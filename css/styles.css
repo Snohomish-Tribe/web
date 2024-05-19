@@ -1,0 +1,142 @@
+/* ================================= 
+BASE STYLES
+==================================== */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: #FFFBE4
+    ;
+  }
+
+  ul {
+    padding-left: 0;
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+  a {
+    color: #000000;
+    text-decoration: none;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+  
+  /* ================================= 
+    Shared Styles
+  ==================================== */
+/* =========== Flexbox =========== */
+.nav,
+.intro,
+.values-list .wrapper {
+  display: flex;
+}
+
+h1, 
+.intro-section h2,
+.intro-section p,
+.intro-title,
+.intro-details {
+    text-align: center;
+}
+
+/* =========== Font Size =========== */
+.intro-title h2,
+.values-section h2 {
+  font-size: 2rem;
+}
+
+/* =========== Font Color =========== */
+.intro-title, 
+.intro-details {
+  color: #fff;
+}
+
+/* =========== Margins =========== */
+.nav,
+.main-nav, 
+.intro-details p, 
+.values-section .container {
+  margin: 0 auto;
+}
+
+/* =========== Width =========== */
+.nav,
+.main-nav, 
+.values-section .container{
+  width: 90%;
+}
+
+/* ================================= 
+Header
+==================================== */
+.main-header {
+  border-bottom: 1px solid #000000;
+}
+
+.nav,
+.main-nav {
+  width: 90%;
+}
+
+.main-nav li {
+  margin: 1rem 0; 
+  font-size: 1.5rem;
+}
+
+.toggle {
+  margin: auto 0;
+}
+
+.toggle:hover {
+  cursor: pointer;
+}
+
+.nav {
+  justify-content: space-between;
+}
+
+/* ================================= 
+Intro Section
+==================================== */
+.img-container {
+  position: relative
+}
+
+.intro-title {
+  position: absolute; 
+  top: 0;
+  width: 100%
+}
+
+.intro-details {
+  position: absolute;
+  bottom: 10%;
+}
+
+.intro-details p {
+  font-size: 1.2rem;
+  width: 70%;
+}
+
+.boat {
+  object-fit: cover;
+  width: 100%;
+  height: 70vh;
+}
+
+/* ================================= 
+Values Section
+==================================== */
+.line {
+  border-left: 3px solid black;
+  height: 4rem;
+  width: 3px
+}
