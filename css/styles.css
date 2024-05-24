@@ -40,69 +40,76 @@ BASE STYLES
   ==================================== */
 /* =========== Flexbox =========== */
 .nav,
-.intro,
-.values-list .wrapper {
+.bt-point > div {
   display: flex;
 }
 
 h1, 
 .intro-section h2,
 .intro-section p,
-.intro-title,
-.intro-details,
-.values-section h2,
+.title,
+.details,
+.ancestral-section h2,
 footer ul li,
 .copyright{
     text-align: center;
 }
 
-/* =========== Font Size =========== */
-
-
-/* =========== Font Color =========== */
-.intro-title, 
-.intro-details {
-  color: #fff;
-}
-
 /* =========== Margins =========== */
 .nav,
 .main-nav, 
-.intro-details p, 
-.values-section .container,
+.container,
+.details p,
 .line,
-.standing-section .container, 
-.ancestral-section .container,
+.standing-section .bt-point p,
+.svg-container svg,
 footer svg {
   margin: 0 auto;
 }
 
+.toggle,
+.bt-point h4 {
+  margin: auto 0;
+}
+
+.img-container {
+  margin: 2.5rem 0; 
+}
+
 /* =========== Width =========== */
 .nav,
-.main-nav, 
-.values-section .container,
-.standing-section .container,
-.ancestral-section .container,
-footer .container {
+.main-nav,
+.nav,
+.container,
+.stone, 
+.svg-container svg, 
+.ancestral-section .bg-container {
   width: 90%;
 }
 
-.intro-title, 
-.boat, 
-.stone,
-.svg-container svg,
-.standing-section .img-container img, 
-.ancestral-section .img-container img {
+.bg-container,
+.bg-container img,
+.title, 
+.details,
+.standing-section img,
+.trigon,
+.ancestral-section img {
   width: 100%
 }
 
+/* =========== Background-Image =========== */
+.bg-container img {
+  object-fit: cover;
+}
+
 /* =========== Display block =========== */
+.ancestral-section .svg-container svg,
 .footer a,
 footer svg {
   display: block;
 }
 
-/* =========== Fonts =========== */
+/* =========== Font styles =========== */
 .amarante {
   font-family: "Amarante";
 }
@@ -111,15 +118,35 @@ footer svg {
   font-family: "Fira Sans";
 }
 
-/* =========== Position =========== */
-.values-section .wrapper, 
-.img-container {
-  position: relative;
+.font-white {
+  color: #fff;
 }
 
-.intro-title, 
-.intro-details {
+.sentence {
+  font-size: 1.25rem;
+}
+
+.title h2,
+.ancestral-section h2{
+  font-size: 2.5rem;
+}
+
+/* =========== Position =========== */
+.bg-container,
+.stone-container {
+  position: relative;
+} 
+
+.title, 
+.details,
+.trigon,
+.stone {
   position: absolute;
+} 
+
+.title,
+.stone {
+  top: 0;
 }
 
 /* ================================= 
@@ -149,29 +176,20 @@ footer svg {
 /* ================================= 
 Intro Section
 ==================================== */
-.intro-title h2 {
-  font-size: 2.5rem;
-}
-
-.intro-title {
-  top: 0;
-}
-
-.intro-details {
-  bottom: 10%;
-}
-
-.intro-details p {
-  font-size: 1.2rem;
-  width: 75%; 
-  line-height: 2rem;
-}
-
 .boat {
-  object-fit: cover;
   height: 70vh;
 }
 
+.details {
+  bottom: 10%;
+}
+
+.details p {
+  width: 70%; 
+  line-height: 1.75rem;
+}
+
+/* =========== Home Page =========== */
 /* ================================= 
   Values Section
 ==================================== */
@@ -180,22 +198,36 @@ Intro Section
 }
 
 .values-section h2 {
+  margin-bottom: 1.75rem;
   font-size: 2.75rem;
 }
 
 .values-section h3 {
   font-size: 1.5rem;
   line-height: 2rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
+}
+
+.stone-container {
+  padding-bottom: 1.5rem;
 }
 
 .stone {
   height: 30vh;
 }
 
-/* .stone-container {
-  border: 3px solid red; 
-} */
+.bt-point {
+  margin-bottom: 1rem;
+}
+
+.arrw-wrap, 
+.line-wrap {
+  width: 15%; 
+}
+
+.word-wrap {
+  width: 85%;
+}
 
 .line {
   border-left: 3px solid black;
@@ -209,25 +241,40 @@ Intro Section
 .standing-section {
   background-color: #2D302C;
   min-height: 100vh;
+  padding: 2.5rem 0 2rem;
 }
 
+.standing-section h2, 
 .standing-section p, 
 .standing-section h4 {
   color: #FFFBE4;
 }
 
-.standing-section .img-container img{
-  object-fit: contain;
+.standing-section h2 {
+  font-size: 2.25rem;
+}
+
+.standing-section ul {
+  margin-top: 2.5rem;
+}
+
+.cm-arrw {
+  display: none;
 }
 
 .events-btn {
   display: inline-block;
   padding: 1rem 1.5rem;
+  margin-top: 1rem;
 }
 
 /* ================================= 
   Ancestral Section
 ==================================== */
+.trigon {
+  top: -200px;
+}
+
 .membership-btn {
   display: inline-block;
   padding: 1rem 1.5rem;
