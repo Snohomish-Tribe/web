@@ -40,18 +40,27 @@ BASE STYLES
   ==================================== */
 /* =========== Flexbox =========== */
 .nav,
+.intro-section .container,
 .bt-point > div {
   display: flex;
 }
 
+.intro-section .container {
+  flex-direction: column;
+}
+
+/* =========== Text-alignment =========== */
 h1, 
 .intro-section h2,
 .intro-section p,
 .title,
 .details,
 .ancestral-section h2,
+.nation-section h2,
+.nation-section h3,
+.nation-section p,
 footer ul li,
-.copyright{
+.copyright {
     text-align: center;
 }
 
@@ -63,6 +72,7 @@ footer ul li,
 .line,
 .standing-section .bt-point p,
 .svg-container svg,
+.nation-section .img-container img,
 footer svg {
   margin: 0 auto;
 }
@@ -81,10 +91,8 @@ footer svg {
 .main-nav,
 .nav,
 .container,
-.stone, 
-.svg-container svg, 
-.ancestral-section .bg-container {
-  width: 90%;
+.svg-container svg {
+width: 90%;
 }
 
 .bg-container,
@@ -92,18 +100,30 @@ footer svg {
 .title, 
 .details,
 .standing-section img,
-.trigon,
-.ancestral-section img {
+.trigon, 
+.inner-container, 
+.about .row-1 img {
   width: 100%
 }
 
-/* =========== Background-Image =========== */
+/* =========== Background-Styles =========== */
 .bg-container img {
   object-fit: cover;
 }
 
+.bg-blk {
+  background-color: #2D302C;
+}
+
+.bg-red {
+  background-color: #9E3333;
+}
+
 /* =========== Display block =========== */
 .ancestral-section .svg-container svg,
+.nation-section .svg-container svg,
+.nation-section .img-container img,
+.about .row-1 img, 
 .footer a,
 footer svg {
   display: block;
@@ -122,31 +142,40 @@ footer svg {
   color: #fff;
 }
 
-.sentence {
-  font-size: 1.25rem;
+.font-xsm {
+    font-size: 1.25rem;
+}
+.font-sm {
+  font-size: 1.5rem;
 }
 
 .title h2,
-.ancestral-section h2{
+.ancestral-section h2,
+.nation-section h3 {
   font-size: 2.5rem;
 }
 
 /* =========== Position =========== */
-.bg-container,
-.stone-container {
+.bg-container {
   position: relative;
 } 
 
 .title, 
-.details,
-.trigon,
-.stone {
+.wrapper,
+.trigon, 
+.inner-container {
   position: absolute;
 } 
 
 .title,
-.stone {
+.wrapper {
   top: 0;
+}
+
+/* =========== Line-Height =========== */
+.values-section h3, 
+.banner .fira-sans  {
+  line-height: 2rem;
 }
 
 /* ================================= 
@@ -174,22 +203,23 @@ footer svg {
 }
 
 /* ================================= 
-Intro Section
+Home Page 
 ==================================== */
-.boat {
+/* =========== Intro =========== */
+.boat,
+.title,
+.intro-section .container {
   height: 70vh;
 }
 
-.details {
-  bottom: 10%;
+.intro-section .container {
+  outline: 3px solid black;
 }
 
-.details p {
-  width: 70%; 
-  line-height: 1.75rem;
+.bg-footer {
+  margin: auto 0 3rem;
 }
 
-/* =========== Home Page =========== */
 /* ================================= 
   Values Section
 ==================================== */
@@ -204,16 +234,7 @@ Intro Section
 
 .values-section h3 {
   font-size: 1.5rem;
-  line-height: 2rem;
   margin-bottom: 2.5rem;
-}
-
-.stone-container {
-  padding-bottom: 1.5rem;
-}
-
-.stone {
-  height: 30vh;
 }
 
 .bt-point {
@@ -239,14 +260,18 @@ Intro Section
   Standing Section
 ==================================== */
 .standing-section {
-  background-color: #2D302C;
   min-height: 100vh;
   padding: 2.5rem 0 2rem;
 }
 
 .standing-section h2, 
 .standing-section p, 
-.standing-section h4 {
+.standing-section h4,
+.nation-section h2, 
+.nation-section h3, 
+.nation-section p, 
+.about .row-1,
+.about .row-2 {
   color: #FFFBE4;
 }
 
@@ -272,14 +297,56 @@ Intro Section
   Ancestral Section
 ==================================== */
 .trigon {
-  top: -200px;
+  top: -50%;
+  left: 0; 
 }
 
 .membership-btn {
   display: inline-block;
   padding: 1rem 1.5rem;
   border: 1px solid black;
+  margin-top: 1rem;
 }
+
+/* ================================= 
+  Nation Section
+==================================== */
+.nation-section .img-container img {
+  width: unset;
+}
+
+.inner-container {
+  bottom: 0; 
+}
+
+.nation-img {
+  min-height: 100vh; 
+}
+
+/* ================================= 
+  About Page
+==================================== */
+/* =========== Banner Section =========== */
+.banner p,
+.banner h1 {
+  text-align: left;
+}
+
+.about .banner p:first-child {
+  padding-top: 3rem;
+}
+
+.about h1 {
+  margin-top: 0;
+}
+
+/* ================================= 
+  Tribal Council
+==================================== */
+
+/* ================================= 
+  Resilience and Surival
+==================================== */
 
 /* ================================= 
   Footer
