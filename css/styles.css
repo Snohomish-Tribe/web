@@ -27,7 +27,6 @@ BASE STYLES
   }
 
   a {
-    color: #000000;
     text-decoration: none;
   }
 
@@ -59,6 +58,8 @@ h1,
 .nation-section h2,
 .nation-section h3,
 .nation-section p,
+.about .row-3 .container,
+.row-4 h2,
 footer ul li,
 .copyright {
     text-align: center;
@@ -73,6 +74,7 @@ footer ul li,
 .standing-section .bt-point p,
 .svg-container svg,
 .nation-section .img-container img,
+.carousel img,
 footer svg {
   margin: 0 auto;
 }
@@ -102,7 +104,9 @@ width: 90%;
 .standing-section img,
 .trigon, 
 .inner-container, 
-.about .row-1 img {
+.about .row-1 img, 
+.about .row-2 img, 
+.about .row-3 svg {
   width: 100%
 }
 
@@ -120,12 +124,9 @@ width: 90%;
 }
 
 /* =========== Display block =========== */
-.ancestral-section .svg-container svg,
-.nation-section .svg-container svg,
-.nation-section .img-container img,
-.about .row-1 img, 
-.footer a,
-footer svg {
+svg,
+img,
+.footer a{
   display: block;
 }
 
@@ -138,6 +139,30 @@ footer svg {
   font-family: "Fira Sans";
 }
 
+a, 
+.about .values-list .row-1,  
+.about .values-list .row-2, 
+.events .container > p:first-child {
+  color: #000000;
+}
+
+.roboto{
+  font-family: "Roboto";
+}
+
+.standing-section h2, 
+.standing-section p, 
+.standing-section h4,
+.nation-section h2, 
+.nation-section h3, 
+.nation-section p, 
+.about .row-1,
+.about .row-2,
+.about .row-4,  
+.date {
+  color: #FFFBE4;
+}
+
 .font-white {
   color: #fff;
 }
@@ -145,8 +170,21 @@ footer svg {
 .font-xsm {
     font-size: 1.25rem;
 }
+
 .font-sm {
   font-size: 1.5rem;
+}
+
+.font-md {
+  font-size: 2rem;
+}
+
+.font-base {
+  font-size: 2.5rem;
+}
+
+.font-lg {
+  font-size: 3rem;
 }
 
 .title h2,
@@ -156,14 +194,16 @@ footer svg {
 }
 
 /* =========== Position =========== */
-.bg-container {
+.bg-container,
+.date {
   position: relative;
 } 
 
 .title, 
 .wrapper,
 .trigon, 
-.inner-container {
+.inner-container,
+.date svg {
   position: absolute;
 } 
 
@@ -174,7 +214,9 @@ footer svg {
 
 /* =========== Line-Height =========== */
 .values-section h3, 
-.banner .fira-sans  {
+.banner .fira-sans,
+.about .row-1,
+.about .row-3 p {
   line-height: 2rem;
 }
 
@@ -210,10 +252,6 @@ Home Page
 .title,
 .intro-section .container {
   height: 70vh;
-}
-
-.intro-section .container {
-  outline: 3px solid black;
 }
 
 .bg-footer {
@@ -262,17 +300,6 @@ Home Page
 .standing-section {
   min-height: 100vh;
   padding: 2.5rem 0 2rem;
-}
-
-.standing-section h2, 
-.standing-section p, 
-.standing-section h4,
-.nation-section h2, 
-.nation-section h3, 
-.nation-section p, 
-.about .row-1,
-.about .row-2 {
-  color: #FFFBE4;
 }
 
 .standing-section h2 {
@@ -332,6 +359,10 @@ Home Page
   text-align: left;
 }
 
+.about .row-1 {
+  padding: 1rem 0 2rem 0; 
+}
+
 .about .banner p:first-child {
   padding-top: 3rem;
 }
@@ -341,12 +372,89 @@ Home Page
 }
 
 /* ================================= 
-  Tribal Council
-==================================== */
-
-/* ================================= 
   Resilience and Surival
 ==================================== */
+.about .row-1 {
+  padding: 1rem 0 3rem; 
+}
+
+.about .row-1 h2 {
+  width: 70%;
+  line-height: 3rem;
+}
+
+.about .row-1 svg {
+  width: 50%;
+}
+
+/* ================================= 
+  Tribal Council
+==================================== */
+.about .row-2 h2 {
+  padding-top: 2rem;
+  margin-top: 0;
+}
+
+.about .row-2 ul{
+  margin-bottom: 3rem;
+}
+
+.about .row-2 ul li {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.about .row-2 svg {
+  display: none;
+}
+/* ================================= 
+  Timeline
+==================================== */
+.about .row-3 {
+  padding-top: 2rem;
+}
+
+.about .row-3 h2 {
+  margin-top: 1rem;
+}
+
+.timeline {
+  width: 90%; 
+  margin: 0 auto; 
+}
+
+/* .about .row-3 .word-wrap {
+  margin: 0;
+} */
+
+/* ================================= 
+  Photo Gallery
+==================================== */
+.about .row-4 {
+  padding: 1rem 0 2rem 0; 
+  min-height: 50vh;
+}
+
+/* ================================= 
+  Events Page
+==================================== */
+.date p {
+  margin: 0.5rem 0;
+  padding-left: 0.5rem;
+}
+
+.date svg {
+  top: 0;
+  z-index: -1;
+}
+
+.event-name {
+  margin-top: 2.5rem;
+}
+
+.event-name p:last-child {
+  width: 75%;
+}
 
 /* ================================= 
   Footer
