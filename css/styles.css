@@ -53,11 +53,10 @@ h1,
 .intro-section h2,
 .intro-section p,
 .title,
-.details,
-.ancestral-section h2,
-.nation-section h2,
-.nation-section h3,
-.nation-section p,
+.home .row-3 h2,
+.home .row-4 h2,
+.home .row-4 h3,
+.home .row-4 p,
 .about .row-3 .container,
 .row-4 h2,
 footer ul li,
@@ -69,12 +68,12 @@ footer ul li,
 .nav,
 .main-nav, 
 .container,
-.details p,
 .line,
-.standing-section .bt-point p,
+.home .row-2 .bt-point p,
 .svg-container svg,
-.nation-section .img-container img,
+.home .row-4 .img-container img,
 .carousel img,
+.timeline,
 footer svg {
   margin: 0 auto;
 }
@@ -84,8 +83,36 @@ footer svg {
   margin: auto 0;
 }
 
+.about h1,
+.about .row-2 h2 {
+  margin-top: 0;
+}
+
 .img-container {
   margin: 2.5rem 0; 
+}
+
+.home .row-2 ul,
+.event-name  {
+  margin-top: 2.5rem;
+}
+
+.events-btn,
+.membership-btn, 
+.about .row-3 h2 {
+  margin-top: 1rem;
+}
+
+/* =========== Padding =========== */
+.about .row-1,
+.about .row-2 h2, 
+.about .row-4 {
+  padding: 1rem 0 2rem 0; 
+}
+
+.about .row-2 h2,
+.about .row-3  {
+  padding-top: 2rem;
 }
 
 /* =========== Width =========== */
@@ -100,8 +127,7 @@ width: 90%;
 .bg-container,
 .bg-container img,
 .title, 
-.details,
-.standing-section img,
+.home .row-2 img,
 .trigon, 
 .inner-container, 
 .about .row-1 img, 
@@ -139,6 +165,10 @@ img,
   font-family: "Fira Sans";
 }
 
+.roboto{
+  font-family: "Roboto";
+}
+
 a, 
 .about .values-list .row-1,  
 .about .values-list .row-2, 
@@ -146,16 +176,12 @@ a,
   color: #000000;
 }
 
-.roboto{
-  font-family: "Roboto";
-}
-
-.standing-section h2, 
-.standing-section p, 
-.standing-section h4,
-.nation-section h2, 
-.nation-section h3, 
-.nation-section p, 
+.home .row-2 h2, 
+.home .row-2 p, 
+.home .row-2 h4,
+.home .row-4 h2, 
+.home .row-4 h3, 
+.home .row-4 p, 
 .about .row-1,
 .about .row-2,
 .about .row-4,  
@@ -168,7 +194,7 @@ a,
 }
 
 .font-xsm {
-    font-size: 1.25rem;
+  font-size: 1.25rem;
 }
 
 .font-sm {
@@ -188,9 +214,16 @@ a,
 }
 
 .title h2,
-.ancestral-section h2,
-.nation-section h3 {
+.home .row-3 h2,
+.home .row-4 h3 {
   font-size: 2.5rem;
+}
+
+.main-nav a,
+.home .row-1 h2,
+.home .row-2 h2,
+.home .row-3 h2 {
+  font-weight: 500;
 }
 
 /* =========== Position =========== */
@@ -208,13 +241,22 @@ a,
 } 
 
 .title,
-.wrapper {
+.wrapper,
+.date svg {
   top: 0;
 }
 
 /* =========== Line-Height =========== */
-.values-section h3, 
+.home .row-1 h2, 
+.home .row-1 p,
+.home .row-2,
+.word-wrap {
+  line-height: 1.75rem;
+}
+
+.home .row-1 h3, 
 .banner .fira-sans,
+.home .row-3 p, 
 .about .row-1,
 .about .row-3 p {
   line-height: 2rem;
@@ -230,6 +272,10 @@ a,
 .main-nav li {
   margin: 1rem 0; 
   font-size: 1.5rem;
+}
+
+nav {
+  min-height: 90vh;
 }
 
 .toggle {
@@ -258,20 +304,23 @@ Home Page
   margin: auto 0 3rem;
 }
 
-/* ================================= 
-  Values Section
-==================================== */
-.values-section {
-  padding-top: 1rem;
+.bg-footer p{
+  line-height: 2rem;
 }
 
-.values-section h2 {
+/* ================================= 
+  Guided By Our Values 
+==================================== */
+.home .row-1 {
+  padding: 1rem 0 2rem;
+}
+
+.home .row-1 h2 {
   margin-bottom: 1.75rem;
   font-size: 2.75rem;
 }
 
-.values-section h3 {
-  font-size: 1.5rem;
+.home .row-1 h3 {
   margin-bottom: 2.5rem;
 }
 
@@ -286,59 +335,66 @@ Home Page
 
 .word-wrap {
   width: 85%;
+  margin-top: 0.5rem;
 }
 
 .line {
   border-left: 3px solid black;
-  height: 4rem;
+  height: 6.5rem;
   width: 3px
 }
 
+.row-1 .bt-point h4,
+.word-wrap {
+  margin-left: 1rem;
+}
+
 /* ================================= 
-  Standing Section
+  Standing Strong
 ==================================== */
-.standing-section {
+.home .row-2 {
   min-height: 100vh;
   padding: 2.5rem 0 2rem;
 }
 
-.standing-section h2 {
+.home .row-2 h2 {
   font-size: 2.25rem;
 }
 
-.standing-section ul {
-  margin-top: 2.5rem;
+.home .row-2 .bt-point .word-wrap {
+  margin-right: 0;
 }
 
 .cm-arrw {
   display: none;
 }
 
-.events-btn {
+.events-btn,
+.membership-btn {
   display: inline-block;
   padding: 1rem 1.5rem;
-  margin-top: 1rem;
 }
 
 /* ================================= 
-  Ancestral Section
+  Ancestral Territory
 ==================================== */
+.home .row-3 h2 {
+  margin: 3rem 0 1.5rem;
+}
+
 .trigon {
   top: -50%;
   left: 0; 
 }
 
 .membership-btn {
-  display: inline-block;
-  padding: 1rem 1.5rem;
   border: 1px solid black;
-  margin-top: 1rem;
 }
 
 /* ================================= 
-  Nation Section
+  Sovereign Nation 
 ==================================== */
-.nation-section .img-container img {
+.home .row-4 .img-container img {
   width: unset;
 }
 
@@ -359,16 +415,8 @@ Home Page
   text-align: left;
 }
 
-.about .row-1 {
-  padding: 1rem 0 2rem 0; 
-}
-
 .about .banner p:first-child {
   padding-top: 3rem;
-}
-
-.about h1 {
-  margin-top: 0;
 }
 
 /* ================================= 
@@ -390,11 +438,6 @@ Home Page
 /* ================================= 
   Tribal Council
 ==================================== */
-.about .row-2 h2 {
-  padding-top: 2rem;
-  margin-top: 0;
-}
-
 .about .row-2 ul{
   margin-bottom: 3rem;
 }
@@ -410,22 +453,9 @@ Home Page
 /* ================================= 
   Timeline
 ==================================== */
-.about .row-3 {
-  padding-top: 2rem;
-}
-
-.about .row-3 h2 {
-  margin-top: 1rem;
-}
-
 .timeline {
   width: 90%; 
-  margin: 0 auto; 
 }
-
-/* .about .row-3 .word-wrap {
-  margin: 0;
-} */
 
 /* ================================= 
   Photo Gallery
@@ -444,12 +474,7 @@ Home Page
 }
 
 .date svg {
-  top: 0;
   z-index: -1;
-}
-
-.event-name {
-  margin-top: 2.5rem;
 }
 
 .event-name p:last-child {
@@ -465,6 +490,11 @@ footer ul li{
 
 .page-links {
   font-weight: 700;
+}
+
+.privacy {
+  padding-top: 1rem;
+  border-top: 1px solid black;
 }
 
 .privacy a {
