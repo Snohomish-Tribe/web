@@ -29,10 +29,6 @@ BASE STYLES
   a {
     text-decoration: none;
   }
-
-  h1 {
-    font-size: 4.5rem;
-  }
   
   /* ================================= 
     Common Styles
@@ -40,7 +36,9 @@ BASE STYLES
 /* =========== Flexbox =========== */
 .nav,
 .intro-section .container,
-.bt-point > div {
+.bt-point > div, 
+.carousel,
+.breadcrumbs {
   display: flex;
 }
 
@@ -60,6 +58,9 @@ h1,
 .about .row-3 .container,
 .row-4 h2,
 footer ul li,
+.about .row-5 h2,
+.about .row-5 h3,
+.about .row-5 p,
 .copyright {
     text-align: center;
 }
@@ -73,7 +74,10 @@ footer ul li,
 .svg-container svg,
 .home .row-4 .img-container img,
 .carousel img,
-.timeline,
+.about .box-1 .line,
+.years,
+.about .row-4 h2,
+.breadcrumbs,
 footer svg {
   margin: 0 auto;
 }
@@ -84,6 +88,7 @@ footer svg {
 }
 
 .about h1,
+.about .row-1,
 .about .row-2 h2 {
   margin-top: 0;
 }
@@ -105,14 +110,8 @@ footer svg {
 
 /* =========== Padding =========== */
 .about .row-1,
-.about .row-2 h2, 
-.about .row-4 {
-  padding: 1rem 0 2rem 0; 
-}
-
-.about .row-2 h2,
-.about .row-3  {
-  padding-top: 2rem;
+.about .row-2 {
+  padding: 3rem 0 3.5rem;
 }
 
 /* =========== Width =========== */
@@ -120,6 +119,7 @@ footer svg {
 .main-nav,
 .nav,
 .container,
+.years,
 .svg-container svg {
 width: 90%;
 }
@@ -134,6 +134,17 @@ width: 90%;
 .about .row-2 img, 
 .about .row-3 svg {
   width: 100%
+}
+
+.about .row-1 svg,
+.breadcrumbs {
+  width: 50%;
+}
+
+/* =========== Background-Styles =========== */
+.boat,
+.intro-section .container {
+  height: 70vh;
 }
 
 /* =========== Background-Styles =========== */
@@ -184,7 +195,8 @@ a,
 .home .row-4 p, 
 .about .row-1,
 .about .row-2,
-.about .row-4,  
+.about .row-4,
+.about .row-5,  
 .date {
   color: #FFFBE4;
 }
@@ -213,17 +225,23 @@ a,
   font-size: 3rem;
 }
 
-.title h2,
-.home .row-3 h2,
-.home .row-4 h3 {
-  font-size: 2.5rem;
-}
-
 .main-nav a,
 .home .row-1 h2,
 .home .row-2 h2,
-.home .row-3 h2 {
+.home .row-3 h2,
+.about .row-1 h2,
+.about .row-2 h2,
+.about .row-3 h2,
+.about .row-4 h2,
+.events h2 {
   font-weight: 500;
+}
+
+.about .banner p,
+.about .banner h1, 
+.programs p,
+.programs h1 {
+  text-align: left;
 }
 
 /* =========== Position =========== */
@@ -282,7 +300,9 @@ nav {
   margin: auto 0;
 }
 
-.toggle:hover {
+.toggle:hover,
+.carousel svg,
+.crumb:hover {
   cursor: pointer;
 }
 
@@ -294,17 +314,15 @@ nav {
 Home Page 
 ==================================== */
 /* =========== Intro =========== */
-.boat,
-.title,
-.intro-section .container {
-  height: 70vh;
+.home h1 {
+  font-size: 4.5rem;
 }
 
 .bg-footer {
   margin: auto 0 3rem;
 }
 
-.bg-footer p{
+.bg-footer p {
   line-height: 2rem;
 }
 
@@ -410,9 +428,12 @@ Home Page
   About Page
 ==================================== */
 /* =========== Banner Section =========== */
-.banner p,
-.banner h1 {
-  text-align: left;
+.plant {
+  min-height: 60vh;
+}
+
+.about h1 {
+  font-size: 3rem;
 }
 
 .about .banner p:first-child {
@@ -422,23 +443,19 @@ Home Page
 /* ================================= 
   Resilience and Surival
 ==================================== */
-.about .row-1 {
-  padding: 1rem 0 3rem; 
-}
-
 .about .row-1 h2 {
   width: 70%;
-  line-height: 3rem;
+  line-height: 2.75rem;
 }
 
-.about .row-1 svg {
-  width: 50%;
+.about .row-1 p {
+  margin-bottom: 2.5rem;
 }
 
 /* ================================= 
   Tribal Council
 ==================================== */
-.about .row-2 ul{
+.about .row-2 ul {
   margin-bottom: 3rem;
 }
 
@@ -450,24 +467,98 @@ Home Page
 .about .row-2 svg {
   display: none;
 }
+
 /* ================================= 
   Timeline
 ==================================== */
-.timeline {
-  width: 90%; 
+.about .row-3 {
+  padding-bottom: 2rem;
+}
+
+.about .row-3 .roboto {
+  padding-top: 3rem;
+}
+
+.about .box-1 {
+  width: 15%; 
+}
+.about .box-1 .line {
+  height: 2rem;
+}
+
+.about .row-3 h4 {
+  margin-bottom: 1rem;
 }
 
 /* ================================= 
   Photo Gallery
 ==================================== */
 .about .row-4 {
-  padding: 1rem 0 2rem 0; 
-  min-height: 50vh;
+  padding: 2.5rem 0; 
+  min-height: 65vh;
+}
+
+.about .row-4 h2 {
+  width: 60%;
+  margin-right: auto; 
+  margin-left: auto;
+  margin-bottom: 2rem;
+}
+
+.carousel {
+  justify-content: center;
+}
+
+.carousel svg {
+  margin: auto;
+}
+
+.carousel .img-container {
+  margin-top: 0; 
+  margin-bottom: 2rem;
+}
+
+.breadcrumbs {
+  padding: 1rem 0; 
+  justify-content: space-around;
+}
+
+.crumb {
+  border-radius: 100%;
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: #fff;
+}
+
+/* ================================= 
+  About Page Bottom section 
+==================================== */
+.about .row-5 h2 {
+  margin-top: 3.5rem;
+}
+
+.about .row-5 .wrapper .container p:last-child {
+  padding-top: 1rem;
 }
 
 /* ================================= 
   Events Page
 ==================================== */
+.events .row-1,
+.events .row-2,
+.events .row-3 {
+  border-top: 1px solid  #000000;
+  padding-top: 1.5rem;
+}
+
+.events .row-3 {
+  margin-bottom: 3rem;
+}
+
+.date {
+  padding-top: 0.5rem;
+}
+
 .date p {
   margin: 0.5rem 0;
   padding-left: 0.5rem;
@@ -484,6 +575,10 @@ Home Page
 /* ================================= 
   Footer
 ==================================== */
+footer {
+  padding-top: 2rem;
+}
+
 footer ul li{
   padding: 0.5rem 0; 
 }
