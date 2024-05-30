@@ -38,11 +38,13 @@ BASE STYLES
 .intro-section .container,
 .bt-point > div, 
 .carousel,
-.breadcrumbs {
+.breadcrumbs,
+.programs .bg-container .container {
   display: flex;
 }
 
-.intro-section .container {
+.intro-section .container,
+.programs .bg-container .container  {
   flex-direction: column;
 }
 
@@ -233,7 +235,8 @@ a,
 .about .row-2 h2,
 .about .row-3 h2,
 .about .row-4 h2,
-.events h2 {
+.events h2,
+.programs .row-1 h2 {
   font-weight: 500;
 }
 
@@ -428,7 +431,8 @@ Home Page
   About Page
 ==================================== */
 /* =========== Banner Section =========== */
-.plant {
+.plant,
+.pebbles {
   min-height: 60vh;
 }
 
@@ -571,6 +575,52 @@ Home Page
 .event-name p:last-child {
   width: 75%;
 }
+
+/* ================================= 
+  Programs Page
+==================================== */
+/* =========== Banner =========== */
+.programs .bg-container .title, 
+.programs .bg-container .container {
+  height: 100%; 
+}
+
+.programs .bg-container .container p:first-child {
+  margin-top: auto;  
+}
+.programs .bg-container .container p:last-child {
+  margin-bottom: auto;  
+}
+
+.programs h1 {
+  margin-top: 0;
+}
+
+.programs .bg-container .amarante {
+  padding-top: 0;
+}
+
+/* ================================= 
+  Unique Programs 
+==================================== */
+.programs .row-1 {
+  padding-top: 3rem;
+}
+
+.programs .row-1 img {
+  width: 100%; 
+}
+
+.programs .row-1 p {
+  margin-bottom: 2rem;
+}
+
+.programs .row-1 .img-container {
+  margin-bottom: 2rem;
+}
+
+
+
 
 /* ================================= 
   Footer
