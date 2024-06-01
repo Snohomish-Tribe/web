@@ -42,21 +42,23 @@ BASE STYLES
 .intro-section .container,
 .bt-point > div, 
 .carousel,
-.breadcrumbs {
+.breadcrumbs,
+.programs .banner .container {
   display: flex;
 }
 
 .intro-section .container,
 .programs .bg-container .container,
-.membership .bg-container .container  {
+.membership .bg-container .container, 
+.language .bg-container .container {
   flex-direction: column;
 }
 
 /* =========== Text-alignment =========== */
-h1, 
+.home h1, 
 .intro-section h2,
 .intro-section p,
-.title,
+.home .title,
 .home .row-3 h2,
 .home .row-4 h2,
 .home .row-4 h3,
@@ -68,13 +70,21 @@ footer ul li,
 .about .row-5 h3,
 .about .row-5 p,
 .copyright {
-    text-align: center;
+  text-align: center;
+}
+
+.programs p,
+.programs h1,
+.membership p,
+.membership h1 {
+  text-align: left;
 }
 
 /* =========== Margins =========== */
 .nav,
 .main-nav, 
 .container,
+.programs .container,
 .line,
 .home .row-2 .bt-point p,
 .svg-container svg,
@@ -100,7 +110,8 @@ footer svg {
 .programs h1,
 .membership h1,
 .programs .row-3 h2,
-.membership .row-3 h2 {
+.membership .row-3 h2,
+.language h1 {
   margin-top: 0;
 }
 
@@ -121,22 +132,20 @@ footer svg {
 
 /* =========== Padding =========== */
 .about .row-1,
-.about .row-2 {
-  padding: 3rem 0 3.5rem;
+.about .row-2,
+.membership .row-1,
+.membership .row-2 {
+  padding: 3rem 0;
 }
 
 .home .row-4 .container,
 .about .banner p:first-child,
 .about .row-3 .roboto, 
 .programs .row-1,
-.membership .row-1  {
+.membership .row-1 {
   padding-top: 3rem;
 }
 
-.membership .row-1,
-.membership .row-2 {
-  padding: 3rem 0;
-}
 
 /* =========== Width =========== */
 .nav,
@@ -211,7 +220,7 @@ img,
   font-family: "Fira Sans";
 }
 
-.roboto{
+.roboto {
   font-family: "Roboto";
 }
 
@@ -271,15 +280,6 @@ a,
 .programs h2,
 .membership h1{
   font-weight: 500;
-}
-
-.about .banner p,
-.about .banner h1, 
-.programs p,
-.programs h1,
-.membership p,
-.membership h1  {
-  text-align: left;
 }
 
 /* =========== Position =========== */
@@ -360,9 +360,6 @@ nav {
 .nav {
   justify-content: space-between;
 }
-
-
-
 
 /* ================================= 
 Home Page 
@@ -610,7 +607,6 @@ Home Page
 Programs & Membership pages
 ==================================== */
 /* =========== Banner =========== */
-.programs .banner .container,
 .membership .banner .container  {
   display: inline-flex;
 }
@@ -618,17 +614,22 @@ Programs & Membership pages
 .programs .bg-container .title, 
 .programs .bg-container .container,
 .membership .bg-container .title,
-.membership .bg-container .container {
+.membership .bg-container .container, 
+.language .bg-container .title,
+.language .bg-container .container {
   height: 100%; 
 }
 
 .programs .bg-container .container p:first-child,
-.membership .bg-container .container p:first-child {
+.membership .bg-container .container p:first-child,
+.language .bg-container .container p:first-child  {
   margin-top: auto;  
 }
 
 .programs .bg-container .container p:last-child,
-.membership .bg-container .container p:last-child  {
+.membership .bg-container .container p:last-child,
+.membership .bg-container .container p:first-child,
+.language .bg-container .container p:last-child {
   margin-bottom: auto;  
 }
 
@@ -670,7 +671,7 @@ Programs & Membership pages
 
 .programs .row-2 li, 
 .membership .row-2 li {
- margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .programs .row-2 li a, 
@@ -694,9 +695,8 @@ Programs & Membership pages
 }
 
 /* ================================= 
-  Membership Page
+  Language Learning
 ==================================== */
-/* =========== Questions =========== */
 
 
 
