@@ -16,7 +16,9 @@ BASE STYLES
   body, 
   .events-btn,
   .programs .btn-container a, 
-  .programs .row-3 a {
+  .programs .row-3 a,
+  .membership .row-2 a,
+  .membership .row-4 a {
     background-color: #FFFBE4;
   }
 
@@ -45,7 +47,8 @@ BASE STYLES
 }
 
 .intro-section .container,
-.programs .bg-container .container  {
+.programs .bg-container .container,
+.membership .bg-container .container  {
   flex-direction: column;
 }
 
@@ -95,7 +98,9 @@ footer svg {
 .about .row-2 h2, 
 .carousel .img-container,
 .programs h1,
-.programs .row-3 h2 {
+.membership h1,
+.programs .row-3 h2,
+.membership .row-3 h2 {
   margin-top: 0;
 }
 
@@ -123,8 +128,14 @@ footer svg {
 .home .row-4 .container,
 .about .banner p:first-child,
 .about .row-3 .roboto, 
-.programs .row-1  {
+.programs .row-1,
+.membership .row-1  {
   padding-top: 3rem;
+}
+
+.membership .row-1,
+.membership .row-2 {
+  padding: 3rem 0;
 }
 
 /* =========== Width =========== */
@@ -145,8 +156,10 @@ width: 90%;
 .inner-container, 
 .about .row-1 img, 
 .about .row-2 img, 
-.about .row-3 svg {
-  width: 100%
+.about .row-3 svg,
+.programs .row-1 img, 
+.membership .row-1 img {
+  width: 100%; 
 }
 
 .about .row-1 svg,
@@ -183,7 +196,9 @@ img,
 .events-btn,
 .membership-btn,
 .programs .btn-container a,
-.programs .row-3 .btn  {
+.programs .row-3 .btn,
+.membership .row-2 .btn-container a, 
+.membership .row-4 a {
   display: inline-block;
 }
 
@@ -218,7 +233,9 @@ a,
 .about .row-4,
 .about .row-5,  
 .date,
-.programs .row-3 {
+.programs .row-3,
+.membership .row-1,
+.membership .row-4 h2{
   color: #FFFBE4;
 }
 
@@ -250,14 +267,18 @@ a,
 .home h2,
 .about h2,
 .events h2,
-.programs h2 {
+.programs h1, 
+.programs h2,
+.membership h1{
   font-weight: 500;
 }
 
 .about .banner p,
 .about .banner h1, 
 .programs p,
-.programs h1 {
+.programs h1,
+.membership p,
+.membership h1  {
   text-align: left;
 }
 
@@ -286,7 +307,8 @@ a,
 .home .row-1 p,
 .home .row-2,
 .word-wrap,
-.programs .row-2 p  {
+.programs .row-2 p,
+.faqs-item p  {
   line-height: 1.75rem;
 }
 
@@ -294,15 +316,25 @@ a,
 .banner .fira-sans,
 .home .row-3 p, 
 .about .row-1,
-.about .row-3 p {
+.about .row-3 p, 
+.membership .row-1 p,
+.membership .row-2 p {
   line-height: 2rem;
+}
+
+.events section, 
+.faqs, 
+.privacy {
+  border-top: 1px solid #000000;
 }
 
 /* ================================= 
   Header
 ==================================== */
 .main-header,
-.membership-btn {
+.membership-btn,
+.faqs-item
+{
   border-bottom: 1px solid #000000;
 }
 
@@ -328,6 +360,9 @@ nav {
 .nav {
   justify-content: space-between;
 }
+
+
+
 
 /* ================================= 
 Home Page 
@@ -548,7 +583,6 @@ Home Page
   Events Page
 ==================================== */
 .events section {
-  border-top: 1px solid #000000;
   padding-top: 1.5rem;
 }
 
@@ -573,27 +607,33 @@ Home Page
   width: 75%;
 }
 /* ================================= 
-Programs Page
+Programs & Membership pages
 ==================================== */
 /* =========== Banner =========== */
-.programs .banner .container {
+.programs .banner .container,
+.membership .banner .container  {
   display: inline-flex;
 }
 
 .programs .bg-container .title, 
-.programs .bg-container .container {
+.programs .bg-container .container,
+.membership .bg-container .title,
+.membership .bg-container .container {
   height: 100%; 
 }
 
-.programs .bg-container .container p:first-child {
+.programs .bg-container .container p:first-child,
+.membership .bg-container .container p:first-child {
   margin-top: auto;  
 }
 
-.programs .bg-container .container p:last-child {
+.programs .bg-container .container p:last-child,
+.membership .bg-container .container p:last-child  {
   margin-bottom: auto;  
 }
 
-.programs .bg-container .amarante {
+.programs .bg-container .amarante,
+.membership .bg-container .amarante {
   padding-top: 0;
 }
 
@@ -617,21 +657,26 @@ Programs Page
 ==================================== */
 .programs .row-2,
 .programs .row-3,
-.programs .row-4 {
+.programs .row-4,
+.membership .row-3,
+.membership .row-4 {
   padding: 3rem 0; 
 }
 
-.programs .btn-container {
-  gap: 1rem;
+.programs .btn-container,
+.membership .btn-container {
   margin-top: 1.5rem;
 }
 
-.programs .row-2 li {
+.programs .row-2 li, 
+.membership .row-2 li {
  margin-bottom: 1rem;
 }
 
 .programs .row-2 li a, 
-.programs .btn  {
+.programs .btn,  
+.membership .row-2 li a,
+.membership .row-4 a {
   padding: 1rem;
 }
 
@@ -647,6 +692,13 @@ Programs Page
 .programs .row-3 .btn {
   border: 1px solid #000000;
 }
+
+/* ================================= 
+  Membership Page
+==================================== */
+/* =========== Questions =========== */
+
+
 
 /* ================================= 
   Footer
@@ -665,7 +717,6 @@ footer ul li{
 
 .privacy {
   padding: 1rem 0; 
-  border-top: 1px solid black;
 }
 
 .privacy a {
