@@ -64,7 +64,6 @@ footer ul li,
 .about .row-5 h2,
 .about .row-5 h3,
 .about .row-5 p,
-.programs .btn-container,
 .copyright {
     text-align: center;
 }
@@ -121,6 +120,13 @@ footer svg {
   padding: 3rem 0 3.5rem;
 }
 
+.home .row-4 .container,
+.about .banner p:first-child,
+.about .row-3 .roboto, 
+.programs .row-1  {
+  padding-top: 3rem;
+}
+
 /* =========== Width =========== */
 .nav,
 .main-nav,
@@ -175,7 +181,9 @@ img,
 }
 
 .events-btn,
-.membership-btn {
+.membership-btn,
+.programs .btn-container a,
+.programs .row-3 .btn  {
   display: inline-block;
 }
 
@@ -239,15 +247,10 @@ a,
 }
 
 .main-nav a,
-.home .row-1 h2,
-.home .row-2 h2,
-.home .row-3 h2,
-.about .row-1 h2,
-.about .row-2 h2,
-.about .row-3 h2,
-.about .row-4 h2,
+.home h2,
+.about h2,
 .events h2,
-.programs .row-1 h2 {
+.programs h2 {
   font-weight: 500;
 }
 
@@ -282,7 +285,8 @@ a,
 .home .row-1 h2, 
 .home .row-1 p,
 .home .row-2,
-.word-wrap {
+.word-wrap,
+.programs .row-2 p  {
   line-height: 1.75rem;
 }
 
@@ -297,7 +301,8 @@ a,
 /* ================================= 
   Header
 ==================================== */
-.main-header {
+.main-header,
+.membership-btn {
   border-bottom: 1px solid #000000;
 }
 
@@ -404,6 +409,7 @@ Home Page
 .events-btn,
 .membership-btn {
   padding: 1rem 1.5rem;
+  border: 1px solid black;
 }
 
 /* ================================= 
@@ -416,10 +422,6 @@ Home Page
 .trigon {
   top: -50%;
   left: 0; 
-}
-
-.membership-btn {
-  border: 1px solid black;
 }
 
 /* ================================= 
@@ -444,14 +446,6 @@ Home Page
 .plant,
 .pebbles {
   min-height: 60vh;
-}
-
-.about h1 {
-  font-size: 3rem;
-}
-
-.about .banner p:first-child {
-  padding-top: 3rem;
 }
 
 /* ================================= 
@@ -487,10 +481,6 @@ Home Page
 ==================================== */
 .about .row-3 {
   padding-bottom: 2rem;
-}
-
-.about .row-3 .roboto {
-  padding-top: 3rem;
 }
 
 .about .box-1 {
@@ -557,10 +547,8 @@ Home Page
 /* ================================= 
   Events Page
 ==================================== */
-.events .row-1,
-.events .row-2,
-.events .row-3 {
-  border-top: 1px solid  #000000;
+.events section {
+  border-top: 1px solid #000000;
   padding-top: 1.5rem;
 }
 
@@ -584,11 +572,14 @@ Home Page
 .event-name p:last-child {
   width: 75%;
 }
-
 /* ================================= 
-  Programs Page
+Programs Page
 ==================================== */
 /* =========== Banner =========== */
+.programs .banner .container {
+  display: inline-flex;
+}
+
 .programs .bg-container .title, 
 .programs .bg-container .container {
   height: 100%; 
@@ -597,10 +588,10 @@ Home Page
 .programs .bg-container .container p:first-child {
   margin-top: auto;  
 }
+
 .programs .bg-container .container p:last-child {
   margin-bottom: auto;  
 }
-
 
 .programs .bg-container .amarante {
   padding-top: 0;
@@ -609,10 +600,6 @@ Home Page
 /* ================================= 
   Unique Programs 
 ==================================== */
-.programs .row-1 {
-  padding-top: 3rem;
-}
-
 .programs .row-1 img {
   width: 100%; 
 }
@@ -629,30 +616,23 @@ Home Page
   Emergency Food Assistance 
 ==================================== */
 .programs .row-2,
-.programs .row-3 {
-  padding: 3rem 0 2rem; 
+.programs .row-3,
+.programs .row-4 {
+  padding: 3rem 0; 
 }
 
 .programs .btn-container {
-  display: inline-flex;
-  flex-direction: column;
   gap: 1rem;
   margin-top: 1.5rem;
 }
 
-.programs .btn-container a {
-  display: inline-block;
-  padding: 1rem;
+.programs .row-2 li {
+ margin-bottom: 1rem;
 }
 
-.programs .row-2 p {
-  line-height: 1.5rem;
-}
-
-.programs .row-3 .btn {
-  display: inline-block;
+.programs .row-2 li a, 
+.programs .btn  {
   padding: 1rem;
-  border: 1px solid;
 }
 
 .programs .box-1 p:first-child,
@@ -662,6 +642,10 @@ Home Page
 
 .programs .box-1 p:nth-of-type(2) {
   margin-top: 0.5rem;
+}
+
+.programs .row-3 .btn {
+  border: 1px solid #000000;
 }
 
 /* ================================= 
@@ -680,7 +664,7 @@ footer ul li{
 }
 
 .privacy {
-  padding-top: 1rem;
+  padding: 1rem 0; 
   border-top: 1px solid black;
 }
 
