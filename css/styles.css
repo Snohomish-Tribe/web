@@ -9,6 +9,8 @@ BASE STYLES
 /* Amarante Font */
 @import url('https://fonts.googleapis.com/css2?family=Amarante&display=swap');
 
+/* For banner look under programs and membership pages height & use flexbox */
+
 * {
     box-sizing: border-box;
   }
@@ -46,14 +48,16 @@ BASE STYLES
 .breadcrumbs,
 .programs .banner .container,
 .membership .banner .container,
-.language .banner .container {
+.language .banner .container, 
+.contact .banner .container {
   display: flex;
 }
 
 .intro-section .container,
 .programs .bg-container .container,
 .membership .bg-container .container, 
-.language .bg-container .container {
+.language .bg-container .container, 
+.contact .bg-container .container {
   flex-direction: column;
 }
 
@@ -73,6 +77,7 @@ footer ul li,
 .about .row-5 h3,
 .about .row-5 p,
 .language .row-2 h2, 
+.contact .row-2, 
 .copyright {
   text-align: center;
 }
@@ -98,6 +103,8 @@ footer ul li,
 .years,
 .about .row-4 h2,
 .breadcrumbs,
+.address,
+.contact .row-2 svg,
 footer svg {
   margin: 0 auto;
 }
@@ -173,7 +180,9 @@ footer svg {
 .language .row-1,
 .language .row-2,
 .language .row-3, 
-.language .row-4 {
+.language .row-4,
+.contact .row-1,
+.contact .row-2 {
   padding: 3rem 0;
 }
 
@@ -199,7 +208,10 @@ width: 90%;
 .about .row-3 svg,
 .programs .row-1 img, 
 .membership .row-1 img,
-.language .carousel {
+.language .carousel,
+input[type="text"],
+select, 
+textarea {
   width: 100%; 
 }
 
@@ -229,6 +241,10 @@ width: 90%;
 /* =========== Display  =========== */
 svg,
 img,
+form,
+label,
+input,
+form select,
 .footer a {
   display: block;
 }
@@ -279,7 +295,8 @@ a,
 .membership .row-1,
 .membership .row-4 h2,
 .language .row-1,
-.language .row-2 {
+.language .row-2,
+.contact .row-2 {
   color: #FFFBE4;
 }
 
@@ -361,8 +378,8 @@ a,
 .membership .row-1 p,
 .membership .row-2 p,
 .lesson p,
-
-.language .row-4 p {
+.language .row-4 p, 
+.address {
   line-height: 2rem;
 }
 
@@ -636,20 +653,25 @@ Programs & Membership pages
 .membership .bg-container .title,
 .membership .bg-container .container, 
 .language .bg-container .title,
-.language .bg-container .container {
+.language .bg-container .container, 
+.contact .bg-container .title,
+.contact .bg-container .container {
   height: 100%; 
 }
 
 .programs .bg-container .container p:first-child,
 .membership .bg-container .container p:first-child,
-.language .bg-container .container p:first-child  {
+.language .bg-container .container p:first-child,
+.contact .bg-container .container p:first-child {
   margin-top: auto;  
 }
 
 .programs .bg-container .container p:last-child,
 .membership .bg-container .container p:last-child,
 .membership .bg-container .container p:first-child,
-.language .bg-container .container p:last-child {
+.language .bg-container .container p:last-child, 
+.contact .bg-container .container p:last-child 
+{
   margin-bottom: auto;  
 }
 
@@ -725,6 +747,61 @@ Programs & Membership pages
 
 .language .row-4 .btn-container {
   margin-top: 2rem;
+}
+
+/* ================================= 
+  Contact Page
+==================================== */
+.contact .address, 
+.contact .row-2 {
+  font-weight: 200;
+}
+
+.address {
+  text-decoration: underline;
+  width: 70%;
+  line-height: 2rem;
+}
+
+label {
+  margin-top: 1.5rem;
+}
+
+.contact .svg-container {
+  display: none;
+}
+
+input[type="text"],
+select, 
+textarea {
+  padding: 0.75rem 0;
+  margin-top: 0.5rem;
+}
+
+select {
+  padding-left: 0.5rem;
+}
+
+.form-group {
+  margin-top: 2rem;
+}
+
+.form-group input, 
+.form-group label {
+  display: inline-block;
+}
+
+.form-group input {
+  margin-right: 0.5rem;
+}
+
+button {
+  border: 0;
+  margin-top: 2.5rem;
+  padding: 1rem 2.25rem;
+  background-color: #000000;
+  color: #fff;
+  display: block;
 }
 
 /* ================================= 
