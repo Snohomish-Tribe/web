@@ -335,7 +335,8 @@ a,
 .language .row-2 h2,
 .language .row-3 h2,
 .language .row-3 h3, 
-.language .row-4 h2 {
+.language .row-4 h2,
+.not-found h1 {
   font-weight: 500;
 }
 
@@ -366,7 +367,8 @@ a,
 .word-wrap,
 .programs .row-2 p,
 .faqs-item p,
-.language .row-1 p {
+.language .row-1 p,
+.not-found h1  {
   line-height: 1.75rem;
 }
 
@@ -757,12 +759,6 @@ Programs & Membership pages
   font-weight: 200;
 }
 
-.address {
-  text-decoration: underline;
-  width: 70%;
-  line-height: 2rem;
-}
-
 label {
   margin-top: 1.5rem;
 }
@@ -802,6 +798,37 @@ button {
   background-color: #000000;
   color: #fff;
   display: block;
+}
+
+.address {
+  width: 70%;
+  line-height: 2rem;
+}
+
+.address,
+.creative-credits p span {
+  text-decoration: underline;
+}
+/* ================================= 
+  Not Found Page
+==================================== */
+.not-found h1 {
+  font-size: 5rem;
+}
+
+/* ================================= 
+  Creative Credits Page
+==================================== */
+.credits {
+  font-weight: 700;
+}
+
+.creative-credits .credits:nth-of-type(2n) {
+  margin-top: 3rem;
+}
+
+.credits p {
+  margin: 0.5rem 0;
 }
 
 /* ================================= 
