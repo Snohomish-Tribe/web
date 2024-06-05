@@ -9,7 +9,7 @@ BASE STYLES
 /* Amarante Font */
 @import url('https://fonts.googleapis.com/css2?family=Amarante&display=swap');
 
-/* For banner look under programs and membership pages height & use flexbox */
+/* For banner look at  programs and membership pages height & use flexbox */
 
 * {
     box-sizing: border-box;
@@ -153,6 +153,8 @@ footer svg {
   margin-bottom: 1rem;
 }
 
+.events-btn,
+.membership-btn,
 .about .row-2 ul,
 .txt {
   margin-bottom: 3rem;
@@ -199,7 +201,10 @@ width: 90%;
 
 .bg-container,
 .bg-container img,
+.programs .row-1 img,
+.moons,
 .title, 
+.home .row-1 .svg-container svg,
 .home .row-2 img,
 .trigon, 
 .inner-container, 
@@ -347,6 +352,7 @@ a,
 } 
 
 .title, 
+.moons,
 .wrapper,
 .trigon, 
 .inner-container,
@@ -372,7 +378,7 @@ a,
   line-height: 1.75rem;
 }
 
-.home .row-1 h3, 
+.home .row-1 p, 
 .banner .fira-sans,
 .home .row-3 p, 
 .about .row-1,
@@ -410,10 +416,6 @@ nav {
   min-height: 90vh;
 }
 
-.toggle {
-  margin: auto 0;
-}
-
 .toggle:hover,
 .carousel svg,
 .crumb:hover {
@@ -448,8 +450,9 @@ Home Page
   font-size: 2.75rem;
 }
 
-.home .row-1 h3 {
-  margin-bottom: 2.5rem;
+.moons {
+  top: 0; 
+  height: 50vh;
 }
 
 .arrw-wrap, 
@@ -506,7 +509,13 @@ Home Page
   margin: 0;
 }
 
+.arrows {
+  margin-top: 2rem; 
+}
+
+
 .trigon {
+  z-index: -1;
   top: -50%;
   left: 0; 
 }
@@ -685,10 +694,6 @@ Programs & Membership pages
 /* ================================= 
   Unique Programs 
 ==================================== */
-.programs .row-1 img {
-  width: 100%; 
-}
-
 .programs .row-1 p {
   margin-bottom: 2rem;
 }
@@ -730,6 +735,7 @@ Programs & Membership pages
 /* ================================= 
   Language Learning Page
 ==================================== */
+.home .row-1 .details,
 .language .row-1 p {
   font-weight: 600;
 }
@@ -806,7 +812,7 @@ button {
 }
 
 .address,
-.creative-credits p span {
+.creative-credits p a {
   text-decoration: underline;
 }
 /* ================================= 
@@ -819,7 +825,8 @@ button {
 /* ================================= 
   Creative Credits Page
 ==================================== */
-.credits {
+.credits,
+.page-links {
   font-weight: 700;
 }
 
@@ -840,10 +847,6 @@ footer {
 
 footer ul li{
   padding: 0.5rem 0; 
-}
-
-.page-links {
-  font-weight: 700;
 }
 
 .privacy {
