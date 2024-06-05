@@ -1,0 +1,108 @@
+/* ================================= 
+Home Page 
+==================================== */
+/* =========== Intro =========== */
+.home h1 {
+    font-size: 4.5rem;
+  }
+  
+  .bg-footer {
+    margin: auto 0 0;
+  }
+  
+  .bg-footer p {
+    line-height: 2rem;
+  }
+  
+  /* ================================= 
+    Guided By Our Values 
+  ==================================== */
+  .home .row-1 h2 {
+    margin-bottom: 1.75rem;
+    font-size: 2.75rem;
+  }
+  
+  .moons {
+    top: 0; 
+    height: 50vh;
+  }
+  
+  .arrw-wrap, 
+  .line-wrap {
+    width: 15%; 
+  }
+  
+  .word-wrap {
+    width: 85%;
+    margin-top: 0.5rem;
+  }
+  
+  .line {
+    border-left: 3px solid black;
+    height: 6.5rem;
+    width: 3px
+  }
+  
+  .row-1 .bt-point h4,
+  .word-wrap {
+    margin-left: 1rem;
+  }
+  
+  /* ================================= 
+    Standing Strong
+  ==================================== */
+  .home .row-2 {
+    min-height: 100vh;
+  }
+  
+  .home .row-2 h2 {
+    font-size: 2.25rem;
+  }
+  
+  .home .row-2 .bt-point .word-wrap {
+    margin-right: 0;
+  }
+  
+  .cm-arrw {
+    display: none;
+  }
+  
+  .events-btn,
+  .membership-btn,
+  .language .row-3 .btn {
+    padding: 1rem 1.5rem;
+    border: 1px solid black;
+  }
+  
+  /* ================================= 
+    Ancestral Territory
+  ==================================== */
+  .home .row-3 h2 {
+    margin: 0;
+  }
+  
+  .arrows {
+    margin-top: 2rem; 
+  }
+  
+  
+  .trigon {
+    z-index: -1;
+    top: -50%;
+    left: 0; 
+  }
+  
+  /* ================================= 
+    Sovereign Nation 
+  ==================================== */
+  .home .row-4 .img-container img {
+    width: unset;
+  }
+  
+  .inner-container {
+    bottom: 0; 
+  }
+  
+  .nation-img {
+    min-height: 100vh; 
+  }
