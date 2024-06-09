@@ -78,10 +78,11 @@ h1 {
 }
 
 .row-3 .svg-container svg,
-.arrows {
+.arrows,
+.row-4 .bg-container .container:last-child {
   margin-top: 2rem; 
 }
-  
+
 .trigon {
   z-index: -1;
   top: -50%;
@@ -95,10 +96,6 @@ h1 {
   width: unset;
 }
   
-.inner-container {
-  bottom: 0; 
-}
-
 /* ================================= 
   Media Queries 768px
 ==================================== */
