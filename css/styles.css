@@ -61,12 +61,8 @@ a {
 
 /* =========== Text-alignment =========== */
 .home h1, 
-.intro-section h2,
+.home h2,
 .intro-section p,
-.home .title,
-.home .row-3 h2,
-.home .row-4 h2,
-.home .row-4 h3,
 .home .row-4 p,
 .about .row-3 .container,
 .about .row-4 h2,
@@ -298,12 +294,8 @@ a,
   color: #000000;
 }
 
-.home .row-2 h2, 
-.home .row-2 p, 
-.home .row-2 h4,
-.home .row-4 h2, 
-.home .row-4 h3, 
-.home .row-4 p, 
+.home .row-2,
+.home .row-4, 
 .about .row-1,
 .about .row-2,
 .about .row-4,
@@ -343,19 +335,12 @@ a,
 }
 
 .main-nav a,
-.home h2,
-.about h2,
-.events h2,
+h2,
+.home h4,
 .programs h1, 
-.programs h2,
 .membership h1, 
-.membership h2,
 .membership h3,
-.language .row-1 h2,
-.language .row-2 h2,
-.language .row-3 h2,
 .language .row-3 h3, 
-.language .row-4 h2,
 .not-found h1 {
   font-weight: 500;
 }
@@ -395,6 +380,7 @@ a,
 
 .home .row-1 p, 
 .banner .fira-sans,
+.bg-footer p, 
 .home .row-3 p, 
 .about .row-1,
 .about .row-3 p, 
@@ -417,7 +403,14 @@ a,
 .faqs-item {
   border-bottom: 1px solid #000000;
 }
-  
+
+/* =========== Underline ============= */
+.address,
+.creative-credits p a,
+.privacy a {
+  text-decoration: underline;
+} 
+
 /* ================================= 
   Header
 ==================================== */
@@ -449,9 +442,16 @@ Home Page-Standing Strong
 
 .events-btn,
 .membership-btn,
+.language .row-3 .btn,
+.programs .row-3 .btn {
+  padding: 1rem 1.5rem;
+  border: 1px solid #000000;
+}
+
+.events-btn,
+.membership-btn,
 .language .row-3 .btn {
   padding: 1rem 1.5rem;
-  border: 1px solid black;
 }
 
 /* ================================= 
@@ -503,7 +503,7 @@ Home Page-Standing Strong
 }
 
 /* ================================= 
-Programs, Membership & Language pages
+Programs, Membership, Language, Contact pages
 ==================================== */
 .programs .bg-container .title, 
 .programs .bg-container .container,
@@ -550,19 +550,6 @@ Programs, Membership & Language pages
   padding: 1rem;
 }
 
-.programs .row-3 .btn,
-.language .row-3 .btn {
-  border: 1px solid #000000;
-}
-
-/* ================================= 
-  Language Learning Page
-==================================== */
-.address,
-.creative-credits p a {
-  text-decoration: underline;
-} 
-
 /* ================================= 
   Footer
 ==================================== */
@@ -576,8 +563,4 @@ footer ul li{
 
 .privacy {
   padding: 1rem 0; 
-}
-
-.privacy a {
-  text-decoration: underline;
 }

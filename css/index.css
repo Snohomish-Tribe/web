@@ -9,14 +9,10 @@ h1 {
 .bg-footer {
   margin: auto 0 0;
 }
-  
-.bg-footer p {
-  line-height: 2rem;
-}
-  
-  /* ================================= 
-    Guided By Our Values 
-  ==================================== */
+
+/* ================================= 
+  Guided By Our Values 
+==================================== */
 .row-1 h2 {
   margin-bottom: 1.75rem;
   font-size: 2.75rem;
@@ -37,27 +33,37 @@ h1 {
   margin-left: 1rem;
 }
 
+.row-1 .svg-container {
+  display: flex;
+  margin: 2rem 0;
+}
+
+.row-1 .svg-container svg:last-child {
+  display: none;
+}
+
 .row-1 ul p {
   font-size: 1.25rem;
 }
   
-  /* ================================= 
-    Standing Strong
-  ==================================== */
+/* ================================= 
+  Standing Strong
+==================================== */
 .row-2 {
   min-height: 100vh;
 }
-  
+
 .row-2 h2 {
   font-size: 2.25rem;
+  text-align: left;
 }
-  
+
 .row-2 .bt-point .word-wrap {
   margin-right: 0;
 }
 
 .row-2 .bt-point .fira-sans {
- margin-left: auto;
+  margin-left: auto;
 }
   
 .cm-arrw {
@@ -93,6 +99,6 @@ h1 {
   bottom: 0; 
 }
 
-.nation-img {
-  min-height: 100vh; 
-}
+/* ================================= 
+  Media Queries 768px
+==================================== */
