@@ -9,33 +9,31 @@ BASE STYLES
 /* Amarante Font */
 @import url('https://fonts.googleapis.com/css2?family=Amarante&display=swap');
 
-/* For banner look at  programs and membership pages height & use flexbox */
-
 * {
     box-sizing: border-box;
   }
 
-  body, 
-  .events-btn,
-  .programs .btn-container a, 
-  .programs .row-3 a,
-  .membership .row-2 a,
-  .membership .row-4 a,
-  .language .row-4 a {
-    background-color: #FFFBE4;
-  }
+body, 
+.events-btn,
+.programs .btn-container a, 
+.programs .row-3 a,
+.membership .row-2 a,
+.membership .row-4 a,
+.language .row-4 a {
+  background-color: #FFFBE4;
+}
 
-  ul {
-    padding-left: 0;
-  }
+ul {
+  padding-left: 0;
+}
 
-  li {
-    list-style-type: none;
-  }
+li {
+  list-style-type: none;
+}
 
-  a {
-    text-decoration: none;
-  }
+a {
+  text-decoration: none;
+}
   
   /* ================================= 
     Common Styles
@@ -95,7 +93,6 @@ footer ul li,
 .container,
 .programs .container,
 .line,
-.home .row-2 .bt-point p,
 .svg-container svg,
 .home .row-4 .img-container img,
 .carousel img,
@@ -225,6 +222,22 @@ textarea {
   width: 50%;
 }
 
+.arrw-wrap, 
+.line-wrap {
+  width: 15%; 
+}
+
+.line {
+  border-left: 3px solid black;
+  height: 6.5rem;
+  width: 3px
+}
+
+.word-wrap {
+  width: 85%;
+  margin-top: 0.5rem;
+}
+
 /* =========== Background-Styles =========== */
 .boat,
 .intro-section .container {
@@ -336,6 +349,8 @@ a,
 .programs h1, 
 .programs h2,
 .membership h1, 
+.membership h2,
+.membership h3,
 .language .row-1 h2,
 .language .row-2 h2,
 .language .row-3 h2,
@@ -397,16 +412,15 @@ a,
   border-top: 1px solid #000000;
 }
 
+.main-header,
+.membership-btn,
+.faqs-item {
+  border-bottom: 1px solid #000000;
+}
+  
 /* ================================= 
   Header
 ==================================== */
-.main-header,
-.membership-btn,
-.faqs-item
-{
-  border-bottom: 1px solid #000000;
-}
-
 .main-nav li {
   margin: 1rem 0; 
   font-size: 1.5rem;
@@ -427,70 +441,8 @@ nav {
 }
 
 /* ================================= 
-Home Page 
+Home Page-Standing Strong
 ==================================== */
-/* =========== Intro =========== */
-.home h1 {
-  font-size: 4.5rem;
-}
-
-.bg-footer {
-  margin: auto 0 0;
-}
-
-.bg-footer p {
-  line-height: 2rem;
-}
-
-/* ================================= 
-  Guided By Our Values 
-==================================== */
-.home .row-1 h2 {
-  margin-bottom: 1.75rem;
-  font-size: 2.75rem;
-}
-
-.moons {
-  top: 0; 
-  height: 50vh;
-}
-
-.arrw-wrap, 
-.line-wrap {
-  width: 15%; 
-}
-
-.word-wrap {
-  width: 85%;
-  margin-top: 0.5rem;
-}
-
-.line {
-  border-left: 3px solid black;
-  height: 6.5rem;
-  width: 3px
-}
-
-.row-1 .bt-point h4,
-.word-wrap {
-  margin-left: 1rem;
-}
-
-/* ================================= 
-  Standing Strong
-==================================== */
-.home .row-2 {
-  min-height: 100vh;
-}
-
-.home .row-2 h2 {
-  font-size: 2.25rem;
-}
-
-.home .row-2 .bt-point .word-wrap {
-  margin-right: 0;
-}
-
 .cm-arrw {
   display: none;
 }
@@ -513,7 +465,6 @@ Home Page
   margin-top: 2rem; 
 }
 
-
 .trigon {
   z-index: -1;
   top: -50%;
@@ -523,82 +474,24 @@ Home Page
 /* ================================= 
   Sovereign Nation 
 ==================================== */
-.home .row-4 .img-container img {
-  width: unset;
-}
-
-.inner-container {
-  bottom: 0; 
-}
-
 .nation-img {
   min-height: 100vh; 
 }
 
 /* ================================= 
-  About Page
+  About Page-Banner Section
 ==================================== */
-/* =========== Banner Section =========== */
 .plant,
 .pebbles {
   min-height: 60vh;
 }
 
-.about .banner p:first-child {
-  padding-top: 3rem;
-}
-
-/* ================================= 
-  Resilience and Surival
-==================================== */
-.about .row-1 h2 {
-  width: 70%;
-  line-height: 2.75rem;
-}
-
-.about .row-1 p {
-  margin-bottom: 2.5rem;
-}
-
-/* ================================= 
-  Tribal Council
-==================================== */
-.about .row-2 ul li {
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
-}
-
-.about .row-2 svg {
-  display: none;
-}
-
-/* ================================= 
-  Timeline
-==================================== */
-.about .box-1 {
-  width: 15%; 
-}
-.about .box-1 .line {
-  height: 2rem;
-}
-
 /* ================================= 
   Photo Gallery
 ==================================== */
-.about .row-4 {
-  padding: 2.5rem 0; 
-  min-height: 65vh;
-}
-
 .about .row-4 h2,
 .carousel .img-container {
   margin-bottom: 2rem;
-}
-
-.about .row-4 h2 {
-  width: 60%;
-  margin-right: auto; 
-  margin-left: auto;
 }
 
 .carousel {
@@ -609,55 +502,8 @@ Home Page
   margin: auto;
 }
 
-.breadcrumbs {
-  padding: 1rem 0; 
-  justify-content: space-around;
-}
-
-.crumb {
-  border-radius: 100%;
-  width: 0.75rem;
-  height: 0.75rem;
-  background-color: #fff;
-}
-
 /* ================================= 
-  About Page Bottom section 
-==================================== */
-.about .row-5 .wrapper .container p:last-child {
-  padding-top: 1rem;
-}
-
-/* ================================= 
-  Events Page
-==================================== */
-.events section {
-  padding-top: 1.5rem;
-}
-
-.events .row-3,
-.lesson {
-  margin-bottom: 3rem;
-}
-
-.date {
-  padding-top: 0.5rem;
-}
-
-.date p {
-  margin: 0.5rem 0;
-  padding-left: 0.5rem;
-}
-
-.date svg {
-  z-index: -1;
-}
-
-.event-name p:last-child {
-  width: 75%;
-}
-/* ================================= 
-Programs & Membership pages
+Programs, Membership & Language pages
 ==================================== */
 .programs .bg-container .title, 
 .programs .bg-container .container,
@@ -681,25 +527,13 @@ Programs & Membership pages
 .membership .bg-container .container p:last-child,
 .membership .bg-container .container p:first-child,
 .language .bg-container .container p:last-child, 
-.contact .bg-container .container p:last-child 
-{
+.contact .bg-container .container p:last-child {
   margin-bottom: auto;  
 }
 
 .programs .bg-container .amarante,
 .membership .bg-container .amarante {
   padding-top: 0;
-}
-
-/* ================================= 
-  Unique Programs 
-==================================== */
-.programs .row-1 p {
-  margin-bottom: 2rem;
-}
-
-.programs .row-1 .img-container {
-  margin-bottom: 2rem;
 }
 
 /* ================================= 
@@ -710,21 +544,10 @@ Programs & Membership pages
   margin-top: 1.5rem;
 }
 
-.programs .row-2 li a, 
-.programs .btn,  
 .membership .row-2 li a,
 .membership .row-4 a,
 .language .row-4 a {
   padding: 1rem;
-}
-
-.programs .box-1 p:first-child,
-.programs .box-1 p:nth-of-type(2) {
-  margin-bottom: 0;
-}
-
-.programs .box-1 p:nth-of-type(2) {
-  margin-top: 0.5rem;
 }
 
 .programs .row-3 .btn,
@@ -735,108 +558,10 @@ Programs & Membership pages
 /* ================================= 
   Language Learning Page
 ==================================== */
-.home .row-1 .details,
-.language .row-1 p {
-  font-weight: 600;
-}
-
-.language .row-3 .btn {
-  margin-right: 2rem;
-}
-
-.audio-file::after {
-  content: ">";
-  padding-left: 0.5rem;
-}
-
-.lesson p {
-  font-weight: 400;
-}
-
-.language .row-4 .btn-container {
-  margin-top: 2rem;
-}
-
-/* ================================= 
-  Contact Page
-==================================== */
-.contact .address, 
-.contact .row-2 {
-  font-weight: 200;
-}
-
-label {
-  margin-top: 1.5rem;
-}
-
-.contact .svg-container {
-  display: none;
-}
-
-input[type="text"],
-select, 
-textarea {
-  padding: 0.75rem 0;
-  margin-top: 0.5rem;
-}
-
-select {
-  padding-left: 0.5rem;
-}
-
-.form-group {
-  margin-top: 2rem;
-}
-
-.form-group input, 
-.form-group label {
-  display: inline-block;
-}
-
-.form-group input {
-  margin-right: 0.5rem;
-}
-
-button {
-  border: 0;
-  margin-top: 2.5rem;
-  padding: 1rem 2.25rem;
-  background-color: #000000;
-  color: #fff;
-  display: block;
-}
-
-.address {
-  width: 70%;
-  line-height: 2rem;
-}
-
 .address,
 .creative-credits p a {
   text-decoration: underline;
-}
-/* ================================= 
-  Not Found Page
-==================================== */
-.not-found h1 {
-  font-size: 5rem;
-}
-
-/* ================================= 
-  Creative Credits Page
-==================================== */
-.credits,
-.page-links {
-  font-weight: 700;
-}
-
-.creative-credits .credits:nth-of-type(2n) {
-  margin-top: 3rem;
-}
-
-.credits p {
-  margin: 0.5rem 0;
-}
+} 
 
 /* ================================= 
   Footer
@@ -856,11 +581,3 @@ footer ul li{
 .privacy a {
   text-decoration: underline;
 }
-
-/* ================================= 
-  Media Queries 768px
-==================================== */
-
-/* ================================= 
-  Media Queries 1080px
-==================================== */

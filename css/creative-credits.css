@@ -1,0 +1,19 @@
+/* ================================= 
+  Creative Credits Page
+==================================== */
+.credits,
+.page-links {
+  font-weight: 700;
+}
+
+.svg-container svg {
+  width: 100%;
+}
+
+.credits:nth-of-type(2n) {
+  margin-top: 3rem;
+}
+
+.credits p {
+  margin: 0.5rem 0;
+}

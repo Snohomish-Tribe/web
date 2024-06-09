@@ -1,0 +1,29 @@
+/* ================================= 
+  Events Page
+==================================== */
+section {
+  padding-top: 1.5rem;
+}
+  
+.row-3,
+.lesson {
+  margin-bottom: 3rem;
+}
+
+.date {
+  padding-top: 0.5rem;
+}
+  
+.date p {
+  margin: 0.5rem 0;
+  padding-left: 0.5rem;
+}
+  
+.date svg {
+  z-index: -1;
+}
+  
+.event-name p:last-child {
+  width: 75%;
+  line-height: 1.75rem;
+}

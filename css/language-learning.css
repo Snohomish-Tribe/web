@@ -1,0 +1,23 @@
+/* ================================= 
+  Language Learning Page
+==================================== */
+.row-1 p {
+  font-weight: 600;
+}
+
+.row-3 .btn {
+  margin-right: 2rem;
+}
+
+.audio-file::after {
+  content: ">";
+  padding-left: 0.5rem;
+}
+
+.lesson p {
+  font-weight: 400;
+}
+
+.row-4 .btn-container {
+  margin-top: 2rem;
+}

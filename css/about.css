@@ -1,0 +1,88 @@
+/* ================================= 
+  About Page
+==================================== */
+/* =========== Banner Section =========== */
+.plant,
+.pebbles {
+  min-height: 60vh;
+}
+
+.banner p:first-child {
+  padding-top: 3rem;
+}
+
+/* ================================= 
+  Resilience and Surival
+==================================== */
+.row-1 h2 {
+  width: 70%;
+  line-height: 2.75rem;
+}
+  
+.row-1 p {
+  margin-bottom: 2.5rem;
+}
+  
+  /* ================================= 
+    Tribal Council
+  ==================================== */
+.row-2 ul li {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+  
+.row-2 svg {
+  display: none;
+}
+  
+/* ================================= 
+  Timeline
+==================================== */
+.box-1 {
+  width: 15%; 
+}
+
+.box-1 .line {
+  height: 2rem;
+}
+  
+  /* ================================= 
+    Photo Gallery
+  ==================================== */
+.about .row-4 { 
+  padding: 2.5rem 0; 
+  min-height: 65vh;
+}
+  
+.row-4 h2 {
+  width: 60%;
+  margin-right: auto; 
+  margin-left: auto;
+}
+  
+.carousel {
+  justify-content: center;
+}
+  
+.carousel svg {
+  margin: auto;
+}
+  
+.breadcrumbs {
+  padding: 1rem 0; 
+  justify-content: space-around;
+}
+  
+.crumb {
+  border-radius: 100%;
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: #fff;
+}
+  
+/* ================================= 
+  About Page Bottom section 
+==================================== */
+.row-5 .container p:last-child {
+  padding-top: 1rem;
+}
