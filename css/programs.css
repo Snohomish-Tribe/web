@@ -2,16 +2,20 @@
   Unique Programs 
 ==================================== */
 .row-1 p {
-    margin-bottom: 2rem;
-  }
+  margin-bottom: 2rem;
+}
+
+.mn-arrw {
+  top: -35%;
+}  
   
-.row-1 .img-container {
-    margin-bottom: 2rem;
-  }
+.img-container {
+  margin: 2rem 0;
+}
   
-  /* ================================= 
-    Emergency Food Assistance 
-  ==================================== */
+/* ================================= 
+  Emergency Food Assistance 
+==================================== */
 .btn-container {
   margin-top: 1.5rem;
 }
@@ -20,13 +24,23 @@
 .btn {
   padding: 1rem;
 }
-  
-.box-1 p:first-child,
-.box-1 p:nth-of-type(2) {
-  margin-bottom: 0;
+/* ================================= 
+  Our Affiliates
+==================================== */  
+.box-1 h3:nth-of-type(1) {
+  margin-top: 1.5rem
 }
-  
-.box-1 p:nth-of-type(2) {
+
+.box-1 h3:nth-of-type(2),
+.box-1 p:nth-of-type(2)  {
   margin-top: 0.5rem;
 }
-  
+
+.box-1 h3:nth-of-type(1),
+.box-1 h3:nth-of-type(2) {
+  margin-bottom: 0;
+}
+
+.box-2 {
+  margin-top: 3rem;
+}

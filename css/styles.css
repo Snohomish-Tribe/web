@@ -134,7 +134,7 @@ footer svg {
 
 .events-btn,
 .membership-btn, 
-.about .row-3 h2{
+.about .row-3 h2 {
   margin-top: 1rem;
 }
 
@@ -241,6 +241,13 @@ textarea {
   background-color: #9E3333;
 }
 
+.bg-svg {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;  
+}
+
 /* =========== Display  =========== */
 svg,
 img,
@@ -255,6 +262,7 @@ form select,
 .events-btn,
 .membership-btn,
 .btn-container a, 
+.programs .row-3 .btn,
 .membership .row-4 a,
 .language .row-3 a,
 .language .row-4 a {
@@ -325,6 +333,7 @@ a,
 h2,
 .home h4,
 .programs h1, 
+.programs h3,
 .membership h1, 
 .membership h3,
 .language .row-3 h3, 
