@@ -5,6 +5,11 @@
   font-weight: 600;
 }
 
+.row-3 {
+  background-image: url("/images/bg-moons.svg");
+  background-size: contain;
+}
+
 .row-3 .btn {
   margin-right: 2rem;
 }
