@@ -4,4 +4,11 @@
 h1 {
   font-size: 5rem;
 }
+
+.row-1 {
+  min-height: 70vh;
+}
   
+.bg-svg {
+  top: -30%;
+}
