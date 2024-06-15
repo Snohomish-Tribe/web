@@ -24,8 +24,15 @@ h1 {
 }
   
 .moons {
-  top: 0; 
   height: 50vh;
+  right: 40%;
+  top: 66%;
+}
+
+.row-1 .btn,
+.row-1 .svg-container svg:last-child,
+.cm-arrw {
+  display: none;
 }
 
 .row-1 .bt-point h4,
@@ -36,10 +43,6 @@ h1 {
 .row-1 .svg-container {
   display: flex;
   margin: 2rem 0;
-}
-
-.row-1 .svg-container svg:last-child {
-  display: none;
 }
 
 .row-1 ul p {
@@ -65,16 +68,16 @@ h1 {
 .row-2 .bt-point .fira-sans {
   margin-left: auto;
 }
-  
-.cm-arrw {
-  display: none;
-}
 
 /* ================================= 
-    Ancestral Territory
-  ==================================== */
+  Ancestral Territory
+==================================== */
 .row-3 h2 {
   margin: 0;
+}
+
+.row-3 .svg-container .arrows {
+  width: 100%;
 }
 
 .row-3 .svg-container svg,
@@ -89,13 +92,165 @@ h1 {
   left: 0; 
 }
 
-  /* ================================= 
-    Sovereign Nation 
-  ==================================== */
+/* ================================= 
+  Sovereign Nation 
+==================================== */
 .row-4 .img-container img {
   width: unset;
 }
 
 /* ================================= 
-  Media Queries 768px
+  MEDIA QUERIES 768px 
 ==================================== */
+@media (min-width: 768px) {
+/* =========== Intro =========== */
+  .intro-section .container {
+    width: 70%;
+  }
+
+/* =========== Guided By Our Values =========== */
+  .row-1 .svg-container svg:last-child {
+    display: block;
+  }
+
+  .row-1 .container, 
+  .row-2 .container, 
+  .row-3 .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .col-1,
+  .col-2 {
+    width: 47%;
+  }
+
+  .col-1 .details,
+  .col-2 .fira-sans {
+    font-weight: 400;
+    font-size: 1rem;
+  }
+
+  .col-2 {
+    margin-top: 0;
+  }
+
+  .row-1 h2 {
+    font-size: 2.25rem;
+    text-align: left;
+    margin-bottom: 1.5rem;
+    line-height: 2.5rem;
+  }
+
+  .row-1 .svg-container {
+    margin: 0;
+  }
+
+  .row-1 .btn {
+    display: inline-block;
+  }
+
+  .moons {
+    right: 30%;
+    top: 65%;
+  }
+
+/* =========== Standing Strong =========== */
+  .row-2 .container {
+    flex-direction: row-reverse;
+  }
+
+  .row-2 h2 {
+    margin: 1rem 0;
+  }
+  .row-2 .col-1 {
+    width: 55%;
+  } 
+
+  .row-2 .col-2 {
+    width: 45%;  
+    padding-right: 2rem;
+  }
+
+  .cm-arrw {
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    transform: scale(1.25);
+  }
+
+  .row-2 .img-container {
+    height: 100%;
+  }
+
+  .row-2 .img-container {
+    position: relative;
+    z-index: 1;
+    margin-top: 50%;
+  }
+
+  .row-2 img {
+    object-fit: contain;
+  }
+
+  .row-2 ul {
+    display: flex;
+  }
+
+  .row-2 .col-1 p {
+    font-size: 1rem;
+  }
+
+  .row-2 .bt-point >div:last-child{
+    margin-left: auto;
+    width: 85%;
+  }
+
+  .events-btn {
+    background-color: #2D302C;
+    color: #FFFBE4;
+    border-color: #FFFBE4;;
+  }
+
+  .arrw-wrap {
+    width: 30%;
+  }
+
+  /* =========== Ancestral Territory =========== */
+  .row-3 {
+    display: flex;
+  }
+
+  .row-3 .bg-container {
+    margin: auto 0;
+  }
+
+  .row-3 h2 {
+    text-align: left;
+  }
+
+  .trigon:first-child {
+    display: none;
+  }
+
+  .row-4 .container{
+    width: 70%;
+  }
+
+/* =========== Sovereign Nation =========== */
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .wrapper .container:first-child {
+    margin-top: auto;
+  }
+
+  .wrapper .container:last-child {
+    margin-bottom: auto;
+  }
+}

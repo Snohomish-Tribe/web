@@ -180,15 +180,15 @@ footer svg {
 .main-nav,
 .nav,
 .container,
+.moons,
 .years,
 .svg-container svg,
 .carousel img {
-width: 90%;
+  width: 90%;
 }
 
 .bg-container,
 img,
-.moons,
 .title, 
 .home .row-1 .svg-container svg,
 .home .row-2 img,
@@ -436,6 +436,7 @@ Home Page-Standing Strong
   display: none;
 }
 
+.row-1 .btn,
 .events-btn,
 .membership-btn,
 .language .row-3 .btn,
@@ -559,4 +560,52 @@ footer ul li{
 
 .privacy {
   padding: 1rem 0; 
+}
+
+/* ================================= 
+  MEDIA QUERIES 768px 
+==================================== */
+@media (min-width: 768px) {
+  .nav,
+  .main-nav,
+  .nav,
+  .container
+  /* .moons,
+  .years,
+  .svg-container svg,
+  .carousel img  */
+  {
+    width: 95%;
+  }
+
+  .page-links,
+  .privacy, 
+  .privacy-links,
+  .copyright {
+    display: flex;
+  }
+
+  .page-links {
+    justify-content: space-between;
+    width: 50%;
+    margin: 1.5rem auto 3rem;
+  }
+
+  .privacy { 
+    flex-direction: row-reverse; 
+    justify-content: space-between;
+  }
+
+  .privacy-links,
+  .copyright {
+    gap: 1rem;
+  }
+
+  .copyright {
+    align-items: center;
+  }
+
+  .copyright p {
+    margin: 0;
+  }
 }
