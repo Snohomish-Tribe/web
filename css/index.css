@@ -92,6 +92,10 @@ h1 {
   left: 0; 
 }
 
+.row-3 .trigon:nth-of-type(2){
+  display: none;
+}
+
 /* ================================= 
   Sovereign Nation 
 ==================================== */
@@ -235,10 +239,13 @@ h1 {
     display: none;
   }
 
+  .row-3 .trigon:nth-of-type(2){
+    display: block;
+  }
+  
   .row-4 .container{
     width: 70%;
   }
-
 /* =========== Sovereign Nation =========== */
   .wrapper {
     display: flex;

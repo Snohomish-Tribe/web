@@ -140,7 +140,7 @@ footer svg {
 
 .bt-point, 
 .home .row-4 .svg-container,
-.about .row-3 h4,
+/* .about .row-3 h4, */
 .programs .row-2 li, 
 .membership .row-2 li {
   margin-bottom: 1rem;
@@ -214,7 +214,7 @@ textarea {
 
 .line {
   border-left: 3px solid black;
-  height: 6.5rem;
+  height: 9rem;
   width: 3px
 }
 
@@ -475,17 +475,7 @@ Home Page-Standing Strong
   min-height: 100vh; 
 }
 
-/* ================================= 
-  About Page-Banner Section
-==================================== */
-.plant,
-.pebbles {
-  min-height: 60vh;
-}
-
-/* ================================= 
-  Photo Gallery
-==================================== */
+/* =========== Photo Gallery =========== */
 .about .row-4 h2,
 .carousel .img-container {
   margin-bottom: 2rem;

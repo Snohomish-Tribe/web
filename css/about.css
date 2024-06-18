@@ -1,10 +1,14 @@
 /* ================================= 
   About Page
 ==================================== */
+.banner p:last-child,
+.row-1 p {
+  font-weight: 300;
+}
+
 /* =========== Banner Section =========== */
-.plant,
-.pebbles {
-  min-height: 60vh;
+.plant {
+  height: 60vh;
 }
 
 .banner p:first-child {
@@ -14,6 +18,10 @@
 /* ================================= 
   Resilience and Surival
 ==================================== */
+.row-1 {
+  overflow: hidden;
+}
+
 .row-1 h2 {
   width: 70%;
   line-height: 2.75rem;
@@ -27,21 +35,25 @@
   display: none;
 }
   
-  /* ================================= 
-    Tribal Council
-  ==================================== */
+/* ================================= 
+  Tribal Council
+==================================== */
 .row-2 ul li {
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
 }
-  
+
 .row-2 svg {
   display: none;
 }
-  
+
 /* ================================= 
   Timeline
 ==================================== */
+.row-3 .container p:first-child {
+  font-weight: 500;
+}
+
 .box-1 {
   width: 15%; 
 }
@@ -52,12 +64,12 @@
 
 .svg-container {
   display: flex;
-  }
-  
+}
+
 .svg-container svg:nth-of-type(6), 
 .svg-container svg:nth-of-type(7), 
 .svg-container svg:nth-of-type(8) {
-    display: none;
+  display: none;
 }
   
   /* ================================= 
@@ -67,36 +79,201 @@
   padding: 2.5rem 0; 
   min-height: 65vh;
 }
-  
+
 .row-4 h2 {
   width: 60%;
   margin-right: auto; 
   margin-left: auto;
 }
-  
+
 .carousel {
   justify-content: center;
 }
-  
+
 .carousel svg {
   margin: auto;
 }
-  
+
 .breadcrumbs {
   padding: 1rem 0; 
   justify-content: space-around;
 }
-  
+
 .crumb {
   border-radius: 100%;
   width: 0.75rem;
   height: 0.75rem;
   background-color: #fff;
 }
-  
+
 /* ================================= 
   About Page Bottom section 
 ==================================== */
 .row-5 .container p:last-child {
   padding-top: 1rem;
+}
+
+/* ================================= 
+  MEDIA QUERIES 768px 
+==================================== */
+@media (min-width: 768px) {
+  .row-1 .bg-container, 
+  .row-1 .container,
+  .row-1 .col-1,
+  .row-2 .container,
+  .row-2 .col-2 {
+    display: flex; 
+  }
+
+  .row-1 .bg-container, 
+  .row-1 .col-1,
+  .row-2 .svg-container {
+    position: relative;
+  }
+
+  .moon
+  /* .col-2 svg  */
+  {
+    position: absolute;    
+  }
+
+  .bg-container, 
+  .row-2 .container {
+    justify-content: space-between;
+  }
+
+  .row-1 .col-1,
+  .row-2 .col-2 {
+    width: 50%;
+  }
+
+  .row-1 .col-2,
+  .row-2 .col-1  {
+    width: 45%;
+  }  
+
+  /* =========== Banner =========== */
+  .plant {
+    height: 45vh;
+  }
+
+  .banner p:last-child {
+    width: 75%;
+  }
+
+/* =========== Resilience and Survival =========== */
+  .row-1 .container {
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .row-1 .col-1 {
+    flex-direction: column;
+    z-index: 1;
+  }
+
+  .row-1 .col-1 svg {
+    order: 1;
+  }
+
+  .row-1 .col-1 h2 {
+    order: 2;
+    margin: 1.5rem 0;
+  }
+
+  .row-1 .col-1 p {
+    order: 3;
+    margin-top: 0;
+  }
+    
+  .row-1 .col-1 h2 {
+    margin-bottom: 1.25rem;
+  }
+
+  .moon {
+    display: block;
+    top: 0;
+    left: -10%;
+    z-index: 0;
+  }  
+
+/* =========== Tribal Council =========== */
+.row-2 .col-2 {
+  flex-direction: column;
+}
+
+.row-2 .container {
+  flex-direction: row-reverse;
+}
+
+.row-2 .svg-container {
+  margin: auto 0;
+}
+
+.row-2 img {
+  z-index: 1;
+}
+
+.row-2 .col-2 svg {
+  display: block;
+  top: -10%;
+  width: 100%;
+  transform: rotate(180deg) scale(1.125);
+  z-index: 0;
+}
+
+/* =========== Timeline =========== */
+  .svg-container svg:nth-of-type(6), 
+  .svg-container svg:nth-of-type(7), 
+  .svg-container svg:nth-of-type(8) {
+    display: block;
+  }
+
+  .row-3 .svg-container {
+    width: 75%;
+    margin: 0 auto;
+  }
+
+  .row-3 .col-1 p:last-child {
+    width: 75%;
+    margin: 1.5rem auto 0;
+  }
+
+  .row-3 .col-2 {
+    width: 75%;
+    margin-top: 5rem;
+    margin-left: auto;
+  }
+  /* =========== Timeline =========== */
+  .row-4 .container {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  /* =========== Bottom section =========== */
+  .row-5 .wrapper {
+    height: 100%;
+  }
+
+  .row-5 h2 {
+    margin-bottom: 0;
+  }
+  .row-5 h3 {
+    margin: 1.5rem 0;
+  }
+
+  .row-5 .container {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .row-5 p {
+    line-height: 1.75rem;
+  }
 }
