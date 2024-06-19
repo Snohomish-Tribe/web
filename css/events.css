@@ -13,7 +13,7 @@ section {
 }
 
 .container > p:last-of-type {
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .date {
@@ -36,6 +36,10 @@ section {
   MEDIA QUERIES 768px 
 ==================================== */
 @media (min-width: 768px) {
+  .container > p:last-of-type {
+    margin-bottom: 4rem;
+  }
+  
   .row {
     display: flex;
     padding: 2.5rem 0;
