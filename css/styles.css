@@ -127,8 +127,7 @@ footer svg {
   margin-top: 0;
 }
 
-.home .row-2 ul,
-.event-name  {
+.home .row-2 ul {
   margin-top: 2.5rem;
 }
 
@@ -140,7 +139,6 @@ footer svg {
 
 .bt-point, 
 .home .row-4 .svg-container,
-/* .about .row-3 h4, */
 .programs .row-2 li, 
 .membership .row-2 li {
   margin-bottom: 1rem;
@@ -294,7 +292,6 @@ a,
 .about .row-2,
 .about .row-4,
 .about .row-5,  
-.date,
 .programs .row-3,
 .membership .row-1,
 .membership .row-4 h2,
@@ -350,14 +347,12 @@ h2,
 .moons,
 .wrapper,
 .trigon, 
-.inner-container,
-.date svg {
+.inner-container {
   position: absolute;
 } 
 
 .title,
-.wrapper,
-.date svg {
+.wrapper {
   top: 0;
 }
 
