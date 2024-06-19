@@ -50,20 +50,17 @@
 /* ================================= 
   Timeline
 ==================================== */
+.row-3 .col-2 {
+  width: 90%;
+  margin: 0 auto;
+}
+
 .row-3 .container p:first-child {
   font-weight: 500;
 }
 
-.box-1 {
-  width: 15%; 
-}
-
-.box-1 .line {
-  height: 2rem;
-}
-
 .svg-container {
-  display: flex;
+  display: flex;  
 }
 
 .svg-container svg:nth-of-type(6), 
@@ -71,6 +68,37 @@
 .svg-container svg:nth-of-type(8) {
   display: none;
 }
+
+.item-row-1 .line-wrap:first-child .line {
+  height: 2rem;
+}
+
+.item-title {
+  display: flex;
+}
+
+.icn {
+  width: 15%;
+}
+
+.item-title h4 {
+  width: 85%;
+  margin: 0;
+}
+
+.item-title p {
+  display: none;
+}
+
+.item .line-wrap{
+  margin: 0.5rem 0;
+}
+
+.item-content {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
   
   /* ================================= 
     Photo Gallery
@@ -241,11 +269,30 @@
   }
 
   .row-3 .col-2 {
-    width: 75%;
-    margin-top: 5rem;
-    margin-left: auto;
+    width: 60%;
+    margin: 5rem 0 0 auto;
+    padding-right: 1rem;
   }
-  /* =========== Timeline =========== */
+  
+  .item-title h4 {
+    display: none;
+  }
+
+  .item-title h4:first-of-type,
+  .item-title p {
+    display: block;
+  }
+
+
+  
+  .item-content {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  
+
+
+  /* =========== Photo Gallery =========== */  
   .row-4 .container {
     height: 80vh;
     display: flex;
