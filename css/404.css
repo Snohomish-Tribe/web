@@ -3,12 +3,69 @@
 ==================================== */
 h1 {
   font-size: 5rem;
+  margin-bottom: 0;
+  padding: 1rem;
 }
 
 .row-1 {
   min-height: 70vh;
 }
   
-.bg-svg {
-  top: -30%;
+.svg-container {
+  display: flex;
+  margin: 2rem 0;
+}
+
+.svg-container svg:nth-of-type(4),
+.svg-container svg:last-of-type {
+  display: none;
+}
+
+p {
+  margin-top: 2rem;
+  line-height: 2rem;
+}
+
+
+/* ================================= 
+  MEDIA QUERIES 768px 
+==================================== */
+@media (min-width: 768px) {
+
+  .row-1 {
+    overflow: hidden;
+  }
+
+  h1,
+  .svg-container{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  .bg-container {
+    position: relative;
+  }
+
+  .bg-svg {
+    position: absolute;
+    top: -20%; 
+    left: -15%;
+    width: 90%;
+    transform: rotate(65deg);
+  }
+  
+  .svg-container svg:nth-of-type(4),
+  .svg-container svg:last-of-type {
+    display: block;
+  }
+
+  p {
+    width: 65%;
+    margin: 0 auto;
+  }
 }
