@@ -1,0 +1,56 @@
+/* ================================= 
+  Credits Page
+==================================== */
+section {
+  height: 70vh;
+}
+
+h1 {
+  margin: 0;
+}
+
+.credits,
+.page-links {
+  font-weight: 700;
+}
+
+.svg-container svg {
+  width: 100%;
+  margin: 2rem 0;
+}
+
+.bg-svg {
+  top: 30%;  
+}
+
+.row-2 {
+  margin-top: 3rem;
+}
+
+.credits p {
+  margin: 0.5rem 0;
+}
+
+
+/* ================================= 
+  MEDIA QUERIES 768px 
+==================================== */
+@media (min-width: 768px) {
+  section {
+    height: 80vh
+  }
+
+  h1,
+  .row-1 p,
+  .row-2 p {
+    text-align: center;
+  }
+
+  .bg-svg {
+    width: 100%;
+    top: -15%;
+    right: 15%;
+    transform: rotate(250deg);
+  }
+
+}

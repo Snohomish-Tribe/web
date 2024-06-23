@@ -397,7 +397,7 @@ h2,
 
 /* =========== Underline ============= */
 .address,
-.creative-credits p a,
+.credits p a,
 .privacy a {
   text-decoration: underline;
 } 
