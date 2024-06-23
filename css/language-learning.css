@@ -1,10 +1,21 @@
 /* ================================= 
   Language Learning Page
 ==================================== */
+.mountain {
+  height: 50vh;
+}
+
 .row-1 p {
   font-weight: 600;
 }
 
+.row-1 svg,
+.row-3 svg,
+.row-4 svg {
+  display: none;
+}
+
+/* =========== Lessons =========== */
 .row-3 {
   background-image: url("/images/bg-moons.svg");
   background-size: contain;
@@ -25,4 +36,135 @@
 
 .row-4 .btn-container {
   margin-top: 2rem;
+}
+
+/* ================================= 
+  MEDIA QUERIES 768px 
+==================================== */
+@media (min-width: 768px) {
+  .mountain {
+    height: 40vh; 
+  }
+
+  .row-1 {
+    overflow: hidden;
+  }
+
+  .row-1 .bg-container {
+    position: relative;
+  }
+
+  .row-1 .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: 1;
+    padding: 1rem;
+    position: relative;
+    /* height: 60vh; */
+  }
+
+  .row-1 .col-1 {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+  }
+
+  .row-1 h2 {
+    margin-bottom: 0;
+    font-weight: 100;
+  }
+
+  .row-1 .col-1 {
+    position: relative;    
+  }
+
+  .row-1 .col-1 .font-xsm {
+    font-weight: 500;
+    font-size: 1rem;
+  }
+
+  .row-1 .img-container {
+    width: 55%
+  }
+
+  .row-1 svg {
+    display: block;
+    position: absolute;
+    top: -15%;
+    right: 55%;
+    width: 80%;
+  }
+
+  /* =========== Lessons =========== */
+  .row-3 {
+    background-image: none;
+  }
+
+  .full-lessons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+  
+  .lesson {
+    width: 47.5%;
+    position: relative;
+    z-index: 1;
+  }
+
+  .row-3 .container {
+    display: relative;
+  }
+
+  .row-3 .container svg {
+    display: block; 
+    position: absolute
+  }
+
+  .row-3 svg {
+    width: 60%;
+  }
+
+  .row-3 svg:first-of-type {
+    top: 0;
+    right: 0;
+  }
+
+  .row-3 svg:last-of-type {
+    bottom: 0;
+    left: 0;
+  }
+
+  /* =========== Learn More =========== */
+.row-4 {
+  overflow: hidden;
+}
+
+  .row-4 .container {
+    position: relative;
+  }
+
+  .row-4 svg {
+    display: block;
+  }
+
+  .row-4 p {
+    position: relative;
+    z-index: 1;
+  }
+
+  .row-4 svg:first-of-type {
+    width: 25%;
+  }
+
+  .row-4 svg:last-of-type {
+    width: 60%;
+    position: absolute;
+    bottom: -30%;
+    right: 0;
+  }
 }

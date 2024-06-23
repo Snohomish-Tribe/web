@@ -54,7 +54,7 @@ a {
 .intro-section .container,
 /* .programs .bg-container .container, */
 /* .membership .bg-container .container,  */
-.language .bg-container .container, 
+/* .language .bg-container .container,  */
 .contact .bg-container .container {
   flex-direction: column;
 }
@@ -498,9 +498,16 @@ Programs, Membership, Language, Contact pages
   height: 100%; 
 }
 
+.membership .banner .container,
+.language .banner .container {
+  flex-direction: column;
+  justify-content: center;
+}
+
+
 .programs .bg-container .container p:first-child,
 /* .membership .bg-container .container p:first-child, */
-.language .bg-container .container p:first-child,
+/* .language .bg-container .container p:first-child, */
 .contact .bg-container .container p:first-child {
   margin-top: auto;  
 }
@@ -508,7 +515,7 @@ Programs, Membership, Language, Contact pages
 .programs .bg-container .container p:last-child,
 /* .membership .bg-container .container p:last-child, 
 .membership .bg-container .container p:first-child,*/
-.language .bg-container .container p:last-child, 
+/* .language .bg-container .container p:last-child,  */
 .contact .bg-container .container p:last-child {
   margin-bottom: auto;  
 }
