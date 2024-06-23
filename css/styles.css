@@ -505,18 +505,18 @@ Programs, Membership, Language, Contact pages
 }
 
 
-.programs .bg-container .container p:first-child,
-/* .membership .bg-container .container p:first-child, */
-/* .language .bg-container .container p:first-child, */
-.contact .bg-container .container p:first-child {
+.programs .bg-container .container p:first-child
+/* .membership .bg-container .container p:first-child, 
+.language .bg-container .container p:first-child, 
+.contact .bg-container .container p:first-child*/ {
   margin-top: auto;  
 }
 
-.programs .bg-container .container p:last-child,
+.programs .bg-container .container p:last-child
 /* .membership .bg-container .container p:last-child, 
 .membership .bg-container .container p:first-child,*/
-/* .language .bg-container .container p:last-child,  */
-.contact .bg-container .container p:last-child {
+/* .language .bg-container .container p:last-child, 
+.contact .bg-container .container p:last-child */ {
   margin-bottom: auto;  
 }
 

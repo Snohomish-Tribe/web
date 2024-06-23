@@ -1,16 +1,28 @@
 /* ================================= 
   Contact Page
 ==================================== */
+.top-img {
+  height: 50vh;
+}
+
 .contact .address, 
 .contact .row-2 {
   font-weight: 200;
+}
+
+.banner .container {
+  justify-content: center;
+}
+
+.banner p:first-of-type {
+  margin-bottom: 0;
 }
 
 label {
   margin-top: 1.5rem;
 }
 
-.contact .svg-container {
+.col-2 {
   display: none;
 }
 
@@ -23,10 +35,6 @@ textarea {
 
 select {
   padding-left: 0.5rem;
-}
-
-.form-group {
-  margin-top: 2rem;
 }
 
 .form-group input, 
@@ -52,7 +60,24 @@ button {
   line-height: 2rem;
 }
 
-/* .address,
-.creative-credits p a {
-  text-decoration: underline;
-} */
+/* ================================= 
+  MEDIA QUERIES 768px 
+==================================== */
+@media (min-width: 768px) {
+  .top-img {
+    height: 40vh;
+  }
+
+  .row-1 .container {
+    display: flex;
+  }
+
+  .col-1,
+  .col-2 {
+    width: 50%;
+  }
+
+  .col-2 {
+    display: block;
+  }
+}
