@@ -3,7 +3,7 @@ Home Page
 ==================================== */
 /* =========== Intro =========== */
 h1 {
-  font-size: 4.5rem;
+  font-size: 4rem;
 }
   
 .bg-footer {
@@ -13,25 +13,43 @@ h1 {
 /* ================================= 
   Guided By Our Values 
 ==================================== */
+.row-1 {
+  overflow: hidden;
+}
+
 .row-1 h2 {
   margin-bottom: 1.75rem;
-  font-size: 2.75rem;
+  font-size: 2rem;
+}
+
+.row-1 .bg-container {
+  position: relative;
 }
 
 .row-1 .details {
   font-weight: 600;
   margin-bottom: 2rem;
 }
-  
-.moons {
-  height: 50vh;
-  right: 40%;
-  top: 66%;
+
+.moon {
+  position: absolute;
+  width: 60%;
+}
+
+/* Upper Moon */
+.moon:first-of-type {
+  bottom: 10%;
+  left: -40%;
+}
+/* Lower Moon */
+.moon:last-of-type {
+  bottom: -10%;
+  right: 0; 
 }
 
 .row-1 .btn,
 .row-1 .svg-container svg:last-child,
-.cm-arrw {
+.tan-arrw {
   display: none;
 }
 
@@ -48,12 +66,37 @@ h1 {
 .row-1 ul p {
   font-size: 1.25rem;
 }
-  
+
+.row-1 .bt-pt {
+  border-left: 3px solid black;
+}
+
+.bt-pt {
+  padding-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.bt-pt:before {
+  left: -1.125rem;
+  position: absolute;
+  content: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iMzEiIHZpZXdCb3g9IjAgMCA0OCAzMSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEuNiAzMS4xOUMyLjQ5IDMwLjkzIDMuNCAzMC43MiA0LjI4IDMwLjQxQzExLjA5IDI3Ljk3IDE1LjQzIDIxLjI1IDE0LjczIDE0LjI5QzE0LjAxIDcuMjcwMDEgOC40OSAxLjU0MDAxIDEuMzcgMC40MzAwMTJDMC45MSAwLjM2MDAxMiAwLjQ1IDAuMzAwMDEyIDAgMC4yMDAwMTJDNS43NiAtMC4zNTk5ODggMTEuNDEgMC4yMzAwMTIgMTYuNzMgMi41MzAwMUMxOS45MiAzLjkxMDAxIDIzLjAxIDUuNjEwMDEgMjUuOTcgNy40NDAwMUMzMC4zIDEwLjExIDM0LjY0IDEyLjcxIDM5LjYxIDE0QzQyLjU5IDE0Ljc3IDQ1LjYyIDE1LjM3IDQ4IDE1LjlDNDUuMzkgMTYuNSA0Mi4xNCAxNy4xNSAzOC45NSAxOC4wMUMzNC44NCAxOS4xMSAzMS4xIDIxLjA4IDI3LjQ0IDIzLjIxQzIzLjgxIDI1LjMyIDIwLjE4IDI3LjQyIDE2LjE5IDI4Ljc5QzEyLjY0IDMwLjAxIDkuMDEgMzAuNzcgNS4yNiAzMS4wMkM0LjkxIDMxLjA0IDQuNTcgMzEuMTMgNC4yMyAzMS4xOEgxLjZWMzEuMTlaIiBmaWxsPSJibGFjayIvPgo8L3N2Zz4K'); 
+  background-color: #FFFBE4;
+}
+
+.bt-pt h4 {
+  margin-bottom: 1.25rem;  
+}
+
+.bt-pt p {
+  font-weight: 300;
+}
+
 /* ================================= 
   Standing Strong
 ==================================== */
 .row-2 {
-  min-height: 100vh;
+  padding: 3rem 0;
 }
 
 .row-2 h2 {
@@ -61,44 +104,88 @@ h1 {
   text-align: left;
 }
 
-.row-2 .bt-point .word-wrap {
+.row-2 ul {
+  margin-top: 2.5rem;
+}
+
+.item {
+  /* display: flex; */
+  position: relative;
+  padding-left: 2.5rem;
+}
+
+.item svg {
+  width: 25%;
+  display: none;
+}
+
+.row-2 h4 {
+  margin: 0 0 0.75rem 1rem;
+}
+
+.row-2 h4:before {
+  content: url('data:image/svg+xml;base64,ICAgICAgICAgICAgICAgICAgICAgICAgPHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCA0OCAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZD0iTTEuNiAzMS42OUMyLjQ5IDMxLjQzIDMuNCAzMS4yMiA0LjI4IDMwLjkxQzExLjA5IDI4LjQ3IDE1LjQzIDIxLjc1IDE0LjczIDE0Ljc5QzE0LjAxIDcuNzcwMDEgOC40OSAyLjA0MDAxIDEuMzcgMC45MzAwMTJDMC45MSAwLjg2MDAxMiAwLjQ1IDAuODAwMDEyIDAgMC43MDAwMTJDNS43NiAwLjE0MDAxMiAxMS40MSAwLjczMDAxMiAxNi43MyAzLjAzMDAxQzE5LjkyIDQuNDEwMDEgMjMuMDEgNi4xMTAwMSAyNS45NyA3Ljk0MDAxQzMwLjMgMTAuNjEgMzQuNjQgMTMuMjEgMzkuNjEgMTQuNUM0Mi41OSAxNS4yNyA0NS42MiAxNS44NyA0OCAxNi40QzQ1LjM5IDE3IDQyLjE0IDE3LjY1IDM4Ljk1IDE4LjUxQzM0Ljg0IDE5LjYxIDMxLjEgMjEuNTggMjcuNDQgMjMuNzFDMjMuODEgMjUuODIgMjAuMTggMjcuOTIgMTYuMTkgMjkuMjlDMTIuNjQgMzAuNTEgOS4wMSAzMS4yNyA1LjI2IDMxLjUyQzQuOTEgMzEuNTQgNC41NyAzMS42MyA0LjIzIDMxLjY4SDEuNlYzMS42OVoiCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZmlsbD0iI0ZGRkJFNCIgLz4KICAgICAgICAgICAgICAgICAgICAgICAgPC9zdmc+');
+  position: absolute;
+  left: 0;
+}
+
+
+.row-2 .item p {
+  margin-top: 0; 
+}
+
+/* .row-2 .item:first-of-type {
+  margin-bottom: 1rem;
+} */
+
+/* .row-2 .bt-point .word-wrap {
   margin-right: 0;
 }
 
 .row-2 .bt-point .fira-sans {
   margin-left: auto;
-}
+} */
 
 /* ================================= 
   Ancestral Territory
 ==================================== */
-.row-3 h2 {
-  margin: 0;
-}
-
-.row-3 .svg-container .arrows {
+/* .row-3 .svg-container .arrows {
   width: 100%;
+} */
+
+.row-3 {
+  overflow: hidden;
 }
 
-.row-3 .svg-container svg,
-.arrows,
+.row-3 .svg-container {
+  margin-top: 1.25rem;
+}
+
+.row-3 p {
+  font-weight: 400;
+}
+
 .row-4 .bg-container .container:last-child {
   margin-top: 2rem; 
 }
 
 .trigon {
   z-index: -1;
-  top: -50%;
-  left: 0; 
+  top: -10%;
 }
 
-.row-3 .trigon:nth-of-type(2){
+.row-3 .trigon:last-of-type,
+.row-3 .container svg:last-of-type {
   display: none;
 }
 
 /* ================================= 
   Sovereign Nation 
 ==================================== */
+.row-4 .svg-container {
+  margin-bottom: 2rem;
+}
+
 .row-4 .img-container img {
   width: unset;
 }
@@ -112,21 +199,64 @@ h1 {
     width: 70%;
   }
 
-/* =========== Guided By Our Values =========== */
-  .row-1 .svg-container svg:last-child {
+  .row-1 .svg-container svg:last-child,
+  .tan-arrw, 
+  .row-3 .trigon:nth-of-type(2) {
     display: block;
+  }
+
+/* =========== Guided By Our Values =========== */
+    /* Upper Moon */
+  .moon:first-of-type {
+    /* bottom: -40%; */
+    top: 30%;
+    left: -10%;
+  }
+  /* Lower Moon */
+  .moon:last-of-type {
+    bottom: -50%;
+    right: 0; 
+  }
+
+  .btn {
+    position: relative;
+    z-index: 1;
+  }
+
+  .bt-pt:before {
+    left: -1.5rem;
   }
 
   .row-1 .container, 
   .row-2 .container, 
-  .row-3 .container {
+  .row-2 ul,
+  .row-3,  
+  .row-3 .container,
+  .wrapper {
     display: flex;
-    justify-content: space-between;
+  }
+
+  .row-1 .container,
+  .row-2 .container,
+  .row-3 .container {
+    justify-content: space-between;    
+  }
+
+  .row-1 h4 {
+    margin-bottom: 0.75rem;
+  }
+
+  .row-1 .container {
+    min-height: 70vh;
+  }
+
+  .row-3 .container {
+    padding: 3rem 0;
   }
 
   .col-1,
   .col-2 {
-    width: 47%;
+    width: 47.5%;
   }
 
   .col-1 .details,
@@ -146,6 +276,7 @@ h1 {
     line-height: 2.5rem;
   }
 
+
   .row-1 .svg-container {
     margin: 0;
   }
@@ -154,9 +285,8 @@ h1 {
     display: inline-block;
   }
 
-  .moons {
-    right: 30%;
-    top: 65%;
+  .bt-pt {
+    padding-bottom: 0.25rem;
   }
 
 /* =========== Standing Strong =========== */
@@ -167,40 +297,35 @@ h1 {
   .row-2 h2 {
     margin: 1rem 0;
   }
+
   .row-2 .col-1 {
-    width: 55%;
+    width: 50%;
   } 
 
   .row-2 .col-2 {
     width: 45%;  
-    padding-right: 2rem;
+    margin-top: 10%;
   }
 
-  .cm-arrw {
-    display: block;
+  .row-2 ul {
+    margin-top: 1.5rem;
+  }
+
+  .tan-arrw {
     width: 100%;
     position: absolute;
     top: 0;
     z-index: -1;
-    transform: scale(1.25);
-  }
-
-  .row-2 .img-container {
-    height: 100%;
+    transform: scale(1.125);
   }
 
   .row-2 .img-container {
     position: relative;
     z-index: 1;
-    margin-top: 50%;
   }
 
   .row-2 img {
     object-fit: contain;
-  }
-
-  .row-2 ul {
-    display: flex;
   }
 
   .row-2 .col-1 p {
@@ -218,46 +343,149 @@ h1 {
     border-color: #FFFBE4;;
   }
 
-  .arrw-wrap {
+  /* .arrw-wrap {
     width: 30%;
-  }
+  } */
 
   /* =========== Ancestral Territory =========== */
-  .row-3 {
-    display: flex;
-  }
-
   .row-3 .bg-container {
     margin: auto 0;
   }
 
   .row-3 h2 {
     text-align: left;
+    font-size: 2.25rem;
   }
+
+  /* .row-3 .svg-container svg {
+    margin-right: auto;
+    margin-left: 0;
+  } */
+
+  .row-3 .svg-container {
+    margin: 1rem;
+  }
+
+  .row-3 .svg-container svg:first-of-type {
+    display: none;
+  }
+
+  .row-3 .svg-container svg:last-of-type {
+    display: block;
+    width: 100%;
+  }
+
+  .home .row-3 p {
+    line-height: 1.75rem;
+    font-weight: 300;
+    margin-top: 0;
+    font-size: 1.125rem;
+  }
+
 
   .trigon:first-child {
     display: none;
   }
 
-  .row-3 .trigon:nth-of-type(2){
-    display: block;
+  /* =========== Sovereign Nation =========== */
+  .row-4 .bg-container {
+    height: 100vh; 
   }
+
+   /* .row-4 img {
+   height: 100%;
+    position: absolute;
+  } */
   
   .row-4 .container{
     width: 70%;
   }
-/* =========== Sovereign Nation =========== */
+
   .wrapper {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     height: 100%;
   }
 
-  .wrapper .container:first-child {
+  .row-4 h2 {
+    margin: 1.125rem 0;
+  }
+
+  /* .wrapper .container:first-child {
     margin-top: auto;
   }
 
   .wrapper .container:last-child {
     margin-bottom: auto;
+  } */
+}
+
+/* ================================= 
+  MEDIA QUERIES 1024px 
+==================================== */
+@media (min-width: 1024px) {
+  h1 {
+    margin-top: 2rem;
+  }
+
+  .bg-footer {
+    width: 50%;
+    margin: auto auto 0; 
+  }
+
+  .col-1 .svg-container {
+    display: inline-flex;
+    gap: 1rem;
+  }
+
+  .moon {
+    width: 40%; 
+  }
+
+  /* Upper Moon */
+  .moon:first-of-type {
+    bottom: -10%;
+    left: -5%;
+  }
+  /* Lower Moon */
+  .moon:last-of-type {
+    bottom: -80%;
+    right: 0; 
+  }
+
+  .col-1 .btn {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+
+@media (min-width: 1024px) {
+  .bg-footer {
+    width: 60%;
+  }
+
+  .row-1 .col-1,
+  .row-1 .col-2 {
+    height: 50vh;
+    margin: auto 0;
+  }
+
+  .row-1 .svg-container {
+    width: 65%;
+  }
+
+  .col-1 .btn {
+    width: max-content;
+  }
+
+  .col-2 {
+    margin-bottom: 0;
+  }
+
+  .moon:first-of-type {
+    top:-10%;
+    width: 50%;
   }
 }

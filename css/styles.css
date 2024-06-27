@@ -1,6 +1,7 @@
 /* ================================= 
 BASE STYLES
 ==================================== */
+/* Roboto Font */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 /* Fira Sans Font */
@@ -127,10 +128,6 @@ footer svg {
   margin-top: 0;
 }
 
-.home .row-2 ul {
-  margin-top: 2.5rem;
-}
-
 .events-btn,
 .membership-btn, 
 .about .row-3 h2 {
@@ -138,7 +135,7 @@ footer svg {
 }
 
 .bt-point, 
-.home .row-4 .svg-container,
+/* .home .row-4 .svg-container, */
 .programs .row-2 li, 
 .membership .row-2 li {
   margin-bottom: 1rem;
@@ -178,7 +175,7 @@ footer svg {
 .main-nav,
 .nav,
 .container,
-.moons,
+/* .moons, */
 .years,
 .svg-container svg,
 .carousel img {
@@ -357,7 +354,7 @@ h2,
 }
 
 /* =========== Line-Height =========== */
-.home .row-1 h2, 
+/* .home .row-1 h2,  */
 .home .row-1 p,
 .home .row-2,
 .home .row-4 .container:first-child p, 
