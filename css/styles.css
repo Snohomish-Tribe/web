@@ -551,6 +551,10 @@ footer ul li{
   padding: 1rem 0; 
 }
 
+.page-links {
+  font-weight: 600;
+}
+
 /* ================================= 
   MEDIA QUERIES 768px 
 ==================================== */
@@ -559,9 +563,7 @@ footer ul li{
   .main-nav,
   .nav,
   .container
-  /* .moons,
-  .years,
-  .svg-container svg,
+  /* .years,
   .carousel img  */
   {
     width: 95%;
@@ -596,5 +598,13 @@ footer ul li{
 
   .copyright p {
     margin: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .page-links {
+    outline: 3px solid black;
+    width: max-content; 
+    gap: 3.5rem;
   }
 }
