@@ -409,6 +409,11 @@ h1 {
     height: 85vh;
   }
 
+  .container {
+    max-width: 1140px;    
+  }
+
+
   .bg-footer {
     width: 50%;
     margin: auto auto 0; 
@@ -542,10 +547,18 @@ h1 {
     }
 
   /* =========== Sovereign Nation =========== */
+  .row-4 .bg-container {
+    display: flex;
+    justify-content: center;
+  }
+
   .row-4 h2,
   .row-4 .container:first-of-type p:last-of-type  {
-    width: 60%;
     margin: inherit;
+  }
+
+  .row-4 .container {
+    width: 70%;
   }
 
   .row-4 h2 {

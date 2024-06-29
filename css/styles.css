@@ -603,7 +603,6 @@ footer ul li{
 
 @media (min-width: 1024px) {
   .page-links {
-    outline: 3px solid black;
     width: max-content; 
     gap: 3.5rem;
   }
