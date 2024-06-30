@@ -1,11 +1,20 @@
 /* ================================= 
   Events Page
 ==================================== */
-.two-moons {
+.moon {
   position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: -1;
+  width: 50%;
+}
+
+.moon:first-of-type {
+  top: 5%;
+  right: 7%;
+  transform: rotate(75deg);
+}
+
+.moon:last-of-type {
+  bottom: -5%; 
+  left: -10%; 
 }
 
 section {
@@ -36,6 +45,21 @@ section {
   MEDIA QUERIES 768px 
 ==================================== */
 @media (min-width: 768px) {
+  .bg-container {
+    overflow: hidden;
+  }
+
+  .moon:first-of-type {
+    top: 0;
+    right: 0;
+    transform: rotate(0deg);
+  }
+  
+  .moon:last-of-type {
+    bottom: 0; 
+    left: 0; 
+  }
+
   .container > p:last-of-type {
     margin-bottom: 4rem;
   }
@@ -52,5 +76,23 @@ section {
 
   .event-name h3 {
     margin-top: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+ main .container {
+    width: 70%;
+    max-width: 1200px;
+    margin: 0 auto 0 3rem;
+  }
+
+  .moon:first-of-type {
+    top: -25%;
+    right: 0;
+  }
+
+  .moon:last-of-type {
+    bottom: -30%;
+    left: -8%;
   }
 }
