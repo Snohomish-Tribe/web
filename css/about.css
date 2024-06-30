@@ -23,16 +23,21 @@
 }
 
 .row-1 h2 {
-  width: 70%;
   line-height: 2.75rem;
+}
+
+.row-1 .col-1 svg, 
+.moon, 
+.row-2 svg, 
+.svg-container svg:nth-of-type(6), 
+.svg-container svg:nth-of-type(7), 
+.svg-container svg:nth-of-type(8) 
+{
+  display: none;
 }
   
 .row-1 p {
   margin-bottom: 2.5rem;
-}
-
-.moon {
-  display: none;
 }
   
 /* ================================= 
@@ -43,8 +48,8 @@
   margin-bottom: 0.5rem;
 }
 
-.row-2 svg {
-  display: none;
+.row-2 img {
+  object-fit: contain;
 }
 
 /* ================================= 
@@ -59,47 +64,37 @@
   font-weight: 500;
 }
 
-.svg-container {
+.row-3 .svg-container {
   display: flex;  
 }
 
-.svg-container svg:nth-of-type(6), 
-.svg-container svg:nth-of-type(7), 
-.svg-container svg:nth-of-type(8) {
-  display: none;
+.timeline li:first-child {
+  padding-top: 2rem;
 }
 
-.item-row-1 .line-wrap:first-child .line {
-  height: 2rem;
+.item {
+  position: relative;
+  padding: 0 0 1rem 2.25rem;
+  border-left: 3px solid black;
 }
 
-.item-title {
-  display: flex;
+.item p {
+  margin: 0.5rem 0 0;
 }
 
-.icn {
-  width: 15%;
+.item div {
+  position: absolute;
+  width: max-content;
+  left: -1rem;
+  background-color: #FFFBE4;
+  padding: 0.5rem 0;  
 }
 
-.item-title h4 {
-  width: 85%;
+.item h4 {
   margin: 0;
+  padding: 0.5rem 0;
 }
 
-.item-title p {
-  display: none;
-}
-
-.item .line-wrap{
-  margin: 0.5rem 0;
-}
-
-.item-content {
-  display: flex;
-  flex-direction: row-reverse;
-}
-
-  
   /* ================================= 
     Photo Gallery
   ==================================== */
@@ -145,23 +140,21 @@
   MEDIA QUERIES 768px 
 ==================================== */
 @media (min-width: 768px) {
+  .row-1,
   .row-1 .bg-container, 
   .row-1 .container,
   .row-1 .col-1,
   .row-2 .container,
-  .row-2 .col-2 {
+  .row-2 .col-2, 
+  .item {
     display: flex; 
   }
 
-  .row-1 .bg-container, 
-  .row-1 .col-1,
   .row-2 .svg-container {
     position: relative;
   }
 
-  .moon
-  /* .col-2 svg  */
-  {
+  .moon {
     position: absolute;    
   }
 
@@ -178,7 +171,12 @@
   .row-1 .col-2,
   .row-2 .col-1  {
     width: 45%;
-  }  
+  } 
+  
+  .row-1 .col-1 svg, 
+  .row-3 .svg-container svg  {
+    display: block;
+  }
 
   /* =========== Banner =========== */
   .plant {
@@ -190,14 +188,26 @@
   }
 
 /* =========== Resilience and Survival =========== */
+  .row-1 {
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    height: 60vh;
+  }
+
   .row-1 .container {
     height: 50vh;
     justify-content: center;
     align-items: center;
   }
 
+  .row-1 h2 {
+    width: 100%;
+  }
+
   .row-1 .col-1 {
     flex-direction: column;
+    justify-content: end;
     z-index: 1;
   }
 
@@ -213,18 +223,20 @@
   .row-1 .col-1 p {
     order: 3;
     margin-top: 0;
+    margin-bottom: 1.75rem;
   }
     
   .row-1 .col-1 h2 {
     margin-bottom: 1.25rem;
+    font-size: 2.25rem;
   }
 
   .moon {
     display: block;
-    top: 0;
+    bottom: -15%;
     left: -10%;
     z-index: 0;
-  }  
+  }
 
 /* =========== Tribal Council =========== */
 .row-2 .col-2 {
@@ -235,29 +247,30 @@
   flex-direction: row-reverse;
 }
 
-.row-2 .svg-container {
-  margin: auto 0;
-}
-
 .row-2 img {
+  position: relative;
   z-index: 1;
 }
 
-.row-2 .col-2 svg {
+.row-2 .col-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.row-2 svg {
   display: block;
   top: -10%;
   width: 100%;
-  transform: rotate(180deg) scale(1.125);
-  z-index: 0;
+  transform: scale(1.125);
+  position: absolute;
+}
+
+.row-2 .col-1 {
+  padding-left: 2rem;
 }
 
 /* =========== Timeline =========== */
-  .svg-container svg:nth-of-type(6), 
-  .svg-container svg:nth-of-type(7), 
-  .svg-container svg:nth-of-type(8) {
-    display: block;
-  }
-
   .row-3 .svg-container {
     width: 75%;
     margin: 0 auto;
@@ -273,6 +286,15 @@
     margin: 5rem 0 0 auto;
     padding-right: 1rem;
   }
+
+  .item p {
+    margin: 0 0 0 2rem;
+}
+
+  .item h4 {
+    position: absolute;
+    left: -25%;
+  }
   
   .item-title h4 {
     display: none;
@@ -283,14 +305,10 @@
     display: block;
   }
 
-
-  
   .item-content {
     display: flex;
     flex-direction: row-reverse;
   }
-  
-
 
   /* =========== Photo Gallery =========== */  
   .row-4 .container {
@@ -322,5 +340,101 @@
 
   .row-5 p {
     line-height: 1.75rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .banner p, 
+  .banner h1,
+  .row-1 .container,
+  .row-2 .container,
+  .row-5 .container, 
+  .row-5 .wrapper {
+    max-width: 1200px;
+  }
+
+  .banner p:last-child {
+    width: 45%;
+  }
+
+  .row-1,
+  .row-2, 
+  .row-5 {
+    height: 100vh;
+  }
+  
+  /* =========== Resilience and Survival =========== */
+  .row-1 .col-1 p {
+    margin-bottom: 0;
+  }
+
+  .row-1 .col-1, 
+  .row-1 .col-2 {
+    width: 47.5%; 
+  }
+
+  .row-1 .col-1 {
+    justify-content: center;
+  }
+
+  .moon {
+    bottom: -10%;
+    left: -5%;
+  }
+
+  /* =========== Tribal Council =========== */
+  .row-2 .container {
+    height: 100%;
+  }
+
+  .row-2 .col-1, 
+  .row-2 .col-2 {
+    height: max-content;
+  }
+
+  .row-2 .col-1, 
+  .row-2 .col-2 {
+    margin: auto 0; 
+  }
+
+  .row-2 .col-1,
+  .row-3 .svg-container, 
+  .row-3 .col-1 p:last-of-type    {
+    width: 40%;
+  }
+
+  .row-2 .col-2 {
+    width: 55%;
+  }
+
+  /* =========== Timeline =========== */
+  .row-3 .col-2 {
+    width: 50%;
+  }
+
+  .item {
+    padding-bottom: 2.5rem;
+  }
+
+  .item h4 {
+    left: -20%;
+  }
+
+  .about .row-5 .container {
+    padding: 0;
+  }
+
+  .row-5 .bg-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .row-5 .container {
+    justify-content: center;
+  }
+
+  .row-5 .wrapper {
+    width: 100%;
+    margin: 0 auto;
   }
 }

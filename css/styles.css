@@ -188,8 +188,8 @@ img,
 .home .row-1 .svg-container svg,
 .home .row-2 img,
 .trigon, 
-.inner-container, 
-.about .row-3 svg,
+/* .inner-container, 
+.about .row-3 svg, */
 .language .carousel,
 input[type="text"],
 select, 
@@ -464,7 +464,7 @@ Home Page-Standing Strong
   Sovereign Nation 
 ==================================== */
 .nation-img {
-  min-height: 100vh; 
+  height: 100vh; 
 }
 
 /* =========== Photo Gallery =========== */
