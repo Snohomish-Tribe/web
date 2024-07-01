@@ -28,8 +28,7 @@
 
 .row-2 .arrows,
 .row-4 .arrows,
-.row-2 .container svg:last-of-type,
-.row-4 .container svg:last-of-type {
+.row-2 .container svg:last-of-type {
   display: none;
 }
 
@@ -45,11 +44,10 @@
   padding: 1rem;
 }
 
-
 /* ================================= 
   Our Affiliates
 ==================================== */  
-.row-3 h2 {
+.row-3 .heading {
   width: 90%;
   margin: 0 auto 3rem;
 }
@@ -76,6 +74,11 @@ h3 span {
   margin-top: 3rem;
 }
 
+.top-moon,
+.bottom-moon {
+  display: none;
+}
+
 /* ================================= 
   MEDIA QUERIES 768px 
 ==================================== */
@@ -85,7 +88,7 @@ h3 span {
   }
 
   .pebbles {
-    height: 30vh;
+    height: 35vh;
   }
 
   .row-1 .container,
@@ -132,6 +135,10 @@ h3 span {
     margin-top: 0;
   }
 
+  .row-1 p {
+    margin-top: 0;
+  }
+
   .row-1 .img-container {
     padding-top: 1.5rem;
   }
@@ -154,12 +161,27 @@ h3 span {
     z-index: 1;
   }
 
+  .row-2 h2,
+  .row-2 p {
+    width: 85%; 
+  }
+
   .row-2 .container svg:last-of-type {
     display: block;
     position: absolute;
-    top: 0;
+    bottom: -15%;
     right: 0;
     width: 60%;
+  }
+
+  .row-2 p, 
+  .row-3 p, 
+  .row-4 p {
+    font-weight: 300;
+  }
+
+  .programs .btn-container {
+    margin-top: 2rem;
   }
 
   .btn-container ul {
@@ -168,6 +190,10 @@ h3 span {
   }
 
 /* =========== Our Affliates =========== */
+  .row-3 .heading {
+    width: 95%;
+  }
+
   .row-3 .container {
     align-items: stretch;
   }
@@ -181,15 +207,17 @@ h3 span {
     margin-top: 0;
   }
 
-  .row-3 .col-1 h3 {
-    margin-top: 2rem;
+  .row-3 .col-1 h3:first-of-type, 
+  .row-3 .col-2 h3:first-of-type {
+    margin-top: 1.75rem;
+  }
+
+  .row-3 p {
+    margin-bottom: 2rem;
   }
 
   .row-3 a {
     max-width: max-content;
-  }
-
-  .row-3 .col-1 a{
     margin-top: auto;
   }
 
@@ -206,12 +234,74 @@ h3 span {
   .row-4 p {
     position: relative;
     z-index: 1;
+    font-size: 1rem;
   }
 
-  .row-4 .container svg:last-of-type {
+  .top-moon,
+  .bottom-moon {
     display: block;
+    width: 40%;
     position: absolute;
-    top: 0;
-    width: 100%;
+  }
+
+  .top-moon {
+    right: 0;
+    top: -40%;
+  }
+
+  .bottom-moon {
+    top: 70%;
+    left: 10%; 
+  }
+}
+
+@media (min-width: 1024px) {
+  .row-1 {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .row-1 .container {
+    max-width: 1200px;
+  }
+
+  .row-3 .col-1, .row
+  .row-1 svg {
+    right: 50%;
+  }
+
+  .row-2 .container svg:last-of-type {
+    width: 45%;
+    right: 15%;
+  }
+
+  .row-2 h2, 
+  .row-2 p {
+    width: 50%;
+  }
+
+  .row-3 .heading {
+    width: 90%;
+  }
+
+  .row-4 p {
+    position: relative;
+    z-index: 1;
+    font-size: 1.125rem;
+  }
+
+  .top-moon,
+  .bottom-moon {
+    width: 25%;
+  }
+
+  .top-moon {
+    right: 5%;
+  }
+
+  .bottom-moon {
+    left: 15%; 
   }
 }

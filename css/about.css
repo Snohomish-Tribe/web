@@ -300,7 +300,7 @@
     display: none;
   }
 
-  .item-title h4:first-of-type,
+  /* .item-title h4:first-of-type,
   .item-title p {
     display: block;
   }
@@ -308,7 +308,7 @@
   .item-content {
     display: flex;
     flex-direction: row-reverse;
-  }
+  } */
 
   /* =========== Photo Gallery =========== */  
   .row-4 .container {

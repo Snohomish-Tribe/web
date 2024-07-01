@@ -602,8 +602,12 @@ footer ul li{
 }
 
 @media (min-width: 1024px) {
+  .container {
+    width: 90%;
+  }
+  
   .page-links {
     width: max-content; 
     gap: 3.5rem;
-  }
+  }  
 }
