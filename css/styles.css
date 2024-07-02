@@ -159,7 +159,7 @@ footer svg {
 .programs .row-4,
 .membership .row-1,
 .membership .row-2,
-.membership .row-3,
+/* .membership .row-3, */
 .membership .row-4,
 .language .row-1,
 .language .row-2,
@@ -372,7 +372,7 @@ h2,
 .home .row-3 p, 
 .about .row-1,
 .about .row-3 p, 
-.membership .row-1 p,
+/* .membership .row-1 p, */
 .membership .row-2 p,
 .lesson p,
 .language .row-4 p, 
@@ -560,10 +560,10 @@ footer ul li{
 ==================================== */
 @media (min-width: 768px) {
   .nav,
-  .main-nav,
-  .nav,
+  .main-nav
+  /* .nav,
   .container
-  /* .years,
+  .years,
   .carousel img  */
   {
     width: 95%;
@@ -602,10 +602,6 @@ footer ul li{
 }
 
 @media (min-width: 1024px) {
-  .container {
-    width: 90%;
-  }
-  
   .page-links {
     width: max-content; 
     gap: 3.5rem;

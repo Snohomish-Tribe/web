@@ -32,8 +32,21 @@ h1 {
   margin-top: 0;
 }
 
-.row-3 .bg-svg:nth-of-type(2) {
+.row-3,
+.membership .row-4 {
+  padding: 4rem 0;
+}
+
+.row-3 .bg-svg:first-of-type {
+  top: 8%;
+}
+
+.row-3 .bg-svg:last-of-type {
   top: 30%;
+}
+/* =========== Have Questions =========== */
+.row-4 a {
+  font-size: 1.125rem;
 }
 
 /* ================================= 
@@ -66,10 +79,6 @@ h1 {
     z-index: 1;
   }
 
-  .row-1 .bg-container {
-    position: relative;
-  }
-
   .row-1 svg {
     display: block;
     position: absolute;
@@ -88,6 +97,7 @@ h1 {
 
   .row-1 .col-1 p {
     font-weight: 300;
+    margin-bottom: 0;
   }
 
   .row-1 .img-container {
@@ -104,6 +114,7 @@ h1 {
 /* =========== Download Membership Forms =========== */
   .row-2 ul {
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
   }
 
@@ -122,12 +133,52 @@ h1 {
   }
 /* =========== Download Membership Forms =========== */
   .row-3 .bg-svg:first-of-type {
-    transform: rotate(-60deg);
-    width: 90%;
-    top: -10%
-  }
-
-  .row-3 .bg-svg:nth-of-type(2) {
     display: none;
   }
+
+  .row-3 .bg-svg:last-of-type{
+    top: -30%;
+  }
+/* =========== Have Questions =========== */
+  .row-4 h2 {
+    margin-top: 0;
+  }
+}
+
+/* ================================= 
+  MEDIA QUERIES 768px 
+==================================== */
+@media (min-width: 1024px) {
+  /* =========== Experience Support =========== */
+  .row-1 {
+    height: 85vh; 
+  }
+
+  .row-1 svg {
+    width: 75%;
+  }
+
+  .row-1 p {
+    line-height: 2rem;
+  }
+
+  .row-1 .container {
+    justify-content: space-between;
+    max-width: 1200px;
+  }
+
+  .row-1 .col-1, 
+  .row-1 .img-container {
+    width: 47.5%;
+  }
+
+  .row-1 svg {
+    bottom: -45%;
+    right: 42%; 
+  }
+/* =========== Download Membership Forms =========== */
+  .row-3 .bg-svg:last-of-type {
+    top: -12%;
+  }
+/* =========== Have Questions =========== */  
 }
