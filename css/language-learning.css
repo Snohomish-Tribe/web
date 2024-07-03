@@ -22,7 +22,7 @@
 }
 
 .row-3 .btn {
-  margin-right: 2rem;
+  margin-right: 1.5rem;
 }
 
 .audio-file::after {
@@ -61,15 +61,17 @@
     z-index: 1;
     padding: 1rem;
     position: relative;
-    /* height: 60vh; */
+  }
+
+  .row-1 .col-1, 
+  .row-1 .img-container {
+    width: 47.5%;
   }
 
   .row-1 .col-1 {
-    width: 40%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-
   }
 
   .row-1 h2 {
@@ -84,21 +86,27 @@
   .row-1 .col-1 .font-xsm {
     font-weight: 500;
     font-size: 1rem;
+    margin-bottom: 0;
   }
 
-  .row-1 .img-container {
-    width: 55%
+  .row-1 img {
+    object-fit: scale-down;
+    width: max-content;
   }
 
   .row-1 svg {
     display: block;
     position: absolute;
-    top: -15%;
-    right: 55%;
-    width: 80%;
-  }
+    top: -60%;
+    right: 42%;
+    width: 100%;
+}
 
   /* =========== Lessons =========== */
+  .language .row-3 {
+    padding: 5rem 0;
+  }
+
   .row-3 {
     background-image: none;
   }
@@ -114,6 +122,16 @@
     width: 47.5%;
     position: relative;
     z-index: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .lesson h3 {
+    margin-bottom: 0.25rem;
+  }
+
+  .lesson div:last-child {
+    margin-top: auto;
   }
 
   .row-3 .container {
@@ -140,9 +158,9 @@
   }
 
   /* =========== Learn More =========== */
-.row-4 {
-  overflow: hidden;
-}
+  .row-4 {
+    overflow: hidden;
+  }
 
   .row-4 .container {
     position: relative;
@@ -155,6 +173,7 @@
   .row-4 p {
     position: relative;
     z-index: 1;
+    width: 70%;
   }
 
   .row-4 svg:first-of-type {
@@ -162,9 +181,65 @@
   }
 
   .row-4 svg:last-of-type {
-    width: 60%;
+    width: 70%;
     position: absolute;
     bottom: -30%;
     right: 0;
   }
+}
+
+@media (min-width: 1024px) {
+  
+  .row-1 {
+    height: 75vh;
+  }
+
+  .row-1 .bg-container {
+    height: 100%;
+  }
+
+  .row-1 .container {
+    max-width: 1200px;
+  }
+  
+  .row-1 .col-1, 
+  .row-1 .img-container {
+    width: 47.5%;
+  }
+
+  .row-1 .img-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+  .row-1 .col-1 .font-xsm {
+    font-size: 1.125rem;
+    line-height: 2rem;
+  }
+
+  .row-1 svg {
+    top: -90%;
+    right: 46%;
+    width: 70%;
+  }
+
+  /* =========== Lessons =========== */
+  .row-3 svg {
+    width: 45%;
+  }
+
+  .row-3 .container {
+    max-width: 1200px;
+  }
+
+  .row-4 p {
+    width: 50%;
+  }
+
+  .row-4 svg:last-of-type {
+    width: 37%;
+    bottom: -40%;
+}
+
 }
