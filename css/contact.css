@@ -22,14 +22,14 @@ label {
   margin-top: 1.5rem;
 }
 
-.col-2 {
-  display: none;
-}
-
 input[type="text"],
 select, 
 textarea {
   padding: 0.75rem 0;
+  margin-top: 0.5rem;
+}
+
+textarea {
   margin-top: 0.5rem;
 }
 
@@ -60,6 +60,10 @@ button {
   line-height: 2rem;
 }
 
+.col-2 {
+  display: none;
+}
+
 /* ================================= 
   MEDIA QUERIES 768px 
 ==================================== */
@@ -78,6 +82,29 @@ button {
   }
 
   .col-2 {
+    position: relative;
     display: block;
+  }
+
+  .col-2 svg {
+    width: 100%;
+  }
+}
+
+/* ================================= 
+  MEDIA QUERIES 1024px 
+==================================== */
+@media (min-width: 1024px) {
+  .col-1 {
+    width: 35%;
+  }
+
+  .col-2 {
+    width: 65%;
+    position: relative;
+  }
+
+  .col-2 svg {
+    position: absolute;
   }
 }
