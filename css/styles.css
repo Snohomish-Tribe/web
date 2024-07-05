@@ -570,11 +570,41 @@ footer ul li{
   MEDIA QUERIES 768px 
 ==================================== */
 @media (min-width: 768px) {
+  header {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .toggle {
+    display: none;
+  }
+
+  ul {
+    gap: 1rem;
+  }
+
+  .main-nav {
+    height: auto;
+    display: flex;
+    width: max-content;
+    margin-right: 0;
+  }
+
+  .main-header {
+    border-bottom: none;
+  }
+
+  header,
+  .main-nav ul, 
   .page-links,
   .privacy, 
   .privacy-links,
   .copyright {
     display: flex;
+  }
+
+  header {
+    justify-content: space-between;
   }
 
   .page-links {
@@ -603,6 +633,10 @@ footer ul li{
 }
 
 @media (min-width: 1024px) {
+  header {
+    max-width: 1200px;
+  }
+
   .page-links {
     width: max-content; 
     gap: 3.5rem;
