@@ -14,7 +14,8 @@ BASE STYLES
     box-sizing: border-box;
   }
 
-body, 
+body,
+.toggle, 
 .events-btn,
 .programs .btn-container a, 
 .programs .row-3 a,
@@ -408,7 +409,12 @@ h2,
 }
 
 nav {
-  min-height: 90vh;
+  height: 0vh;
+  overflow: hidden;
+}
+
+.toggle {
+  border: none;
 }
 
 .toggle:hover,
@@ -419,6 +425,11 @@ nav {
 
 .nav {
   justify-content: space-between;
+}
+
+.show-links {
+  height: 90vh;
+  transition: height 0.5s;
 }
 
 /* ================================= 
@@ -559,16 +570,6 @@ footer ul li{
   MEDIA QUERIES 768px 
 ==================================== */
 @media (min-width: 768px) {
-  .nav,
-  .main-nav
-  /* .nav,
-  .container
-  .years,
-  .carousel img  */
-  {
-    width: 95%;
-  }
-
   .page-links,
   .privacy, 
   .privacy-links,
