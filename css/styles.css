@@ -178,8 +178,9 @@ footer svg {
 .container,
 /* .moons, */
 .years,
-.svg-container svg,
-.carousel img {
+.svg-container svg
+/* .carousel img  */
+{
   width: 90%;
 }
 
@@ -418,8 +419,7 @@ nav {
 }
 
 .toggle:hover,
-.carousel svg,
-.crumb:hover {
+.carousel svg:hover {
   cursor: pointer;
 }
 

@@ -95,9 +95,9 @@
   padding: 0.5rem 0;
 }
 
-  /* ================================= 
-    Photo Gallery
-  ==================================== */
+/* ================================= 
+  Photo Gallery
+==================================== */
 .about .row-4 { 
   padding: 2.5rem 0; 
   min-height: 65vh;
@@ -113,6 +113,18 @@
   justify-content: center;
 }
 
+.carousel-container {
+  margin-bottom: 2rem;
+  width: 280px;
+  overflow: hidden;
+  display: flex;
+}
+
+.carousel-img {
+  width: 100%;
+  transition: transform 0.9s ease;
+}
+
 .carousel svg {
   margin: auto;
 }
@@ -126,6 +138,10 @@
   border-radius: 100%;
   width: 0.75rem;
   height: 0.75rem;
+  background-color: #8D8D8D;
+}
+
+.active-crumb {
   background-color: #fff;
 }
 
@@ -299,16 +315,6 @@
   .item-title h4 {
     display: none;
   }
-
-  /* .item-title h4:first-of-type,
-  .item-title p {
-    display: block;
-  }
-
-  .item-content {
-    display: flex;
-    flex-direction: row-reverse;
-  } */
 
   /* =========== Photo Gallery =========== */  
   .row-4 .container {
