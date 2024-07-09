@@ -427,9 +427,13 @@ nav {
   justify-content: space-between;
 }
 
+.main-nav,
+.show-links {
+  transition: height 0.9s ease-in;  
+}
+
 .show-links {
   height: 90vh;
-  transition: height 0.5s;
 }
 
 /* ================================= 
