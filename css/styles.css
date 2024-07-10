@@ -136,7 +136,6 @@ footer svg {
 }
 
 .bt-point, 
-/* .home .row-4 .svg-container, */
 .programs .row-2 li, 
 .membership .row-2 li {
   margin-bottom: 1rem;
@@ -176,11 +175,8 @@ footer svg {
 .main-nav,
 .nav,
 .container,
-/* .moons, */
 .years,
-.svg-container svg
-/* .carousel img  */
-{
+.svg-container svg {
   width: 90%;
 }
 
@@ -190,8 +186,6 @@ img,
 .home .row-1 .svg-container svg,
 .home .row-2 img,
 .trigon, 
-/* .inner-container, 
-.about .row-3 svg, */
 .language .carousel,
 input[type="text"],
 select, 
@@ -324,7 +318,6 @@ a,
   font-size: 3rem;
 }
 
-.main-nav a,
 h2,
 .home h4,
 .programs h1, 
@@ -374,7 +367,6 @@ h2,
 .home .row-3 p, 
 .about .row-1,
 .about .row-3 p, 
-/* .membership .row-1 p, */
 .membership .row-2 p,
 .lesson p,
 .language .row-4 p, 
@@ -404,9 +396,14 @@ h2,
 /* ================================= 
   Header
 ==================================== */
+.main-header {
+  padding-bottom: 0.5rem;
+}
 .main-nav li {
   margin: 1rem 0; 
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+  font-family: 'Roboto';
+  font-weight: 400;
 }
 
 nav {
@@ -558,8 +555,13 @@ footer {
   padding-top: 3rem;
 }
 
-footer ul li{
+footer ul li {
   padding: 0.5rem 0; 
+  margin-bottom: 1rem;
+}
+
+footer ul li:last-of-type {
+  margin-bottom: 2.5rem;
 }
 
 .privacy {
