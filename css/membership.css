@@ -180,5 +180,8 @@ h1 {
   .row-3 .bg-svg:last-of-type {
     top: -12%;
   }
-/* =========== Have Questions =========== */  
+
+  .faqs {
+    width: 75%;
+  }
 }
