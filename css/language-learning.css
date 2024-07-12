@@ -15,6 +15,43 @@
   display: none;
 }
 
+/* =========== Lesson Images =========== */
+.carousel {
+  justify-content: center;
+}
+
+.carousel-container {
+  margin-bottom: 2rem;
+  width: 280px;
+  overflow: hidden;
+  display: flex;
+}
+
+.carousel-img {
+  width: 100%;
+  transition: transform 0.9s ease;
+}
+
+.carousel svg {
+  margin: auto;
+}
+
+.breadcrumbs {
+  padding: 1rem 0; 
+  justify-content: space-around;
+}
+
+.crumb {
+  border-radius: 100%;
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: #8D8D8D;
+}
+
+.active-crumb {
+  background-color: #fff;
+}
+
 /* =========== Lessons =========== */
 .row-3 {
   background-image: url("/images/bg-moons.svg");
@@ -100,7 +137,28 @@
     top: -60%;
     right: 42%;
     width: 100%;
-}
+  }
+
+  /* =========== Lesson Images =========== */
+  .carousel {
+    margin: 3rem 0;
+  }
+
+
+  .carousel-container {
+    width: 500px;
+    /* gap: 3rem; */
+  }
+
+  .carousel-img {
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .breadcrumbs {
+    justify-content: center;
+    gap: 2rem;
+  }  
 
   /* =========== Lessons =========== */
   .language .row-3 {
@@ -224,6 +282,20 @@
     width: 70%;
   }
 
+  /* =========== Lesson Images =========== */
+  /* .carousel-container {
+    width: 850px;
+  } */
+
+  .carousel-img {
+    /* width: 40%; */
+    object-fit: contain;
+  }
+
+  .breadcrumbs {
+    gap: 2rem;
+  }
+
   /* =========== Lessons =========== */
   .row-3 svg {
     width: 45%;
@@ -240,6 +312,6 @@
   .row-4 svg:last-of-type {
     width: 37%;
     bottom: -40%;
-}
+  }
 
 }
