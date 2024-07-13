@@ -389,7 +389,7 @@ h2,
 /* =========== Underline ============= */
 .address,
 .credits p a,
-.privacy a {
+.privacy-links a {
   text-decoration: underline;
 } 
 
@@ -552,16 +552,12 @@ Programs, Membership, Language, Contact pages
   Footer
 ==================================== */
 footer {
-  padding-top: 3rem;
+  padding: 3rem 0;
 }
 
 footer ul li {
   padding: 0.5rem 0; 
   margin-bottom: 1rem;
-}
-
-footer ul li:last-of-type {
-  margin-bottom: 2.5rem;
 }
 
 .privacy {
@@ -624,6 +620,16 @@ footer ul li:last-of-type {
     justify-content: space-between;
   }
 
+  .privacy-links {
+    margin: 0;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .privacy-links li {
+    margin-bottom: 0;
+  }
+
   .privacy-links,
   .copyright {
     gap: 1rem;
@@ -639,7 +645,8 @@ footer ul li:last-of-type {
 }
 
 @media (min-width: 1024px) {
-  header {
+  header,
+  footer .container {
     max-width: 1200px;
   }
 

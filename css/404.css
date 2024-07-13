@@ -38,7 +38,6 @@ p {
 @media (min-width: 768px) {
   .row-1 {
     overflow: hidden;
-    height: 90vh;
   }
 
   h1,
@@ -88,7 +87,7 @@ p {
 =============================== */
 @media (min-width: 1024px) {
   .row-1 {
-    outline: 3px solid black;
+    height: 80vh;
   }
 
   p {
@@ -97,6 +96,7 @@ p {
 
   .bg-svg:last-of-type {
     top: -20%;
-    width: 70%;
-  }
+    width: 65%;
+    left: 10%;
+}
 }
