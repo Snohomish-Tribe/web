@@ -6,7 +6,7 @@
 }
 
 .pebbles {
-  height: 60vh;
+  height: 50vh;
 }
 
 .row-1 p {
@@ -15,6 +15,10 @@
 
 .col {
   position: relative;
+}
+
+.col p {
+  line-height: 2rem;
 }
 
 .bg-svg {
@@ -110,7 +114,7 @@ h3 span {
   .row-3 .col-1,
   .row-3 .col-2  {
     width: 47.5%;
-  }  
+  } 
 
   .row-2 .arrows,
   .row-4 .arrows {

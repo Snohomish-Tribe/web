@@ -11,12 +11,15 @@
   height: 60vh;
 }
 
-.banner p:first-child {
-  padding-top: 3rem;
+.title {
+  height: 100%;
 }
 
 .banner .container {
-  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
 }
 
 /* ================================= 
@@ -195,6 +198,10 @@ aside {
     display: flex; 
   }
 
+  h1 {
+    margin-bottom: 0;
+  }
+
   .row-2 .svg-container {
     position: relative;
   }
@@ -330,7 +337,7 @@ aside {
   }
 
   .expand {
-    height: 600px !important;
+    height: 650px !important;
   }
 
   aside {
@@ -341,6 +348,10 @@ aside {
   .row-3 .col-1 p:last-child {
     width: 75%;
     margin: 1.5rem auto 0;
+  }
+
+  .item {
+    padding-bottom: 2.75rem;
   }
 
   .item p {
@@ -405,6 +416,7 @@ aside {
 }
 
 @media (min-width: 1024px) {
+  .banner .container   
   .banner p, 
   .banner h1,
   .row-1 .container,
@@ -415,7 +427,7 @@ aside {
   }
 
   .banner p:last-child {
-    width: 65%;
+    width: 50%;
   }
 
   .row-1,
@@ -501,6 +513,7 @@ aside {
 
   .about .row-5 .container {
     padding: 0;
+    width: 50%;
   }
 
   .row-5 .bg-container {

@@ -107,4 +107,8 @@ button {
   .col-2 svg {
     position: absolute;
   }
+
+  .address {
+    width: 20%;
+  }
 }
