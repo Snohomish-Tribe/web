@@ -55,6 +55,10 @@
   margin-bottom: 0.5rem;
 }
 
+.row-2 a {
+  color: #FFFBE4;
+}
+
 .row-2 img {
   object-fit: contain;
 }
