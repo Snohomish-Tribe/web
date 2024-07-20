@@ -76,7 +76,7 @@ p {
     display: block;
   }
 
-  p {
+  .row-1 p {
     width: 65%;
     margin: 0 auto;
   }
@@ -90,7 +90,7 @@ p {
     height: 80vh;
   }
 
-  p {
+  .row-1 p {
     width: 50%;
   }
 
@@ -98,5 +98,5 @@ p {
     top: -20%;
     width: 65%;
     left: 10%;
-}
+  }
 }
