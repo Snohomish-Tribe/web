@@ -18,6 +18,45 @@ h1 {
   font-size: 1.25rem;
 }
 
+.banner .container {
+  display: flex;
+}
+
+p,
+h1 {
+  text-align: left;
+}
+
+h1, 
+.row-3 h2 {
+  margin-top: 0;
+}
+
+.row-1,
+.row-2,
+.row-4 {
+  padding: 3rem 0; 
+}
+
+.row-2 p {
+  line-height: 2rem;
+}
+
+.membership-btn, 
+.row-4 a {
+  display: inline-block;
+}
+
+.row-1,
+.row-4 h2{
+  color: #FFFBE4;
+}
+
+.row-2 a, 
+.row-4 a {
+  padding: 1rem 1.5rem;
+}
+
 /* =========== Experience Support =========== */
 .row-1 p {
   margin-bottom: 2rem;
@@ -30,6 +69,15 @@ h1 {
 
 .row-1 .col-1 h2 {
   margin-top: 0;
+}
+
+.row-2 a, 
+.row-4 a {
+  background-color: #FFFBE4;
+}
+
+.row-2 li {
+  margin-bottom: 1rem;
 }
 
 .row-3,
