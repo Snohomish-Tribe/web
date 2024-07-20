@@ -20,6 +20,10 @@
   margin: 0 auto;
 }
 
+.row-4 a {
+  padding: 1rem 1.5rem;
+}
+
 /* =========== Lesson Images =========== */
 .carousel {
   justify-content: center;
