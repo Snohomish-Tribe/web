@@ -11,16 +11,12 @@ BASE STYLES
 @import url('https://fonts.googleapis.com/css2?family=Amarante&display=swap');
 
 * {
-    box-sizing: border-box;
-  }
+  box-sizing: border-box;
+}
 
 body,
 .toggle, 
 .events-btn,
-.programs .btn-container a, 
-.programs .row-3 a,
-.membership .row-2 a,
-.membership .row-4 a,
 .language .row-4 a {
   background-color: #FFFBE4;
 }
@@ -45,8 +41,6 @@ a {
 .nav,
 .carousel,
 .breadcrumbs,
-.programs .banner .container,
-.membership .banner .container,
 .language .banner .container, 
 .contact .banner .container {
   display: flex;
@@ -69,17 +63,10 @@ footer ul li,
   text-align: center;
 }
 
-.programs h1,
-.membership p,
-.membership h1 {
-  text-align: left;
-}
-
 /* =========== Margins =========== */
 .nav,
 .main-nav, 
 .container,
-.programs .container,
 .line,
 .svg-container svg,
 .carousel img,
@@ -104,10 +91,6 @@ footer svg {
 .about .row-2 h2, 
 .about .row-5 h2, 
 .carousel .img-container,
-.programs h1,
-.programs .row-3 h2,
-.membership h1,
-.membership .row-3 h2,
 .language h1,
 .language .row-1 h2,
 .language .row-2 h2,
@@ -117,18 +100,13 @@ footer svg {
 }
 
 .events-btn,
-.membership-btn, 
+/* .membership-btn,  */
 .about .row-3 h2 {
   margin-top: 1rem;
 }
 
-.programs .row-2 li, 
-.membership .row-2 li {
-  margin-bottom: 1rem;
-}
-
 .events-btn,
-.membership-btn,
+/* .membership-btn, */
 .about .row-2 ul,
 .txt {
   margin-bottom: 3rem;
@@ -137,13 +115,6 @@ footer svg {
 /* =========== Padding =========== */
 .about section,
 .about .row-5 .container,
-.programs .row-1,
-.programs .row-2,
-.programs .row-3,
-.programs .row-4,
-.membership .row-1,
-.membership .row-2,
-.membership .row-4,
 .language .row-1,
 .language .row-2,
 .language .row-3, 
@@ -226,10 +197,8 @@ form select,
 }
 
 .events-btn,
-.membership-btn,
+/* .membership-btn, */
 .btn-container a, 
-.programs .row-3 .btn,
-.membership .row-4 a,
 .language .row-3 a,
 .language .row-4 a {
   display: inline-block;
@@ -258,9 +227,6 @@ form select,
 .about .row-2,
 .about .row-4,
 .about .row-5,  
-.programs .row-3,
-.membership .row-1,
-.membership .row-4 h2,
 .language .row-1,
 .language .row-2,
 .contact .row-2 {
@@ -292,8 +258,6 @@ form select,
 }
 
 h2,
-.programs h1, 
-.programs h3,
 .membership h1, 
 .membership h3,
 .language .row-3 h3, 
@@ -322,7 +286,6 @@ h2,
 
 /* =========== Line-Height =========== */
 .word-wrap,
-.programs .row-2 p,
 .faqs-item p,
 .language .row-1 p,
 .not-found h1  {
@@ -333,7 +296,6 @@ h2,
 .bg-footer p, 
 .about .row-1,
 .about .row-3 p, 
-.membership .row-2 p,
 .lesson p,
 .language .row-4 p, 
 .address {
@@ -347,7 +309,6 @@ h2,
 }
 
 header, 
-.membership-btn,
 .faqs-item {
   border-bottom: 1px solid #000000;
 }
@@ -409,7 +370,7 @@ Home Page-Standing Strong
 
 .row-1 .btn,
 .events-btn,
-.membership-btn,
+/* .membership-btn, */
 .language .row-3 .btn,
 .programs .row-3 .btn {
   padding: 1rem 1.5rem;
@@ -417,7 +378,7 @@ Home Page-Standing Strong
 }
 
 .events-btn,
-.membership-btn,
+/* .membership-btn, */
 .language .row-3 .btn {
   padding: 1rem 1.5rem;
 }
@@ -459,10 +420,6 @@ Home Page-Standing Strong
 /* ================================= 
 Programs, Membership, Language, Contact pages
 ==================================== */
-.programs .bg-container .title, 
-.programs .bg-container .container,
-.membership .bg-container .title,
-.membership .banner .container, 
 .language .bg-container .title,
 .language .bg-container .container, 
 .contact .bg-container .title,
@@ -470,38 +427,10 @@ Programs, Membership, Language, Contact pages
   height: 100%; 
 }
 
-.membership .banner .container,
+/* .membership .banner .container, */
 .language .banner .container {
   flex-direction: column;
   justify-content: center;
-}
-
-
-.programs .bg-container .container p:first-child  {
-  margin-top: auto;  
-}
-
-.programs .bg-container .container p:last-child {
-  margin-bottom: auto;  
-}
-
-.programs .bg-container .amarante,
-.membership .bg-container .amarante {
-  padding-top: 0;
-}
-
-/* ================================= 
-  Emergency Food Assistance 
-==================================== */
-.programs .btn-container,
-.membership .btn-container {
-  margin-top: 1.5rem;
-}
-
-.membership .row-2 li a,
-.membership .row-4 a,
-.language .row-4 a {
-  padding: 1rem;
 }
 
 /* ================================= 
@@ -532,6 +461,13 @@ footer ul li {
     margin: 0 auto;
     border-bottom: 1px solid #000000;
   }
+
+  header > div {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+}
+
 
   .toggle {
     display: none;

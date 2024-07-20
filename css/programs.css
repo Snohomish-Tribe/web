@@ -1,6 +1,10 @@
 /* ================================= 
   Unique Programs 
 ==================================== */
+.banner .container {
+  display: flex;
+}
+
 .programs .title .container {
   flex-direction: column;
 }
@@ -36,6 +40,53 @@
   display: none;
 }
 
+.btn-container a,
+.row-3 a {
+  background-color: #FFFBE4;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+h1,
+.row-3 h2 {
+  margin-top: 0;
+}
+
+h1 {
+  text-align: left;
+}
+
+h1, 
+h3 {
+  font-weight: 500;
+}
+
+.row-1,
+.row-2,
+.row-3,
+.row-4 {
+  padding: 3rem 0;
+}
+
+.bg-container .title, 
+.bg-container .container {
+  height: 100%;
+}
+
+.bg-container .container p:first-child  {
+  margin-top: auto;  
+}
+
+.bg-container .container p:last-child {
+  margin-bottom: auto;  
+}
+
+.bg-container .amarante {
+  padding-top: 0;
+}
+
 /* ================================= 
   Emergency Food Assistance 
 ==================================== */
@@ -43,14 +94,26 @@
   margin-top: 1.5rem;
 }
 
+.row-2 li {
+  margin-bottom: 1rem;
+}
+
 .row-2 li a, 
 .btn {
   padding: 1rem;
 }
 
+.row-2 p {
+  line-height: 1.75rem;
+}
+
 /* ================================= 
   Our Affiliates
 ==================================== */  
+.row-3 {
+  color: #FFFBE4;
+}
+
 .row-3 .heading {
   width: 90%;
   margin: 0 auto 3rem;
@@ -78,10 +141,15 @@ h3 span {
   margin-top: 3rem;
 }
 
+.row-3 .btn {
+  display: inline-block;
+}
+
 .top-moon,
 .bottom-moon {
   display: none;
 }
+
 
 /* ================================= 
   MEDIA QUERIES 768px 
