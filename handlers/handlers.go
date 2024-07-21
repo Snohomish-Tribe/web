@@ -4,6 +4,9 @@ import (
 	"fmt"
 	"html/template"
 	"net/http"
+	// "strings"
+	// "bytes"
+	// "github.com/cwinters8/gomap"
 )
 
 func Index(w http.ResponseWriter, r *http.Request) {
@@ -54,4 +57,8 @@ func Events(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		fmt.Println("Unable to parse html")
 	}
+}
+
+func SendEmail() {
+
 }

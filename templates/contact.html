@@ -1,14 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="static/stylesheets/about.css">
 </head>
+
 <body>
     <h1>Contact Page</h1>
+    <form class="fira-sans" method="POST">
+        <label for="name">
+            Full Name
+            <input id="name" type="text">
+        </label>
+        <label for="email">
+            Email Address
+            <input id="email" type="text">
+        </label>
+        <label for="questions">
+            I have a question about
+            <select name="" id="questions">
+                <option value="" disabled selected>Select a category</option>
+                <option value="membership">Membership</option>
+                <option value="events">Events</option>
+                <option value="language">Language Learning</option>
+                <option value="programs">Programs</option>
+                <option value="general">General</option>
+            </select>
+        </label>
+        <label for="message">
+            Message
+            <textarea rows="8" name="" id="message"></textarea>
+        </label>
+        <div class="form-group">
+            <input type="checkbox" name="" id="terms">
+            <label class="roboto" for="terms">
+                I agree to the Terms</label>
+            <button class="roboto" type="submit">Send</button>
+        </div>
+    </form>
+
+
     <script src="/static/js/app.js"></script>
+    <style>
+        form {
+            width: 400px;
+            display: block;
+            border: 1px solid black;
+        }
+    </style>
 </body>
 
 </html>
