@@ -114,10 +114,10 @@ img,
 }
 
 /* =========== Background-Styles =========== */
-.boat,
+/* .boat,
 .intro-section .container {
   height: 70vh;
-}
+} */
 
 .bg-container img {
   object-fit: cover;

@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-func Home(w http.ResponseWriter, r *http.Request) {
+func Index(w http.ResponseWriter, r *http.Request) {
 	tmpl, _ := template.ParseFiles("templates/index.html")
 	http.FileServer(http.Dir("static"))
 	err := tmpl.Execute(w, nil)
@@ -32,6 +32,26 @@ func Contact(w http.ResponseWriter, r *http.Request) {
 	err := tmpl.Execute(w, nil)
 
 	if err != nil {
-		fmt.Print("Unable to parse html")
+		fmt.Println("Unable to parse html")
+	}
+}
+
+func Credits(w http.ResponseWriter, r *http.Request) {
+	tmpl, _ := template.ParseFiles("templates/credits.html")
+
+	err := tmpl.Execute(w, nil)
+
+	if err != nil {
+		fmt.Println("Unable parse html")
+	}
+}
+
+func Events(w http.ResponseWriter, r *http.Request) {
+	tmpl, _ := template.ParseFiles("templates/events.html")
+
+	err := tmpl.Execute(w, nil)
+
+	if err != nil {
+		fmt.Println("Unable to parse html")
 	}
 }

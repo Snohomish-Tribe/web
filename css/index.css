@@ -2,6 +2,11 @@
 Home Page 
 ==================================== */
 /* =========== Intro =========== */
+.boat,
+.intro-section .container {
+  height: 70vh;
+}
+
 .intro-section .container {
   display: flex;
   flex-direction: column;
