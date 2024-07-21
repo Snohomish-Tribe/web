@@ -22,6 +22,49 @@
   height: 100%;
 }
 
+.row-3 .container,
+.row-4 h2,
+.row-5 h2,
+.row-5 h3,
+.row-5 p {
+  text-align: center;
+}
+
+.box-1 .line, 
+.row-4 h2 {
+  margin: 0 auto;
+}
+
+h1,
+.row-1,
+.row-1 h2,
+.row-2 h2, 
+.row-5 h2 {
+  margin-top: 0;
+}
+
+section,
+.row-5 .container {
+  padding: 3rem 0;
+}
+
+.values-list .row-1,  
+.values-list .row-2{
+  color: #000000;
+}
+
+.row-1,
+.row-2,
+.row-4,
+.row-5 {
+  color: #FFFBE4;
+}
+
+.row-1,
+.row-3 p {
+  line-height: 2rem;
+}
+
 /* ================================= 
   Resilience and Surival
 ==================================== */
@@ -42,7 +85,11 @@
 {
   display: none;
 }
-  
+
+.row-1 svg {
+  width: 50%;
+}  
+
 .row-1 p {
   margin-bottom: 2.5rem;
 }
@@ -50,6 +97,10 @@
 /* ================================= 
   Tribal Council
 ==================================== */
+.row-2 ul {
+  margin-bottom: 3rem;
+}
+
 .row-2 ul li {
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
@@ -143,6 +194,7 @@ aside {
   width: 60%;
   margin-right: auto; 
   margin-left: auto;
+  margin-bottom: 2rem;
 }
 
 .carousel {

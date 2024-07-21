@@ -51,12 +51,7 @@ a {
 }
 
 /* =========== Text-alignment =========== */
-.about .row-3 .container,
-.about .row-4 h2,
 footer ul li,
-.about .row-5 h2,
-.about .row-5 h3,
-.about .row-5 p,
 .language .row-2 h2, 
 .contact .row-2, 
 .copyright {
@@ -70,9 +65,7 @@ footer ul li,
 .line,
 .svg-container svg,
 .carousel img,
-.about .box-1 .line,
 .years,
-.about .row-4 h2,
 .breadcrumbs,
 .address,
 .contact .row-2 svg,
@@ -85,11 +78,6 @@ footer svg {
   margin: auto 0;
 }
 
-.about h1,
-.about .row-1,
-.about .row-1 h2,
-.about .row-2 h2, 
-.about .row-5 h2, 
 .carousel .img-container,
 .language h1,
 .language .row-1 h2,
@@ -100,21 +88,16 @@ footer svg {
 }
 
 .events-btn,
-/* .membership-btn,  */
 .about .row-3 h2 {
   margin-top: 1rem;
 }
 
 .events-btn,
-/* .membership-btn, */
-.about .row-2 ul,
 .txt {
   margin-bottom: 3rem;
 }
 
 /* =========== Padding =========== */
-.about section,
-.about .row-5 .container,
 .language .row-1,
 .language .row-2,
 .language .row-3, 
@@ -145,7 +128,6 @@ textarea {
   width: 100%; 
 }
 
-.about .row-1 svg,
 .breadcrumbs {
   width: 50%;
 }
@@ -217,16 +199,10 @@ form select,
   font-family: "Roboto";
 }
 
-.about .values-list .row-1,  
-.about .values-list .row-2, 
 .events .container > p:first-child {
   color: #000000;
 }
 
-.about .row-1,
-.about .row-2,
-.about .row-4,
-.about .row-5,  
 .language .row-1,
 .language .row-2,
 .contact .row-2 {
@@ -294,8 +270,6 @@ h2,
 
 .banner .fira-sans,
 .bg-footer p, 
-.about .row-1,
-.about .row-3 p, 
 .lesson p,
 .language .row-4 p, 
 .address {
@@ -404,7 +378,6 @@ Home Page-Standing Strong
 }
 
 /* =========== Photo Gallery =========== */
-.about .row-4 h2,
 .carousel .img-container {
   margin-bottom: 2rem;
 }
@@ -427,7 +400,6 @@ Programs, Membership, Language, Contact pages
   height: 100%; 
 }
 
-/* .membership .banner .container, */
 .language .banner .container {
   flex-direction: column;
   justify-content: center;
