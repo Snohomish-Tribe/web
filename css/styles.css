@@ -41,19 +41,13 @@ a {
 .nav,
 .carousel,
 .breadcrumbs,
-.language .banner .container, 
-.contact .banner .container {
+.language .banner .container {
   display: flex;
-}
-
-.contact .bg-container .container {
-  flex-direction: column;
 }
 
 /* =========== Text-alignment =========== */
 footer ul li,
 .language .row-2 h2, 
-.contact .row-2, 
 .copyright {
   text-align: center;
 }
@@ -68,7 +62,6 @@ footer ul li,
 .years,
 .breadcrumbs,
 .address,
-.contact .row-2 svg,
 footer svg {
   margin: 0 auto;
 }
@@ -87,8 +80,7 @@ footer svg {
   margin-top: 0;
 }
 
-.events-btn,
-.about .row-3 h2 {
+.events-btn {
   margin-top: 1rem;
 }
 
@@ -101,9 +93,7 @@ footer svg {
 .language .row-1,
 .language .row-2,
 .language .row-3, 
-.language .row-4,
-.contact .row-1,
-.contact .row-2 {
+.language .row-4{
   padding: 3rem 0;
 }
 
@@ -121,10 +111,7 @@ footer svg {
 img,
 .title, 
 .trigon, 
-.language .carousel,
-input[type="text"],
-select, 
-textarea {
+.language .carousel {
   width: 100%; 
 }
 
@@ -394,9 +381,7 @@ Home Page-Standing Strong
 Programs, Membership, Language, Contact pages
 ==================================== */
 .language .bg-container .title,
-.language .bg-container .container, 
-.contact .bg-container .title,
-.contact .bg-container .container {
+.language .bg-container .container {
   height: 100%; 
 }
 
@@ -439,7 +424,6 @@ footer ul li {
     width: 90%;
     margin: 0 auto;
 }
-
 
   .toggle {
     display: none;

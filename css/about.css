@@ -143,6 +143,10 @@ aside {
   margin-top: 2rem;
 }
 
+.row-3 h2 {
+  margin-top: 1rem;
+}
+
 .row-3 .btn:hover {
   cursor: pointer;
 }
