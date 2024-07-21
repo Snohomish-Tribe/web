@@ -15,6 +15,7 @@ func Home(w http.ResponseWriter, r *http.Request) {
 		fmt.Println("Error")
 	}
 }
+
 func About(w http.ResponseWriter, r *http.Request) {
 	tmpl, _ := template.ParseFiles("templates/about.html")
 
@@ -22,5 +23,15 @@ func About(w http.ResponseWriter, r *http.Request) {
 
 	if err != nil {
 		fmt.Println("Error")
+	}
+}
+
+func Contact(w http.ResponseWriter, r *http.Request) {
+	tmpl, _ := template.ParseFiles("templates/contact.html")
+
+	err := tmpl.Execute(w, nil)
+
+	if err != nil {
+		fmt.Print("Unable to parse html")
 	}
 }
