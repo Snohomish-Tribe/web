@@ -16,8 +16,7 @@ BASE STYLES
 
 body,
 .toggle, 
-.events-btn,
-.language .row-4 a {
+.events-btn {
   background-color: #FFFBE4;
 }
 
@@ -40,14 +39,12 @@ a {
 /* =========== Flexbox =========== */
 .nav,
 .carousel,
-.breadcrumbs,
-.language .banner .container {
+.breadcrumbs {
   display: flex;
 }
 
 /* =========== Text-alignment =========== */
 footer ul li,
-.language .row-2 h2, 
 .copyright {
   text-align: center;
 }
@@ -71,12 +68,7 @@ footer svg {
   margin: auto 0;
 }
 
-.carousel .img-container,
-.language h1,
-.language .row-1 h2,
-.language .row-2 h2,
-.language .row-3 h2, 
-.language .row-4 h2 {
+.carousel .img-container {
   margin-top: 0;
 }
 
@@ -87,14 +79,6 @@ footer svg {
 .events-btn,
 .txt {
   margin-bottom: 3rem;
-}
-
-/* =========== Padding =========== */
-.language .row-1,
-.language .row-2,
-.language .row-3, 
-.language .row-4{
-  padding: 3rem 0;
 }
 
 /* =========== Width =========== */
@@ -110,8 +94,7 @@ footer svg {
 .bg-container,
 img,
 .title, 
-.trigon, 
-.language .carousel {
+.trigon {
   width: 100%; 
 }
 
@@ -157,19 +140,13 @@ img,
 /* =========== Display  =========== */
 svg,
 img,
-form,
-label,
-input,
-form select,
 .footer a {
   display: block;
 }
 
 .events-btn,
 /* .membership-btn, */
-.btn-container a, 
-.language .row-3 a,
-.language .row-4 a {
+.btn-container a {
   display: inline-block;
 }
 
@@ -188,12 +165,6 @@ form select,
 
 .events .container > p:first-child {
   color: #000000;
-}
-
-.language .row-1,
-.language .row-2,
-.contact .row-2 {
-  color: #FFFBE4;
 }
 
 .font-white {
@@ -223,7 +194,6 @@ form select,
 h2,
 .membership h1, 
 .membership h3,
-.language .row-3 h3, 
 .not-found h1 {
   font-weight: 500;
 }
@@ -250,15 +220,12 @@ h2,
 /* =========== Line-Height =========== */
 .word-wrap,
 .faqs-item p,
-.language .row-1 p,
 .not-found h1  {
   line-height: 1.75rem;
 }
 
 .banner .fira-sans,
 .bg-footer p, 
-.lesson p,
-.language .row-4 p, 
 .address {
   line-height: 2rem;
 }
@@ -332,15 +299,13 @@ Home Page-Standing Strong
 .row-1 .btn,
 .events-btn,
 /* .membership-btn, */
-.language .row-3 .btn,
 .programs .row-3 .btn {
   padding: 1rem 1.5rem;
   border: 1px solid #000000;
 }
 
-.events-btn,
-/* .membership-btn, */
-.language .row-3 .btn {
+.events-btn
+/* .membership-btn, */ {
   padding: 1rem 1.5rem;
 }
 
@@ -375,19 +340,6 @@ Home Page-Standing Strong
 
 .carousel svg {
   margin: auto;
-}
-
-/* ================================= 
-Programs, Membership, Language, Contact pages
-==================================== */
-.language .bg-container .title,
-.language .bg-container .container {
-  height: 100%; 
-}
-
-.language .banner .container {
-  flex-direction: column;
-  justify-content: center;
 }
 
 /* ================================= 
