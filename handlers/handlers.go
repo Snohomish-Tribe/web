@@ -11,7 +11,7 @@ import (
 
 func Index(w http.ResponseWriter, r *http.Request) {
 	tmpl, _ := template.ParseFiles("templates/index.html")
-	http.FileServer(http.Dir("static"))
+
 	err := tmpl.Execute(w, nil)
 
 	if err != nil {
@@ -51,6 +51,36 @@ func Credits(w http.ResponseWriter, r *http.Request) {
 
 func Events(w http.ResponseWriter, r *http.Request) {
 	tmpl, _ := template.ParseFiles("templates/events.html")
+
+	err := tmpl.Execute(w, nil)
+
+	if err != nil {
+		fmt.Println("Unable to parse html")
+	}
+}
+
+func Language(w http.ResponseWriter, r *http.Request) {
+	tmpl, _ := template.ParseFiles("templates/language-learning.html")
+
+	err := tmpl.Execute(w, nil)
+
+	if err != nil {
+		fmt.Println("Unable to parse html")
+	}
+}
+
+func Membership(w http.ResponseWriter, r *http.Request) {
+	tmpl, _ := template.ParseFiles("templates/membership.html")
+
+	err := tmpl.Execute(w, nil)
+
+	if err != nil {
+		fmt.Println("Unable to parse html")
+	}
+}
+
+func Programs(w http.ResponseWriter, r *http.Request) {
+	tmpl, _ := template.ParseFiles("templates/programs.html")
 
 	err := tmpl.Execute(w, nil)
 

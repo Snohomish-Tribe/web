@@ -1,8 +1,8 @@
 package models
 
-type ReqBody struct {
-	Name     string
-	Email    string
-	Question string
-	Message  string
+type Reqbody struct {
+	Name     string `json:"name"`
+	Email    string `json:"email"`
+	Question string `json:"questions"`
+	Message  string `json:"message"`
 }
