@@ -14,6 +14,9 @@ func main() {
 	http.HandleFunc("/credits", handlers.Credits)
 	http.HandleFunc("/contact", handlers.Contact)
 	http.HandleFunc("/events", handlers.Events)
+	http.HandleFunc("/language-learning", handlers.Language)
+	http.HandleFunc("/membership", handlers.Membership)
+	http.HandleFunc("/programs", handlers.Programs)
 
 	// Post request
 

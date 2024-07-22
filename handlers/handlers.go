@@ -92,3 +92,9 @@ func Programs(w http.ResponseWriter, r *http.Request) {
 func SendEmail() {
 
 }
+
+// events go to bporter@snohomishtribe.org
+//- membership goes to lloeber@snohomishtribe.org
+//- general goes to contact@snohomishtribe.org
+//https://pkg.go.dev/github.com/cwinters8/gomap#example-Client.SendEmail
+// https://www.kirandev.com/http-post-golang
