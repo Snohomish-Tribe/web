@@ -5,7 +5,7 @@ import (
 	"html/template"
 	"net/http"
 	// "strings"
-	// "bytes"
+	// "github.com/danielekpark/models"
 	// "github.com/cwinters8/gomap"
 )
 
@@ -36,6 +36,17 @@ func Contact(w http.ResponseWriter, r *http.Request) {
 
 	if err != nil {
 		fmt.Println("Unable to parse html")
+	}
+
+	if r.Method == "POST" {
+		// msg := models.Reqbody{
+		// 	Name:     r.FormValue("name"),
+		// 	Email:    r.FormValue("email"),
+		// 	Question: r.FormValue("questions"),
+		// 	Message:  r.FormValue("message"),
+		// }
+
+		fmt.Println(r.FormValue("name"))
 	}
 }
 
@@ -90,11 +101,11 @@ func Programs(w http.ResponseWriter, r *http.Request) {
 }
 
 func SendEmail() {
+	// events go to bporter@snohomishtribe.org
+	//- membership goes to lloeber@snohomishtribe.org
+	//- general goes to contact@snohomishtribe.org
 
 }
 
-// events go to bporter@snohomishtribe.org
-//- membership goes to lloeber@snohomishtribe.org
-//- general goes to contact@snohomishtribe.org
 //https://pkg.go.dev/github.com/cwinters8/gomap#example-Client.SendEmail
 // https://www.kirandev.com/http-post-golang

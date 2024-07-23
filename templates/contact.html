@@ -10,18 +10,18 @@
 
 <body>
     <h1>Contact Page</h1>
-    <form class="fira-sans" method="POST">
+    <form class="fira-sans" action="/contact" method="post">
         <label for="name">
             Full Name
-            <input id="name" type="text">
+            <input name="name" id="name" type="text">
         </label>
         <label for="email">
             Email Address
-            <input id="email" type="text">
+            <input name="email" id="email" type="text">
         </label>
         <label for="questions">
             I have a question about
-            <select name="" id="questions">
+            <select name="questions" id="questions">
                 <option value="" disabled selected>Select a category</option>
                 <option value="membership">Membership</option>
                 <option value="events">Events</option>
@@ -32,10 +32,10 @@
         </label>
         <label for="message">
             Message
-            <textarea rows="8" name="" id="message"></textarea>
+            <textarea rows="8" name="message" id="message"></textarea>
         </label>
         <div class="form-group">
-            <input type="checkbox" name="" id="terms">
+            <input type="checkbox" name="terms" id="terms">
             <label class="roboto" for="terms">
                 I agree to the Terms</label>
             <button class="roboto" type="submit">Send</button>
