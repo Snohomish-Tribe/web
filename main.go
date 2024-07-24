@@ -1,8 +1,6 @@
 package main
 
 import (
-	// "encoding/json"
-	// "fmt"
 	"net/http"
 
 	"github.com/danielekpark/handlers"
@@ -10,7 +8,7 @@ import (
 
 func main() {
 	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
-	//Get Requests
+
 	http.HandleFunc("/", handlers.Index)
 	http.HandleFunc("/about", handlers.About)
 	http.HandleFunc("/credits", handlers.Credits)
@@ -19,8 +17,6 @@ func main() {
 	http.HandleFunc("/language-learning", handlers.Language)
 	http.HandleFunc("/membership", handlers.Membership)
 	http.HandleFunc("/programs", handlers.Programs)
-
-	// Post request
 
 	http.ListenAndServe(":3000", nil)
 }

@@ -17,7 +17,7 @@
         </label>
         <label for="email">
             Email Address
-            <input name="email" id="email" type="text">
+            <input name="email" id="email" type="email">
         </label>
         <label for="questions">
             I have a question about
@@ -42,8 +42,30 @@
         </div>
     </form>
 
-
     <script src="/static/js/app.js"></script>
+    <script>
+        /* ===========
+        Selected Elements
+        ============ */
+        const form = document.querySelector('form');
+        const nameInput = document.querySelector('#name');
+        const emailInput = document.querySelector('#email');
+        const textarea = document.querySelector('textarea');
+        const checkbox = document.querySelector('#terms');
+        const select = document.querySelector('select');
+        
+        /* ===========
+        Event Listeners
+        ============ */
+        form.addEventListener('submit', (event) => {
+            if (nameInput.value.trim() === '') event.preventDefault(); 
+            if (emailInput.value.trim() === '') event.preventDefault(); 
+            if (textarea.value.trim() === '') event.preventDefault();
+            if (checkbox.value !== 'on') event.preventDefault();
+            if(select.value === '') event.preventDefault(); 
+        })
+
+    </script>
     <style>
         form {
             width: 400px;
