@@ -8,6 +8,8 @@ const crumbs = [...document.querySelectorAll(".crumb")];
 
 let translateNum = 0;
 
+const limit = - (images.length - 1);
+
 const setActiveImage = (translateNum) => {
   const index = -1 * translateNum;
   images.forEach(
@@ -27,7 +29,7 @@ const setActiveImage = (translateNum) => {
     Event Handlers
 ==================================== */
 nextBtn.addEventListener("click", () => {
-  if(translateNum === -3) return;
+  if(translateNum === limit) return;
   translateNum--;
   setActiveImage(translateNum); 
 });
