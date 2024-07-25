@@ -3,10 +3,14 @@ package handlers
 import (
 	"fmt"
 	"html/template"
+
+	"log"
 	"net/http"
-	// "strings"
-	// "github.com/danielekpark/models"
-	// "github.com/cwinters8/gomap"
+	"os"
+
+	"github.com/cwinters8/gomap"
+	"github.com/danielekpark/models"
+	"github.com/joho/godotenv"
 )
 
 func Index(w http.ResponseWriter, r *http.Request) {
@@ -30,23 +34,62 @@ func About(w http.ResponseWriter, r *http.Request) {
 }
 
 func Contact(w http.ResponseWriter, r *http.Request) {
+	recipient := ""
+	if r.Method == "POST" {
+		godotenv.Load()
+		msg := models.Reqbody{
+			Name:     r.FormValue("name"),
+			Email:    r.FormValue("email"),
+			Question: r.FormValue("questions"),
+			Message:  r.FormValue("message"),
+		}
+
+		switch msg.Question {
+		case "events":
+			recipient = " bporter@snohomishtribe.org"
+		case "membership":
+			recipient = "lloeber@snohomishtribe.org"
+		default:
+			recipient = "contact@snohomishtribe.org"
+		}
+
+		fmt.Println(recipient)
+		//Start here
+		mail, err := gomap.NewClient(
+			"https://api.fastmail.com/jmap/session",
+			os.Getenv("BEARER_TOKEN"),
+			gomap.DefaultDrafts,
+			gomap.DefaultSent,
+		)
+		if err != nil {
+			log.Fatal(err)
+		}
+		fmt.Println(mail)
+		// send an email
+		// from := gomap.NewAddress(msg.Name, msg.Email)
+		from := gomap.NewAddress(msg.Name, "daniel@devonfarm.xyz")
+		to := gomap.NewAddress("Snohomish Tribe Guest user", "daniel@devonfarm.xyz")
+
+		if err := mail.SendEmail(
+			gomap.NewAddresses(from),
+			gomap.NewAddresses(to),
+			"Contact Form Question",
+			fmt.Sprintf("From %s %s", msg.Email, msg.Message),
+			false,
+		); err != nil {
+			log.Fatal(err, " line 80")
+		}
+
+		w.WriteHeader(http.StatusOK)
+		return
+	}
+
 	tmpl, _ := template.ParseFiles("templates/contact.html")
 
 	err := tmpl.Execute(w, nil)
 
 	if err != nil {
 		fmt.Println("Unable to parse html")
-	}
-
-	if r.Method == "POST" {
-		// msg := models.Reqbody{
-		// 	Name:     r.FormValue("name"),
-		// 	Email:    r.FormValue("email"),
-		// 	Question: r.FormValue("questions"),
-		// 	Message:  r.FormValue("message"),
-		// }
-
-		fmt.Println(r.FormValue("name"))
 	}
 }
 
@@ -99,13 +142,3 @@ func Programs(w http.ResponseWriter, r *http.Request) {
 		fmt.Println("Unable to parse html")
 	}
 }
-
-func SendEmail() {
-	// events go to bporter@snohomishtribe.org
-	//- membership goes to lloeber@snohomishtribe.org
-	//- general goes to contact@snohomishtribe.org
-
-}
-
-//https://pkg.go.dev/github.com/cwinters8/gomap#example-Client.SendEmail
-// https://www.kirandev.com/http-post-golang
