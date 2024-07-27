@@ -143,13 +143,14 @@ h3 span {
 
 .row-3 .btn {
   display: inline-block;
+  padding: 1rem 1.5rem;
+  border: 1px solid #000000;
 }
 
 .top-moon,
 .bottom-moon {
   display: none;
 }
-
 
 /* ================================= 
   MEDIA QUERIES 768px 

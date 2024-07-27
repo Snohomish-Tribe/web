@@ -15,8 +15,7 @@ BASE STYLES
 }
 
 body,
-.toggle, 
-.events-btn {
+.toggle {
   background-color: #FFFBE4;
 }
 
@@ -63,8 +62,7 @@ footer svg {
   margin: 0 auto;
 }
 
-.toggle,
-.bt-point h4 {
+.toggle {
   margin: auto 0;
 }
 
@@ -72,11 +70,6 @@ footer svg {
   margin-top: 0;
 }
 
-.events-btn {
-  margin-top: 1rem;
-}
-
-.events-btn,
 .txt {
   margin-bottom: 3rem;
 }
@@ -93,8 +86,7 @@ footer svg {
 
 .bg-container,
 img,
-.title, 
-.trigon {
+.title {
   width: 100%; 
 }
 
@@ -114,11 +106,6 @@ img,
 }
 
 /* =========== Background-Styles =========== */
-/* .boat,
-.intro-section .container {
-  height: 70vh;
-} */
-
 .bg-container img {
   object-fit: cover;
 }
@@ -144,8 +131,6 @@ img,
   display: block;
 }
 
-.events-btn,
-/* .membership-btn, */
 .btn-container a {
   display: inline-block;
 }
@@ -205,7 +190,6 @@ h2,
 .title, 
 .moons,
 .wrapper,
-.trigon, 
 .inner-container {
   position: absolute;
 } 
@@ -294,30 +278,13 @@ Home Page-Standing Strong
   display: none;
 }
 
-.row-1 .btn,
-.events-btn,
-/* .membership-btn, */
-.programs .row-3 .btn {
+.row-1 .btn {
   padding: 1rem 1.5rem;
   border: 1px solid #000000;
 }
 
-.events-btn
-/* .membership-btn, */ {
-  padding: 1rem 1.5rem;
-}
-
-/* ================================= 
-  Ancestral Territory
-==================================== */
 .arrows {
   margin-top: 2rem; 
-}
-
-.trigon {
-  z-index: -1;
-  top: -50%;
-  left: 0; 
 }
 
 /* ================================= 
