@@ -78,6 +78,8 @@ button {
 .address {
   width: 70%;
   line-height: 2rem;
+  margin: 0 auto;
+  text-decoration: underline;
 }
 
 .col-2 {

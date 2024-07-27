@@ -55,7 +55,6 @@ footer ul li,
 .svg-container svg,
 .years,
 .breadcrumbs,
-.address,
 footer svg {
   margin: 0 auto;
 }
@@ -185,29 +184,24 @@ h2 {
 }
 
 /* =========== Line-Height =========== */
-.word-wrap,
-.faqs-item p {
+.word-wrap {
   line-height: 1.75rem;
 }
 
 .banner .fira-sans,
-.bg-footer p, 
-.address {
+.bg-footer p {
   line-height: 2rem;
 }
 
-.faqs, 
 .privacy {
   border-top: 1px solid #000000;
 }
 
-header, 
-.faqs-item {
+header {
   border-bottom: 1px solid #000000;
 }
 
 /* =========== Underline ============= */
-.address,
 .privacy-links a {
   text-decoration: underline;
 } 

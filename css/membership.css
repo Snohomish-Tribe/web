@@ -20,8 +20,17 @@ h3 {
   font-weight: 500;
 }
 
+.faqs {
+  border-top: 1px solid #000000;
+}
+
+.faqs-item {
+  border-bottom: 1px solid #000000;
+}
+
 .faqs-item p {
   font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 .banner .container {
