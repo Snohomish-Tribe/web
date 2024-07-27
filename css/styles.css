@@ -37,7 +37,6 @@ a {
   ==================================== */
 /* =========== Flexbox =========== */
 .nav,
-.carousel,
 .breadcrumbs {
   display: flex;
 }
@@ -54,7 +53,7 @@ footer ul li,
 .container,
 .line,
 .svg-container svg,
-.carousel img,
+.years,
 .breadcrumbs,
 .address,
 footer svg {
@@ -63,10 +62,6 @@ footer svg {
 
 .toggle {
   margin: auto 0;
-}
-
-.carousel .img-container {
-  margin-top: 0;
 }
 
 .txt {
@@ -78,6 +73,7 @@ footer svg {
 .main-nav,
 .nav,
 .container,
+.years,
 .svg-container svg {
   width: 90%;
 }
@@ -86,10 +82,6 @@ footer svg {
 img,
 .title {
   width: 100%; 
-}
-
-.breadcrumbs {
-  width: 50%;
 }
 
 .line {
@@ -244,8 +236,7 @@ nav {
   border: none;
 }
 
-.toggle:hover,
-.carousel svg:hover {
+.toggle:hover {
   cursor: pointer;
 }
 
@@ -265,10 +256,6 @@ nav {
 /* ================================= 
 Home Page-Standing Strong
 ==================================== */
-.cm-arrw {
-  display: none;
-}
-
 .row-1 .btn {
   padding: 1rem 1.5rem;
   border: 1px solid #000000;
@@ -276,19 +263,6 @@ Home Page-Standing Strong
 
 .arrows {
   margin-top: 2rem; 
-}
-
-/* =========== Photo Gallery =========== */
-.carousel .img-container {
-  margin-bottom: 2rem;
-}
-
-.carousel {
-  justify-content: center;
-}
-
-.carousel svg {
-  margin: auto;
 }
 
 /* ================================= 

@@ -206,7 +206,16 @@ aside {
 }
 
 .carousel {
+  display: flex;
   justify-content: center;
+}
+
+.carousel img {
+  margin: 0 auto;
+}
+
+.carousel .img-container {
+  margin-top: 0;
 }
 
 .carousel-container {
@@ -225,7 +234,12 @@ aside {
   margin: auto;
 }
 
+.carousel svg:hover {
+  cursor: pointer;
+}
+
 .breadcrumbs {
+  width: 50%;
   padding: 1rem 0; 
   justify-content: space-around;
 }
