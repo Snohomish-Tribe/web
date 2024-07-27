@@ -36,8 +36,7 @@ a {
     Common Styles
   ==================================== */
 /* =========== Flexbox =========== */
-.nav,
-.breadcrumbs {
+.nav {
   display: flex;
 }
 
@@ -279,7 +278,7 @@ footer ul li {
     display: flex;
     width: 90%;
     margin: 0 auto;
-}
+  }
 
   .toggle {
     display: none;
@@ -298,7 +297,7 @@ footer ul li {
 
   .main-nav li {
     font-size: 1.125rem;
-}
+  }
 
   .main-header {
     border-bottom: none;
