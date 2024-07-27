@@ -3,7 +3,7 @@ package main
 import (
 	"net/http"
 
-	"github.com/danielekpark/handlers"
+	"github.com/danielekpark/pkg/handlers"
 )
 
 func main() {
