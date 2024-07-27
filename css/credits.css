@@ -37,6 +37,10 @@ h1 {
   margin: 0.5rem 0;
 }
 
+p a {
+  text-decoration: underline;
+}
+
 /* ================================= 
   MEDIA QUERIES 768px 
 ==================================== */

@@ -208,7 +208,6 @@ header,
 
 /* =========== Underline ============= */
 .address,
-.credits p a,
 .privacy-links a {
   text-decoration: underline;
 } 
@@ -251,18 +250,6 @@ nav {
 
 .show-links {
   height: 90vh;
-}
-
-/* ================================= 
-Home Page-Standing Strong
-==================================== */
-.row-1 .btn {
-  padding: 1rem 1.5rem;
-  border: 1px solid #000000;
-}
-
-.arrows {
-  margin-top: 2rem; 
 }
 
 /* ================================= 

@@ -99,6 +99,11 @@ section {
   position: relative;
 }
 
+.row-1 .btn {
+  padding: 1rem 1.5rem;
+  border: 1px solid #000000;
+}
+
 .row-1 .details {
   font-weight: 600;
   margin-bottom: 2rem;

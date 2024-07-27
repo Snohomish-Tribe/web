@@ -34,6 +34,10 @@
   margin: 2rem 0;
 }
 
+.arrows {
+  margin-top: 2rem;
+}
+
 .row-2 .arrows,
 .row-4 .arrows,
 .row-2 .container svg:last-of-type {
