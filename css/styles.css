@@ -32,17 +32,6 @@ a {
   text-decoration: none;
 }
   
-/* =========== Flexbox =========== */
-.nav {
-  display: flex;
-}
-
-/* =========== Text-alignment =========== */
-footer ul li,
-.copyright {
-  text-align: center;
-}
-
 /* =========== Margins =========== */
 .nav,
 .main-nav, 
@@ -159,22 +148,13 @@ h2 {
   line-height: 2rem;
 }
 
-.privacy {
-  border-top: 1px solid #000000;
-}
-
+/* ================================= 
+  Header
+==================================== */
 header {
   border-bottom: 1px solid #000000;
 }
 
-/* =========== Underline ============= */
-.privacy-links a {
-  text-decoration: underline;
-} 
-
-/* ================================= 
-  Header
-==================================== */
 .main-header {
   padding-bottom: 0.5rem;
 }
@@ -184,6 +164,10 @@ header {
   font-size: 1.25rem;
   font-family: 'Roboto';
   font-weight: 400;
+}
+
+.nav {
+  display: flex;
 }
 
 nav {
@@ -224,9 +208,19 @@ footer ul li {
   margin-bottom: 1rem;
 }
 
+footer ul li,
+.copyright {
+  text-align: center;
+}
+
 .privacy {
   padding: 1rem 0; 
+  border-top: 1px solid #000000;
 }
+
+.privacy-links a {
+  text-decoration: underline;
+} 
 
 .page-links {
   font-weight: 600;
