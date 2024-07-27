@@ -21,33 +21,14 @@ h1,
   padding: 3rem 0;
 }
 
-.banner .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.row-3 a, 
-.row-4 a {
-  display: inline-block;
-}
-
 .row-1,
 .row-2 {
   color: #FFFBE4;
 }
 
-.mountain {
-  height: 50vh;
-}
-
-.row-2 h2 {
-  text-align: center;
-}
-
-.row-1 p {
-  font-weight: 600;
-  line-height: 1.75rem;
+.row-3 a, 
+.row-4 a {
+  display: inline-block;
 }
 
 .row-1 svg,
@@ -56,16 +37,36 @@ h1,
   display: none;
 }
 
+.banner .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mountain {
+  height: 50vh;
+}
+
+/* =========== About Our Language =========== */
+.row-1 p {
+  font-weight: 600;
+  line-height: 1.75rem;
+}
+
 .row-1 img {
   width: 85%;
   margin: 0 auto;
 }
 
-.row-4 a {
-  padding: 1rem 1.5rem;
+.txt {
+  margin-bottom: 3rem;
 }
 
-/* =========== Lesson Images =========== */
+/* =========== Language Preview =========== */
+.row-2 h2 {
+  text-align: center;
+}
+
 .carousel {
   display: flex;
   justify-content: center;
@@ -104,6 +105,7 @@ h1,
   padding: 1rem 0;
   display: flex; 
   justify-content: space-around;
+  margin: 0 auto;
 }
 
 .carousel {
@@ -149,6 +151,11 @@ h1,
 .lesson p {
   font-weight: 400;
   line-height: 2rem;
+}
+
+/* =========== Learn More =========== */
+.row-4 a {
+  padding: 1rem 1.5rem;
 }
 
 .row-4 .btn-container {

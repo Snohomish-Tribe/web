@@ -33,7 +33,9 @@ section {
 .date {
   padding-top: 0.5rem;
   display: flex;
+  position: relative;
 }
+
 
 .date p {
   margin: 0.5rem 0;

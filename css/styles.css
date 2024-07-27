@@ -32,9 +32,6 @@ a {
   text-decoration: none;
 }
   
-  /* ================================= 
-    Common Styles
-  ==================================== */
 /* =========== Flexbox =========== */
 .nav {
   display: flex;
@@ -50,10 +47,7 @@ footer ul li,
 .nav,
 .main-nav, 
 .container,
-.line,
 .svg-container svg,
-.years,
-.breadcrumbs,
 footer svg {
   margin: 0 auto;
 }
@@ -62,16 +56,11 @@ footer svg {
   margin: auto 0;
 }
 
-.txt {
-  margin-bottom: 3rem;
-}
-
 /* =========== Width =========== */
 .nav,
 .main-nav,
 .nav,
 .container,
-.years,
 .svg-container svg {
   width: 90%;
 }
@@ -80,17 +69,6 @@ footer svg {
 img,
 .title {
   width: 100%; 
-}
-
-.line {
-  border-left: 3px solid black;
-  height: 9rem;
-  width: 3px
-}
-
-.word-wrap {
-  width: 85%;
-  margin-top: 0.5rem;
 }
 
 /* =========== Background-Styles =========== */
@@ -165,27 +143,17 @@ h2 {
 }
 
 /* =========== Position =========== */
-.bg-container,
-.date {
+.bg-container {
   position: relative;
 } 
 
 .title, 
-.wrapper,
-.inner-container {
+.wrapper {
   position: absolute;
+  top: 0;  
 } 
 
-.title,
-.wrapper {
-  top: 0;
-}
-
 /* =========== Line-Height =========== */
-.word-wrap {
-  line-height: 1.75rem;
-}
-
 .banner .fira-sans,
 .bg-footer p {
   line-height: 2rem;

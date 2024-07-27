@@ -170,6 +170,12 @@ section {
   font-weight: 300;
 }
 
+.word-wrap {
+  width: 85%;
+  margin-top: 0.5rem;
+  line-height: 1.75rem;
+}
+
 /* ================================= 
   Standing Strong
 ==================================== */
