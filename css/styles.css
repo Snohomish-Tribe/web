@@ -55,7 +55,6 @@ footer ul li,
 .line,
 .svg-container svg,
 .carousel img,
-.years,
 .breadcrumbs,
 .address,
 footer svg {
@@ -79,7 +78,6 @@ footer svg {
 .main-nav,
 .nav,
 .container,
-.years,
 .svg-container svg {
   width: 90%;
 }
@@ -148,10 +146,6 @@ img,
   font-family: "Roboto";
 }
 
-.events .container > p:first-child {
-  color: #000000;
-}
-
 .font-white {
   color: #fff;
 }
@@ -176,8 +170,7 @@ img,
   font-size: 3rem;
 }
 
-h2,
-.not-found h1 {
+h2 {
   font-weight: 500;
 }
 
@@ -201,8 +194,7 @@ h2,
 
 /* =========== Line-Height =========== */
 .word-wrap,
-.faqs-item p,
-.not-found h1  {
+.faqs-item p {
   line-height: 1.75rem;
 }
 
@@ -212,7 +204,6 @@ h2,
   line-height: 2rem;
 }
 
-.events section, 
 .faqs, 
 .privacy {
   border-top: 1px solid #000000;
@@ -285,13 +276,6 @@ Home Page-Standing Strong
 
 .arrows {
   margin-top: 2rem; 
-}
-
-/* ================================= 
-  Sovereign Nation 
-==================================== */
-.nation-img {
-  height: 100vh; 
 }
 
 /* =========== Photo Gallery =========== */

@@ -7,6 +7,10 @@ Home Page
   height: 70vh;
 }
 
+.nation-img {
+  height: 100vh; 
+}
+
 .intro-section .container {
   display: flex;
   flex-direction: column;
@@ -24,7 +28,6 @@ h1 {
 h1, 
 h2 {
   text-align: center;
-  
 }
   
 .bg-footer {

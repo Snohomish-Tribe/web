@@ -6,6 +6,10 @@
   font-weight: 300;
 }
 
+.nation-img {
+  height: 100vh; 
+}
+
 /* =========== Banner Section =========== */
 .plant {
   height: 60vh;

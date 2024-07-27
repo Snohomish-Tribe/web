@@ -6,6 +6,8 @@ h1 {
   margin-bottom: 0;
   padding: 1rem;
   white-space: nowrap;
+  font-weight: 500;
+  line-height: 1.75rem;
 }
 
 .row-1 {
