@@ -9,12 +9,12 @@ import (
 	"os"
 
 	"github.com/cwinters8/gomap"
-	"github.com/danielekpark/pkg/models"
 	"github.com/joho/godotenv"
+	"github.com/snohomishtribe/pkg/models"
 )
 
 func Index(w http.ResponseWriter, r *http.Request) {
-	tmpl, _ := template.ParseFiles("static/templates/index.html")
+	tmpl, _ := template.ParseFiles("static/templates/base.tmpl")
 
 	if err := tmpl.Execute(w, nil); err != nil {
 		log.Fatal("Failed to parse template ", err)
