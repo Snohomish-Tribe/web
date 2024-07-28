@@ -1,0 +1,84 @@
+/* ================================= 
+  Credits Page
+==================================== */
+section {
+  height: 90vh;
+  padding: 2rem 0;
+}
+
+h1 {
+  margin: 0;
+}
+
+.credits section,
+.page-links {
+  font-weight: 700;
+}
+
+.svg-container svg {
+  width: 100%;
+  margin: 2rem 0;
+}
+
+.bg-svg {
+  top: 50%;
+  left: -10%;
+}
+
+.bg-svg:last-of-type {
+  display: none;
+}
+
+.row-2 {
+  margin-top: 3rem;
+}
+
+.credits p {
+  margin: 0.5rem 0;
+}
+
+p a {
+  text-decoration: underline;
+}
+
+/* ================================= 
+  MEDIA QUERIES 768px 
+==================================== */
+@media (min-width: 768px) {
+  .bg-container{
+    margin-top: 2rem;
+  }
+
+  h1,
+  .row-1 p,
+  .row-2 p {
+    text-align: center;
+  }
+
+  .bg-svg {
+    top: -15%;  
+  }
+
+  .bg-svg:first-of-type {
+    display: none;
+  }
+  .bg-svg:last-of-type {
+    display: block;
+  }
+}
+
+/* ================================= 
+  MEDIA QUERIES 1024px 
+==================================== */
+@media (min-width: 1024px) {
+  .bg-svg {
+    top: 15%;  
+  }
+
+  .svg-container svg {
+    max-width: 1200px;
+    margin: 2rem auto;
+  }
+}
+
+

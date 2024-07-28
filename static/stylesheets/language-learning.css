@@ -1,0 +1,411 @@
+/* ================================= 
+  Language Learning Page
+==================================== */
+.bg-container .title,
+.bg-container .container {
+  height: 100%;
+}
+
+h1,
+.row-1 h2, 
+.row-2 h2, 
+.row-3 h2, 
+.row-2 {
+  margin-top: 0;
+}
+
+.row-1,
+.row-2,
+.row-3, 
+.row-4{
+  padding: 3rem 0;
+}
+
+.row-1,
+.row-2 {
+  color: #FFFBE4;
+}
+
+.row-3 a, 
+.row-4 a {
+  display: inline-block;
+}
+
+.row-1 svg,
+.row-3 svg,
+.row-4 svg {
+  display: none;
+}
+
+.banner .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mountain {
+  height: 50vh;
+}
+
+/* =========== About Our Language =========== */
+.row-1 p {
+  font-weight: 600;
+  line-height: 1.75rem;
+}
+
+.row-1 img {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.txt {
+  margin-bottom: 3rem;
+}
+
+/* =========== Language Preview =========== */
+.row-2 h2 {
+  text-align: center;
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+}
+
+.carousel-container {
+  margin-bottom: 2rem;
+  width: 280px;
+  overflow: hidden;
+  display: flex;
+}
+
+.carousel img {
+  margin: 0 auto;
+}
+
+.carousel .img-container {
+  margin-top: 0;
+}
+
+.carousel-img {
+  width: 100%;
+  transition: transform 0.9s ease;
+}
+
+.carousel svg {
+  margin: auto;
+}
+
+.carousel svg:hover {
+  cursor: pointer;
+}
+
+.breadcrumbs {
+  width: 50%;
+  padding: 1rem 0;
+  display: flex; 
+  justify-content: space-around;
+  margin: 0 auto;
+}
+
+.carousel {
+  width: 100%; 
+}
+
+.crumb {
+  border-radius: 100%;
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: #8D8D8D;
+}
+
+.active-crumb {
+  background-color: #fff;
+}
+
+/* =========== Lessons =========== */
+.row-3 {
+  background-image: url("/images/bg-moons.svg");
+  background-size: contain;
+}
+
+.row-3 h3 {
+  font-weight: 500;
+}
+
+.row-3 .btn {
+  margin-right: 1.5rem;
+  padding: 1rem 1.5rem;
+  border: 1px solid #000000;
+}
+
+.audio-file::after {
+  content: ">";
+  padding-left: 0.5rem;
+}
+
+.lesson {
+  margin-bottom: 3rem;
+}
+
+.lesson p {
+  font-weight: 400;
+  line-height: 2rem;
+}
+
+/* =========== Learn More =========== */
+.row-4 a {
+  padding: 1rem 1.5rem;
+}
+
+.row-4 .btn-container {
+  margin-top: 2rem;
+}
+
+.row-4 p {
+  line-height: 2rem;
+}
+
+.row-4 a {
+  background-color: #FFFBE4;
+}
+
+/* ================================= 
+  MEDIA QUERIES 768px 
+==================================== */
+@media (min-width: 768px) {
+  .mountain {
+    height: 40vh; 
+  }
+
+  .row-1 {
+    overflow: hidden;
+  }
+
+  .row-1 .bg-container {
+    position: relative;
+  }
+
+  .row-1 .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: 1;
+    padding: 1rem;
+    position: relative;
+  }
+
+  .row-1 .col-1, 
+  .row-1 .img-container {
+    width: 47.5%;
+  }
+
+  .row-1 .col-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .row-1 h2 {
+    margin-bottom: 0;
+    font-weight: 100;
+  }
+
+  .row-1 .col-1 {
+    position: relative;    
+  }
+
+  .row-1 .col-1 .font-xsm {
+    font-weight: 500;
+    font-size: 1rem;
+    margin-bottom: 0;
+  }
+
+  .row-1 img {
+    object-fit: scale-down;
+    width: max-content;
+  }
+
+  .row-1 svg {
+    display: block;
+    position: absolute;
+    top: -60%;
+    right: 42%;
+    width: 100%;
+  }
+
+  /* =========== Lesson Images =========== */
+  .carousel {
+    margin: 3rem 0;
+  }
+
+
+  .carousel-container {
+    width: 500px;
+  }
+
+  .carousel-img {
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .breadcrumbs {
+    justify-content: center;
+    gap: 2rem;
+  }  
+
+  /* =========== Lessons =========== */
+  .language .row-3 {
+    padding: 5rem 0;
+  }
+
+  .row-3 {
+    background-image: none;
+  }
+
+  .full-lessons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+  
+  .lesson {
+    width: 47.5%;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+  }
+
+  .lesson h3 {
+    margin-bottom: 0.25rem;
+  }
+
+  .lesson div:last-child {
+    margin-top: auto;
+  }
+
+  .row-3 .container {
+    display: relative;
+  }
+
+  .row-3 .container svg {
+    display: block; 
+    position: absolute
+  }
+
+  .row-3 svg {
+    width: 60%;
+  }
+
+  .row-3 svg:first-of-type {
+    top: 0;
+    right: 0;
+  }
+
+  .row-3 svg:last-of-type {
+    bottom: 0;
+    left: 0;
+  }
+
+  /* =========== Learn More =========== */
+  .row-4 {
+    overflow: hidden;
+  }
+
+  .row-4 .container {
+    position: relative;
+  }
+
+  .row-4 svg {
+    display: block;
+  }
+
+  .row-4 p {
+    position: relative;
+    z-index: 1;
+    width: 70%;
+  }
+
+  .row-4 svg:first-of-type {
+    width: 25%;
+  }
+
+  .row-4 svg:last-of-type {
+    width: 70%;
+    position: absolute;
+    bottom: -30%;
+    right: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .row-1 {
+    height: 75vh;
+  }
+
+  .row-1 .bg-container {
+    height: 100%;
+  }
+
+  .row-1 .container {
+    max-width: 1200px;
+  }
+  
+  .row-1 .col-1, 
+  .row-1 .img-container {
+    width: 47.5%;
+  }
+
+  .row-1 .img-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+  .row-1 .col-1 .font-xsm {
+    font-size: 1.125rem;
+    line-height: 2rem;
+  }
+
+  .row-1 svg {
+    top: -90%;
+    right: 46%;
+    width: 70%;
+  }
+
+  /* =========== Lesson Images =========== */
+  /* .carousel-container {
+    width: 850px;
+  } */
+
+  .carousel-img {
+    /* width: 40%; */
+    object-fit: contain;
+  }
+
+  .breadcrumbs {
+    gap: 2rem;
+  }
+
+  /* =========== Lessons =========== */
+  .row-3 svg {
+    width: 45%;
+  }
+
+  .row-3 .container {
+    max-width: 1200px;
+  }
+
+  .row-4 p {
+    width: 50%;
+  }
+
+  .row-4 svg:last-of-type {
+    width: 37%;
+    bottom: -40%;
+  }
+
+}

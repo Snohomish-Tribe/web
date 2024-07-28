@@ -1,0 +1,329 @@
+/* ================================= 
+BASE STYLES
+==================================== */
+/* Roboto Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Fira Sans Font */
+@import url('https://fonts.googleapis.com/css2?family=Amarante&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Amarante Font */
+@import url('https://fonts.googleapis.com/css2?family=Amarante&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+.toggle {
+  background-color: #FFFBE4;
+}
+
+ul {
+  padding-left: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}
+  
+/* =========== Margins =========== */
+.nav,
+.main-nav, 
+.container,
+.svg-container svg,
+footer svg {
+  margin: 0 auto;
+}
+
+.toggle {
+  margin: auto 0;
+}
+
+/* =========== Width =========== */
+.nav,
+.main-nav,
+.nav,
+.container,
+.svg-container svg {
+  width: 90%;
+}
+
+.bg-container,
+img,
+.title {
+  width: 100%; 
+}
+
+/* =========== Background-Styles =========== */
+.bg-container img {
+  object-fit: cover;
+}
+
+.bg-blk {
+  background-color: #2D302C;
+}
+
+.bg-red {
+  background-color: #9E3333;
+}
+
+.bg-svg {
+  position: absolute;
+  width: 100%;
+  z-index: -1;  
+}
+
+/* =========== Display  =========== */
+svg,
+img,
+.footer a {
+  display: block;
+}
+
+.btn-container a {
+  display: inline-block;
+}
+
+/* =========== Font styles =========== */
+.amarante {
+  font-family: "Amarante";
+}
+
+.fira-sans {
+  font-family: "Fira Sans";
+}
+
+.roboto {
+  font-family: "Roboto";
+}
+
+.font-white {
+  color: #fff;
+}
+
+.font-xsm {
+  font-size: 1.25rem;
+}
+
+.font-sm {
+  font-size: 1.5rem;
+}
+
+.font-md {
+  font-size: 2rem;
+}
+
+.font-base {
+  font-size: 2.5rem;
+}
+
+.font-lg {
+  font-size: 3rem;
+}
+
+h2 {
+  font-weight: 500;
+}
+
+/* =========== Position =========== */
+.bg-container {
+  position: relative;
+} 
+
+.title, 
+.wrapper {
+  position: absolute;
+  top: 0;  
+} 
+
+/* =========== Line-Height =========== */
+.banner .fira-sans,
+.bg-footer p {
+  line-height: 2rem;
+}
+
+/* ================================= 
+  Header
+==================================== */
+header {
+  border-bottom: 1px solid #000000;
+}
+
+.main-header {
+  padding-bottom: 0.5rem;
+}
+
+.main-nav li {
+  margin: 1.75rem 0; 
+  font-size: 1.25rem;
+  font-family: 'Roboto';
+  font-weight: 400;
+}
+
+.nav {
+  display: flex;
+}
+
+nav {
+  height: 0vh;
+  overflow: hidden;
+}
+
+.toggle {
+  border: none;
+}
+
+.toggle:hover {
+  cursor: pointer;
+}
+
+.nav {
+  justify-content: space-between;
+}
+
+.main-nav,
+.show-links {
+  transition: height 0.9s ease-in;  
+}
+
+.show-links {
+  height: 90vh;
+}
+
+/* ================================= 
+  Footer
+==================================== */
+footer {
+  padding: 3rem 0;
+}
+
+footer ul li {
+  padding: 0.5rem 0; 
+  margin-bottom: 1rem;
+}
+
+footer ul li,
+.copyright {
+  text-align: center;
+}
+
+.privacy {
+  padding: 1rem 0; 
+  border-top: 1px solid #000000;
+}
+
+.privacy-links a {
+  text-decoration: underline;
+} 
+
+.page-links {
+  font-weight: 600;
+}
+
+/* ================================= 
+  MEDIA QUERIES 768px 
+==================================== */
+@media (min-width: 768px) {
+  header {
+    margin: 0 auto;
+    border-bottom: 1px solid #000000;
+  }
+
+  header > div {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .toggle {
+    display: none;
+  }
+
+  ul {
+    gap: 1rem;
+  }
+
+  .main-nav {
+    height: auto;
+    display: flex;
+    width: max-content;
+    margin-right: 0;
+  }
+
+  .main-nav li {
+    font-size: 1.125rem;
+  }
+
+  .main-header {
+    border-bottom: none;
+  }
+
+  header,
+  .main-nav ul, 
+  .page-links,
+  .privacy, 
+  .privacy-links,
+  .copyright {
+    display: flex;
+  }
+
+  header {
+    justify-content: space-between;
+  }
+
+  .main-nav li {
+    margin: 1rem 0;
+  }
+
+  .page-links {
+    justify-content: space-between;
+    width: 60%;
+    margin: 1.5rem auto 3rem;
+  }
+
+  .privacy { 
+    flex-direction: row-reverse; 
+    justify-content: space-between;
+  }
+
+  .privacy-links {
+    margin: 0;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .privacy-links li {
+    margin-bottom: 0;
+  }
+
+  .privacy-links,
+  .copyright {
+    gap: 1rem;
+  }
+
+  .copyright {
+    align-items: center;
+  }
+
+  .copyright p {
+    margin: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  header,
+  footer .container {
+    max-width: 1200px;
+  }
+
+  .page-links {
+    width: max-content; 
+    gap: 3.5rem;
+  }  
+}

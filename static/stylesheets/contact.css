@@ -1,0 +1,147 @@
+/* ================================= 
+  Contact Page
+==================================== */
+.bg-container .title,
+.bg-container .container {
+  height: 100%; 
+}
+
+.row-1, 
+.row-2 {
+  padding: 3rem 0;
+}
+
+.top-img {
+  height: 50vh;
+}
+
+.address, 
+.row-2 {
+  font-weight: 200;
+}
+
+.banner .container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.banner p:first-of-type {
+  margin-bottom: 0;
+}
+
+label {
+  margin-top: 1.5rem;
+}
+
+form,
+label,
+input,
+form select {
+  display: block;
+}
+
+input[type="text"],
+select, 
+textarea {
+  padding: 0.75rem 0;
+  margin-top: 0.5rem;
+  width: 100%; 
+}
+
+textarea {
+  margin-top: 0.5rem;
+}
+
+select {
+  padding-left: 0.5rem;
+}
+
+.form-group input, 
+.form-group label {
+  display: inline-block;
+}
+
+.form-group input {
+  margin-right: 0.5rem;
+}
+
+button {
+  border: 0;
+  margin-top: 2.5rem;
+  padding: 1rem 2.25rem;
+  background-color: #000000;
+  color: #fff;
+  display: block;
+}
+
+.address {
+  width: 70%;
+  line-height: 2rem;
+  margin: 0 auto;
+  text-decoration: underline;
+}
+
+.col-2 {
+  display: none;
+}
+
+.row-2 {
+  text-align: center;
+  color: #FFFBE4;
+}
+
+.row-2 svg {
+  margin: 0 auto;
+}
+
+
+
+/* ================================= 
+  MEDIA QUERIES 768px 
+==================================== */
+@media (min-width: 768px) {
+  .top-img {
+    height: 40vh;
+  }
+
+  .row-1 .container {
+    display: flex;
+  }
+
+  .col-1,
+  .col-2 {
+    width: 50%;
+  }
+
+  .col-2 {
+    position: relative;
+    display: block;
+  }
+
+  .col-2 svg {
+    width: 100%;
+  }
+}
+
+/* ================================= 
+  MEDIA QUERIES 1024px 
+==================================== */
+@media (min-width: 1024px) {
+  .col-1 {
+    width: 35%;
+  }
+
+  .col-2 {
+    width: 65%;
+    position: relative;
+  }
+
+  .col-2 svg {
+    position: absolute;
+  }
+
+  .address {
+    width: 20%;
+  }
+}

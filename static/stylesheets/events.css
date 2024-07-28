@@ -1,0 +1,115 @@
+/* ================================= 
+  Events Page
+==================================== */
+.moon {
+  position: absolute;
+  width: 50%;
+}
+
+.moon:first-of-type {
+  top: 5%;
+  right: 7%;
+  transform: rotate(75deg);
+}
+
+.moon:last-of-type {
+  bottom: -5%; 
+  left: -10%; 
+}
+
+section {
+  padding-top: 1.5rem;
+  border-top: 1px solid #000000;
+}
+
+.container > p:first-child {
+  color: #000000;
+}
+
+.container > p:last-of-type {
+  font-weight: 400;
+}
+
+.date {
+  padding-top: 0.5rem;
+  display: flex;
+  position: relative;
+}
+
+
+.date p {
+  margin: 0.5rem 0;
+  padding-left: 0.5rem;
+  width: max-content;
+}
+
+.event-btn {
+  display: inline-block;
+  border: 1px solid #000;
+  padding: 1rem 1.5rem; 
+  margin-bottom: 2rem;
+  background-color: #FFFBE4;
+  position: relative;
+  z-index: 1;
+}
+  
+.event-name p:last-child {
+  width: 75%;
+  line-height: 1.75rem;
+}
+
+/* ================================= 
+  MEDIA QUERIES 768px 
+==================================== */
+@media (min-width: 768px) {
+  .bg-container {
+    overflow: hidden;
+  }
+
+  .moon:first-of-type {
+    top: 0;
+    right: 0;
+    transform: rotate(0deg);
+  }
+  
+  .moon:last-of-type {
+    bottom: 0; 
+    left: 0; 
+  }
+
+  .container > p:last-of-type {
+    margin-bottom: 4rem;
+  }
+  
+  .row {
+    display: flex;
+    padding: 2.5rem 0;
+  }
+
+  .date {
+    margin-right: 3rem;
+    padding-top: 0;
+  }
+
+  .event-name h3 {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+ main .container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto 0 3rem;
+  }
+
+  .moon:first-of-type {
+    top: -25%;
+    right: 0;
+  }
+
+  .moon:last-of-type {
+    bottom: -30%;
+    left: -8%;
+  }
+}

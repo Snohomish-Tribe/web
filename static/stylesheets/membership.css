@@ -1,0 +1,245 @@
+/* ================================= 
+  Membership Page
+==================================== */
+.sand {
+  height: 50vh;
+}
+
+.banner .container {
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1 {
+  text-align: left;  
+  margin-bottom: 1rem;
+}
+
+h1, 
+h3 {
+  font-weight: 500;
+}
+
+.faqs {
+  border-top: 1px solid #000000;
+}
+
+.faqs-item {
+  border-bottom: 1px solid #000000;
+}
+
+.faqs-item p {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.banner .container {
+  display: flex;
+}
+
+h1, 
+.row-3 h2 {
+  margin-top: 0;
+}
+
+.row-1,
+.row-2,
+.row-4 {
+  padding: 3rem 0; 
+}
+
+.row-2 p {
+  line-height: 2rem;
+}
+
+.membership-btn, 
+.row-4 a {
+  display: inline-block;
+}
+
+.row-1,
+.row-4 h2{
+  color: #FFFBE4;
+}
+
+.row-2 a, 
+.row-4 a {
+  padding: 1rem 1.5rem;
+}
+
+/* =========== Experience Support =========== */
+.row-1 p {
+  margin-bottom: 2rem;
+}
+
+.row-1 svg,
+.row-2 svg  {
+  display: none;
+}
+
+.row-1 .col-1 h2 {
+  margin-top: 0;
+}
+
+.row-2 a, 
+.row-4 a {
+  background-color: #FFFBE4;
+}
+
+.row-2 li {
+  margin-bottom: 1rem;
+}
+
+.row-3,
+.membership .row-4 {
+  padding: 4rem 0;
+}
+
+.row-3 .bg-svg:first-of-type {
+  top: 8%;
+}
+
+.row-3 .bg-svg:last-of-type {
+  top: 30%;
+}
+/* =========== Have Questions =========== */
+.row-4 a {
+  font-size: 1.125rem;
+}
+
+/* ================================= 
+  MEDIA QUERIES 768px 
+==================================== */
+@media (min-width: 768px) {
+  h1 {
+    margin-bottom: 0.5rem;
+  }
+
+  .title p:last-of-type {
+    width: 60%;
+  }
+
+  .sand {
+    height: 40vh;
+  }
+
+  /* =========== Experience Support =========== */
+  .row-1 {
+    overflow: hidden;
+  }
+
+  .row-1 .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 60vh;
+    position: relative;
+    z-index: 1;
+  }
+
+  .row-1 svg {
+    display: block;
+    position: absolute;
+    right: 45%;
+    bottom: -25%;
+    width: 100%;
+  }
+
+  .row-1 .col-1 {
+    width: 40%;
+  }
+
+  .row-1 .col-1 h2 {
+    margin-bottom: 0;
+  }
+
+  .row-1 .col-1 p {
+    font-weight: 300;
+    margin-bottom: 0;
+  }
+
+  .row-1 .img-container {
+    width: 55%
+  }
+
+  .row-1 .col-1,
+  .row-1 .img-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+/* =========== Download Membership Forms =========== */
+  .row-2 ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .row-2 svg {
+    display: block;
+    width: 25%;
+    margin: 1.5rem 0;
+  }
+
+  .row-2 h2 {
+    margin-bottom: 0;
+  }
+  
+  .row-2 p {
+    margin-top: 0;
+  }
+/* =========== Download Membership Forms =========== */
+  .row-3 .bg-svg:first-of-type {
+    display: none;
+  }
+
+  .row-3 .bg-svg:last-of-type{
+    top: -30%;
+  }
+/* =========== Have Questions =========== */
+  .row-4 h2 {
+    margin-top: 0;
+  }
+}
+
+/* ================================= 
+  MEDIA QUERIES 768px 
+==================================== */
+@media (min-width: 1024px) {
+  /* =========== Experience Support =========== */
+  .row-1 {
+    height: 85vh; 
+  }
+
+  .row-1 svg {
+    width: 75%;
+  }
+
+  .row-1 p {
+    line-height: 2rem;
+  }
+
+  .row-1 .container {
+    justify-content: space-between;
+    max-width: 1200px;
+  }
+
+  .row-1 .col-1, 
+  .row-1 .img-container {
+    width: 47.5%;
+  }
+
+  .row-1 svg {
+    bottom: -45%;
+    right: 42%; 
+  }
+/* =========== Download Membership Forms =========== */
+  .row-3 .bg-svg:last-of-type {
+    top: -12%;
+  }
+
+  .faqs {
+    width: 75%;
+  }
+}
