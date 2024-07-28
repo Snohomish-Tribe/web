@@ -14,7 +14,7 @@ import (
 )
 
 func Index(w http.ResponseWriter, r *http.Request) {
-	tmpl, _ := template.ParseFiles("templates/index.html")
+	tmpl, _ := template.ParseFiles("static/templates/index.html")
 
 	if err := tmpl.Execute(w, nil); err != nil {
 		log.Fatal("Failed to parse template ", err)
@@ -22,7 +22,7 @@ func Index(w http.ResponseWriter, r *http.Request) {
 }
 
 func About(w http.ResponseWriter, r *http.Request) {
-	tmpl, _ := template.ParseFiles("templates/about.html")
+	tmpl, _ := template.ParseFiles("static/templates/about.html")
 
 	if err := tmpl.Execute(w, nil); err != nil {
 		log.Fatal("Failed to parse template ", err)
@@ -67,8 +67,8 @@ func Contact(w http.ResponseWriter, r *http.Request) {
 		if err := mail.SendEmail(
 			gomap.NewAddresses(from),
 			gomap.NewAddresses(to),
-			fmt.Sprintf("Contact Page Question: %s", msg.Question),
-			fmt.Sprintf("From %s \n %s", msg.Email, msg.Message),
+			fmt.Sprintf("Contact Page Question: %s", msg.Question), // Email subject title
+			fmt.Sprintf("From %s \n %s", msg.Email, msg.Message),   // Message
 			false,
 		); err != nil {
 			log.Fatal(err, " line 71")
@@ -77,61 +77,49 @@ func Contact(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(http.StatusOK)
 	}
 
-	tmpl, _ := template.ParseFiles("templates/contact.html")
+	tmpl, _ := template.ParseFiles("static/templates/contact.html")
 
-	err := tmpl.Execute(w, nil)
-
-	if err != nil {
+	if err := tmpl.Execute(w, nil); err != nil {
 		log.Fatal("Failed to parse template ", err)
 	}
 }
 
 func Credits(w http.ResponseWriter, r *http.Request) {
-	tmpl, _ := template.ParseFiles("templates/credits.html")
+	tmpl, _ := template.ParseFiles("static/templates/credits.html")
 
-	err := tmpl.Execute(w, nil)
-
-	if err != nil {
+	if err := tmpl.Execute(w, nil); err != nil {
 		log.Fatal("Failed to parse template ", err)
 	}
 }
 
 func Events(w http.ResponseWriter, r *http.Request) {
-	tmpl, _ := template.ParseFiles("templates/events.html")
+	tmpl, _ := template.ParseFiles("static/templates/events.html")
 
-	err := tmpl.Execute(w, nil)
-
-	if err != nil {
+	if err := tmpl.Execute(w, nil); err != nil {
 		log.Fatal("Failed to parse template ", err)
 	}
 }
 
 func Language(w http.ResponseWriter, r *http.Request) {
-	tmpl, _ := template.ParseFiles("templates/language-learning.html")
+	tmpl, _ := template.ParseFiles("static/templates/language-learning.html")
 
-	err := tmpl.Execute(w, nil)
-
-	if err != nil {
+	if err := tmpl.Execute(w, nil); err != nil {
 		log.Fatal("Failed to parse template ", err)
 	}
 }
 
 func Membership(w http.ResponseWriter, r *http.Request) {
-	tmpl, _ := template.ParseFiles("templates/membership.html")
+	tmpl, _ := template.ParseFiles("static/templates/membership.html")
 
-	err := tmpl.Execute(w, nil)
-
-	if err != nil {
+	if err := tmpl.Execute(w, nil); err != nil {
 		log.Fatal("Failed to parse template ", err)
 	}
 }
 
 func Programs(w http.ResponseWriter, r *http.Request) {
-	tmpl, _ := template.ParseFiles("templates/programs.html")
+	tmpl, _ := template.ParseFiles("static/templates/programs.html")
 
-	err := tmpl.Execute(w, nil)
-
-	if err != nil {
+	if err := tmpl.Execute(w, nil); err != nil {
 		log.Fatal("Failed to parse template ", err)
 	}
 }
