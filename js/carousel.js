@@ -7,7 +7,7 @@ const prevBtn = document.querySelector(".prev-btn");
 const images = [...document.querySelectorAll(".carousel-img")];
 const breadcrumbs = document.querySelector('.breadcrumbs');
 
-/* ======= Create gallery navigation ========= */
+/* ======= Creates photo gallery navigation dots ========= */
 for(let i = 0; i < images.length; i++){
   const crumb = document.createElement('div'); 
   if (i === 0) {
