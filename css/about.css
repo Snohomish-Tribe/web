@@ -210,10 +210,6 @@ aside {
   justify-content: center;
 }
 
-.carousel img {
-  margin: 0 auto;
-}
-
 .carousel .img-container {
   margin-top: 0;
 }
@@ -228,8 +224,9 @@ aside {
 .carousel-img {
   width: 100%;
   transition: transform 0.9s ease;
+  margin: 0 auto;
+  object-fit: contain;
 }
-
 .carousel svg {
   margin: auto;
 }
@@ -239,7 +236,7 @@ aside {
 }
 
 .breadcrumbs {
-  width: 50%;
+  /* width: 50%; */
   padding: 1rem 0;
   display: flex; 
   justify-content: space-around;

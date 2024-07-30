@@ -1,13 +1,25 @@
+document.addEventListener("DOMContentLoaded", () => {
 /* ================================= 
     Selected Elements
 ==================================== */
 const nextBtn = document.querySelector(".next-btn");
 const prevBtn = document.querySelector(".prev-btn");
 const images = [...document.querySelectorAll(".carousel-img")];
-const crumbs = [...document.querySelectorAll(".crumb")];
+const breadcrumbs = document.querySelector('.breadcrumbs');
+
+/* ======= Create gallery navigation ========= */
+for(let i = 0; i < images.length; i++){
+  const crumb = document.createElement('div'); 
+  if (i === 0) {
+    crumb.classList.add('active-crumb');
+  }
+  crumb.classList.add('crumb');
+  breadcrumbs.appendChild(crumb); 
+}
+
+const crumbs = document.querySelectorAll ('.crumb');
 
 let translateNum = 0;
-
 const limit = - (images.length - 1);
 
 const setActiveImage = (translateNum) => {
@@ -39,3 +51,4 @@ prevBtn.addEventListener("click", () => {
   translateNum++;
   setActiveImage(translateNum); 
 });
+})
