@@ -75,6 +75,15 @@ button {
   display: block;
 }
 
+.success-msg {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+
 .address {
   width: 70%;
   line-height: 2rem;
@@ -94,8 +103,6 @@ button {
 .row-2 svg {
   margin: 0 auto;
 }
-
-
 
 /* ================================= 
   MEDIA QUERIES 768px 
