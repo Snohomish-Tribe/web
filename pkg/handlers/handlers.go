@@ -77,7 +77,7 @@ func Contact(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(http.StatusOK)
 	}
 
-	tmpl, _ := template.ParseFiles("static/templates/contact.html")
+	tmpl, _ := template.ParseFiles("static/templates/contact.html", "static/templates/main.layout.html")
 
 	if err := tmpl.Execute(w, nil); err != nil {
 		log.Fatal("Failed to parse template ", err)
