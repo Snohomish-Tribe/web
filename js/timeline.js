@@ -12,8 +12,13 @@ let hideTimeline = true;
 ==================================== */
 btn.addEventListener("click", () => {
     hideTimeline = !hideTimeline;    
-    if (hideTimeline === false) btn.textContent = "Collapse"; 
-    if (hideTimeline === true) btn.textContent = "Expand";
+    if (hideTimeline === false) {
+        btn.textContent = "Collapse"; 
+    } 
 
-    col.classList.toggle("expand");
+    if (hideTimeline === true) {
+        btn.textContent = "Expand";
+    }
+
+    col.classList.toggle("expand")
 });

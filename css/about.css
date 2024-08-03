@@ -124,18 +124,13 @@ section,
 .row-3 .col-2 {
   width: 90%;
   margin: 0 auto;
-  height: 0;
+  height: 450px;
   overflow: hidden;  
-  transition: height 0.9s ease-in;
+  transition: height 1.4s ease-in;
 }
 
 aside {
   padding-left: 1rem;
-}
-
-.expand {
-  height: 700px !important;
-  transition: height 0.9s ease-in;  
 }
 
 .row-3 .btn {
@@ -165,6 +160,10 @@ aside {
 
 .timeline li:first-child {
   padding-top: 2rem;
+}
+
+.expand {
+  height: 100% !important;
 }
 
 .item {
@@ -421,10 +420,6 @@ aside {
     padding-right: 1rem;
   }
 
-  .expand {
-    height: 650px !important;
-  }
-
   aside {
     width: 50%;
     margin-left: auto;
@@ -437,6 +432,14 @@ aside {
 
   .item {
     padding-bottom: 2.75rem;
+  }
+
+  .timeline li h4 {
+    left: -6rem;
+  }
+
+  .timeline li:last-child h4 {
+    left: -8rem;
   }
 
   .item p {
@@ -573,17 +576,8 @@ aside {
     width: 100%;
   }
 
-  .expand {
-    height: 500px !important;
-  }
-
-
   .item {
     padding-bottom: 3.5rem;
-  }
-
-  .item h4 {
-    left: -20%;
   }
 
   .carousel-container {
