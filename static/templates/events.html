@@ -1,16 +1,105 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Events</title>
-    <link rel="stylesheet" href="static/stylesheets/about.css">
-</head>
-<body>
-    <h1>Events page</h1>
-    <img src="/static/images/ancestral-territory.png" alt="">
-    <a href="/">Home</a>
-</body>
+{{template "main" .}}
+{{define "css"}}<link rel="stylesheet" href="static/stylesheets/events.css">{{end}}
+{{define "title"}} Events {{end}}
+{{define "content"}}
+<main>
+    <div class="bg-container">
+        <!-- Moon SVGs -->
+        <svg class="moon" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1140.55 1159.11">
+            <path
+                d="M821.622 1070.26C787.782 1085.49 754.552 1102.16 720.072 1115.56C643.652 1145.14 564.032 1158.76 482.172 1159.11C476.832 1159.16 471.442 1158.74 461.752 1158.42C470.332 1152.68 475.472 1149.08 480.772 1145.71C666.952 1029.28 750.562 793.356 671.412 593.312C605.452 426.712 473.902 345.288 299.682 329.022C198.802 319.607 104.965 345.576 18.288 397.704C14.114 400.242 9.91997 402.625 5.62897 404.988C5.33897 405.182 4.662 404.796 0 403.717C21.333 370.007 40.325 336.183 62.821 304.967C183.832 136.808 345.462 32.081 551.742 4.70398C728.062 -18.677 874.332 46.37 996.162 171.607C1007.97 183.759 1019.09 196.628 1030.47 209.149L1073.16 273.042C1081.17 290.672 1090.3 307.971 1097.05 326.105C1182.81 554.861 1140.76 759.996 979.732 941.812C954.062 970.782 923.142 995.052 894.652 1021.55L821.542 1070.4L821.622 1070.26Z"
+                fill="#2D302C" fill-opacity="0.07"></path>
+        </svg>
+        <svg class="moon" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0.42 0.97 1171.59 1150.29">
+            <path
+                d="M650.822 1.49012C602.812 35.8401 561.639 72.0141 530.245 117.55C434.019 257.125 408.81 406.95 476.296 565.32C528.23 687.24 625.241 761.88 751.065 796.91C896.94 837.47 1032.71 812.44 1156.39 724.5C1159.31 722.47 1162.37 720.51 1165.32 718.53C1167.53 719.08 1169.8 719.58 1172.01 720.12C1169.9 722.37 1166.98 724.15 1165.81 726.79C1062.7 964.16 885.802 1111.79 628.257 1145.77C435.684 1171.15 266.507 1108.39 135.816 961.13C-13.2574 793.01 -71.8578 500.43 131.278 261.744C265.196 104.387 436.592 21.3241 640.445 1.0221C642.245 0.829105 644.085 1.19715 650.765 1.52815L650.822 1.49012Z"
+                fill="#2D302C" fill-opacity="0.07"></path>
+        </svg>    
+        <!-- Events -->
+        <div class="container">
+            <p class="amarante font-sm">Gather</p>
+            <h2 class="amarante font-md">Upcoming Events</h2>
+            <p class="fira-sans font-sm">Stay updated on the latest cultural and community events hosted by the Snohomish Tribe.</p>
+            <!-- First Event -->
+            <section class="row">
+                    <div class="date">
+                        <div>
+                            <svg width="96" height="80" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 69 45">
+                                <path
+                                    d="M2.21529 44.9904C3.50034 44.62 4.80939 44.3217 6.06568 43.8744C15.8667 40.3772 22.1337 30.6938 21.1363 20.6351C20.1294 10.5188 12.2033 2.23522 1.97074 0.609293C1.31382 0.503464 0.652119 0.412067 0 0.272564C8.28575 -0.516347 16.4037 0.34472 24.0517 3.67835C28.6405 5.67949 33.0711 8.14244 37.329 10.7882C43.5481 14.651 49.7864 18.4223 56.9358 20.2888C61.2225 21.4048 65.5764 22.2803 69 23.0548C65.2503 23.911 60.5704 24.8395 55.972 26.0709C50.0597 27.6536 44.6654 30.4869 39.4005 33.5512C34.1787 36.5865 28.9522 39.6075 23.203 41.5798C18.1011 43.3308 12.865 44.4179 7.47538 44.7691C6.9767 44.8028 6.48763 44.923 5.99374 45C4.73266 45 3.47637 45 2.21529 44.9952V44.9904Z"
+                                    fill="#2D302C"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="fira-sans font-xsm">Fri</p>
+                            <p class="amarante font-sm">09</p>
+                            <p class="fira-sans font-sm">Feb 2024</p>
+                        </div>
+                    </div>
+                    <div class="event-name">
+                        <h3 class="amarante font-sm">Regalia Making</h3>
+                        <p class="fira-sans">Location</p>
+                        <p class="fira-sans font-xsm">Snohomish Cultural Center, 123 Main St, Snohomish, WA 98290
+                        </p>
+                        <a href="#" class="event-btn roboto">Event Flyer PDF</a>
+                    </div>
+            </section>
+            <!-- Second Event -->
+            <section class="row">
+                    <div class="date">
+                        <div>
+                            <svg width="96" height="80" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 69 45">
+                                <path
+                                    d="M2.21529 44.9904C3.50034 44.62 4.80939 44.3217 6.06568 43.8744C15.8667 40.3772 22.1337 30.6938 21.1363 20.6351C20.1294 10.5188 12.2033 2.23522 1.97074 0.609293C1.31382 0.503464 0.652119 0.412067 0 0.272564C8.28575 -0.516347 16.4037 0.34472 24.0517 3.67835C28.6405 5.67949 33.0711 8.14244 37.329 10.7882C43.5481 14.651 49.7864 18.4223 56.9358 20.2888C61.2225 21.4048 65.5764 22.2803 69 23.0548C65.2503 23.911 60.5704 24.8395 55.972 26.0709C50.0597 27.6536 44.6654 30.4869 39.4005 33.5512C34.1787 36.5865 28.9522 39.6075 23.203 41.5798C18.1011 43.3308 12.865 44.4179 7.47538 44.7691C6.9767 44.8028 6.48763 44.923 5.99374 45C4.73266 45 3.47637 45 2.21529 44.9952V44.9904Z"
+                                    fill="#2D302C"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="fira-sans font-xsm">Fri</p>
+                            <p class="amarante font-sm">09</p>
+                            <p class="fira-sans font-sm">Feb 2024</p>
+                        </div>
+                    </div>
+                    <div class="event-name">
+                        <h3 class="amarante font-sm">Regalia Making</h3>
+                        <p class="fira-sans">Location</p>
+                        <p class="fira-sans font-xsm">Snohomish Cultural Center, 123 Main St, Snohomish, WA 98290
+                        </p>
+                        <a href="#" class="event-btn roboto">Event Flyer PDF</a>
+                    </div>
+            </section>
+            <!-- Third Event -->
+            <section class="row">
+                    <div class="date">
+                        <div>
+                            <svg width="96" height="80" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 69 45">
+                                <path
+                                    d="M2.21529 44.9904C3.50034 44.62 4.80939 44.3217 6.06568 43.8744C15.8667 40.3772 22.1337 30.6938 21.1363 20.6351C20.1294 10.5188 12.2033 2.23522 1.97074 0.609293C1.31382 0.503464 0.652119 0.412067 0 0.272564C8.28575 -0.516347 16.4037 0.34472 24.0517 3.67835C28.6405 5.67949 33.0711 8.14244 37.329 10.7882C43.5481 14.651 49.7864 18.4223 56.9358 20.2888C61.2225 21.4048 65.5764 22.2803 69 23.0548C65.2503 23.911 60.5704 24.8395 55.972 26.0709C50.0597 27.6536 44.6654 30.4869 39.4005 33.5512C34.1787 36.5865 28.9522 39.6075 23.203 41.5798C18.1011 43.3308 12.865 44.4179 7.47538 44.7691C6.9767 44.8028 6.48763 44.923 5.99374 45C4.73266 45 3.47637 45 2.21529 44.9952V44.9904Z"
+                                    fill="#2D302C"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="fira-sans font-xsm">Fri</p>
+                            <p class="amarante font-sm">09</p>
+                            <p class="fira-sans font-sm">Feb 2024</p>
+                        </div>
+                    </div>
+                    <div class="event-name">
+                        <h3 class="amarante font-sm">Regalia Making</h3>
+                        <p class="fira-sans">Location</p>
+                        <p class="fira-sans font-xsm">Snohomish Cultural Center, 123 Main St, Snohomish, WA 98290
+                        </p>
+                        <a href="#" class="event-btn roboto">Event Flyer PDF</a>
+                    </div>
+            </section>
 
-<script src="/static/js/app.js"></script>
-</html>
+        </div>
+    </div>
+
+</main>
+{{end}}
+
+{{define "js"}}<script src="static/js/app.js"></script>{{end}}

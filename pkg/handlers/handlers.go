@@ -85,7 +85,7 @@ func Contact(w http.ResponseWriter, r *http.Request) {
 }
 
 func Credits(w http.ResponseWriter, r *http.Request) {
-	tmpl, _ := template.ParseFiles("static/templates/credits.html")
+	tmpl, _ := template.ParseFiles("static/templates/credits.html", "static/templates/main.layout.html")
 
 	if err := tmpl.Execute(w, nil); err != nil {
 		log.Fatal("Failed to parse template ", err)
@@ -93,7 +93,7 @@ func Credits(w http.ResponseWriter, r *http.Request) {
 }
 
 func Events(w http.ResponseWriter, r *http.Request) {
-	tmpl, _ := template.ParseFiles("static/templates/events.html")
+	tmpl, _ := template.ParseFiles("static/templates/events.html", "static/templates/main.layout.html")
 
 	if err := tmpl.Execute(w, nil); err != nil {
 		log.Fatal("Failed to parse template ", err)
