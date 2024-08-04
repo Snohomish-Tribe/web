@@ -232,7 +232,6 @@ footer ul li,
 @media (min-width: 768px) {
   header {
     margin: 0 auto;
-    border-bottom: 1px solid #000000;
   }
 
   header > div {
@@ -317,7 +316,7 @@ footer ul li,
 }
 
 @media (min-width: 1024px) {
-  header,
+  header > div,
   footer .container {
     max-width: 1200px;
   }

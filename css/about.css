@@ -126,7 +126,6 @@ section,
   margin: 0 auto;
   height: 450px;
   overflow: hidden;  
-  transition: height 1.4s ease-in;
 }
 
 aside {
