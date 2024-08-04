@@ -14,7 +14,7 @@ import (
 )
 
 func Index(w http.ResponseWriter, r *http.Request) {
-	tmpl, _ := template.ParseFiles("static/templates/index.page.html", "static/templates/main.layout.html")
+	tmpl, _ := template.ParseFiles("static/templates/index.html", "static/templates/main.layout.html")
 
 	if err := tmpl.Execute(w, nil); err != nil {
 		log.Fatal("Failed to parse template ", err)
