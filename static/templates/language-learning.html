@@ -1,15 +1,235 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Language</title>
-    <link rel="stylesheet" href="static/stylesheets/home.css">
+{{template "main" .}}
+{{define "css" }}<link rel="stylesheet" href="static/stylesheets/language-learning.css">{{end}}
+{{define "title"}}Language Learning{{end}}
+{{define "content"}}
+    <!-- Banner -->
+    <section class="banner">
+        <div class="bg-container">
+            <img class="mountain" src="images/mountain.png" alt="Plant">
+            <div class="title">
+                <div class="container">
+                    <p class="fira-sans font-white font-sm">Language Education</p>
+                    <h1 class="font-white amarante font-lg">Learn dxʷləšucid</h1>
+                    <p class="fira-sans font-white font-xsm">Preserving the voice of our culture</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-</head>
-<body>
-    <h1>This is the Language page</h1>
-</body>
+    <!-- About Our Language -->
+    <section class="bg-red row-1">
+        <div class="bg-container">
+            <div class="container">
+                <div class="col-1">
+                    <h2 class="amarante font-base">About Our Language</h2>
+                    <div class="txt">
+                        <p class="font-xsm fira-sans">Lushootseed is a native language spoken in the vicinity of
+                            Seattle. It
+                            is
+                            pronounced dxʷləšucid or (t)xʷəlšucid and is sometimes called ‘Puget Salish’. Lushootseed
+                            covered roughly an area from the north including the Skagit River, Mount Vernon, Everett,
+                            Seattle, Tacoma, Olympia, and almost into present-day Shelton. It also included Bremerton
+                            Bainbridge Island, and vicinity. The northern part of the lushootseed area, including the
+                            Snohomish in Skagit people speak a sub dialect, called ‘Northern Lushootseed’ (NL) the
+                            Duwamish,
+                            Snoqualmie, and the rest speak ‘Southern Lushootseed’ (SL)</p>
+                    </div>
 
-<script src="/static/js/app.js"></script>
-</html>
+                </div>
+                <div class="img-container">
+                    <img src="/images/map.png" alt="Map Image">
+                </div>
+            </div>
+            <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="-0.14 -0.16 1681.98 2029.45">
+                <path opacity="0.1"
+                    d="M-0.14209 830.259C30.9749 854.265 60.902 880.052 93.403 901.995C346.876 1073.14 684.521 1052.97 904.341 854.362C1125.43 654.602 1182.67 322.801 1042.65 52.3729C1033.64 34.9789 1024.27 17.7669 1016.26 -0.164062C1179.34 182.294 1300.62 389.331 1355.25 628.335C1388.04 771.799 1407.14 919.471 1418.97 1066.3C1436.24 1280.75 1456.05 1493.91 1536.79 1695.63C1585.2 1816.57 1640.5 1934.76 1681.84 2029.29C1596.2 1955.42 1492.78 1860.79 1383.6 1773.4C1243.14 1660.98 1082.34 1582.65 918.207 1511.26C755.575 1440.53 593.193 1369.27 446.39 1267.55C316.059 1177.26 199.136 1072.23 96.8789 950.851C87.4529 939.667 76.0769 930.138 65.6019 919.84C43.6889 889.983 21.7829 860.13 -0.130066 830.273L-0.14209 830.259Z"
+                    fill="black"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Lesson Preview -->
+    <section class="row-2 bg-blk">
+        <div class="container">
+            <h2 class="amarante font-base">
+                Lesson Preview
+            </h2>
+            <div class="carousel">
+                <!-- Left SVG arrow button -->
+                <svg class="prev-btn" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="0.5" y="0.5" width="43" height="43" rx="21.5" fill="#FFFBE4" />
+                    <rect x="0.5" y="0.5" width="43" height="43" rx="21.5" stroke="black" />
+                    <g clip-path="url(#clip0_6406_2170)">
+                        <path
+                            d="M33.1951 13C32.7262 13.1471 32.2573 13.2682 31.7962 13.4499C28.2404 14.8515 25.9741 18.7189 26.3335 22.7421C26.7008 26.7912 29.5767 30.1049 33.2888 30.7538C33.5311 30.7971 33.7656 30.8317 34 30.8922C30.9991 31.2037 28.0528 30.8663 25.2863 29.5339C23.6218 28.7293 22.0197 27.7516 20.4723 26.6874C18.2216 25.1387 15.9553 23.6333 13.3686 22.8892C11.8134 22.4393 10.2348 22.0932 9 21.7817C10.3598 21.4357 12.0556 21.0723 13.7202 20.5791C15.8615 19.9475 17.8153 18.8141 19.7299 17.5855C21.6211 16.3743 23.5202 15.163 25.5989 14.3757C27.4511 13.6749 29.3501 13.2423 31.296 13.0952C31.4758 13.0779 31.6555 13.0346 31.8353 13H33.2029H33.1951Z"
+                            fill="black" />
+                    </g>
+                    <defs>
+                        <clippath id="clip0_6406_2170">
+                            <rect width="24" height="24" fill="white" transform="translate(10 10)" />
+                        </clippath>
+                    </defs>
+                </svg>
+
+                <div class="carousel-container">
+                    <img class="carousel-img frame" src="/images/Lesson-1.png" alt="Image 1">
+                    <img class="carousel-img frame" src="/images/Lesson-1.png" alt="Image 1">
+                    <img class="carousel-img frame" src="/images/Lesson-1.png" alt="Image 1">
+                    <img class="carousel-img frame" src="/images/Lesson-1.png" alt="Image 1">
+
+                </div>
+                <!-- Right SVG arrow button -->
+                <svg class="next-btn" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="0.5" y="0.5" width="43" height="43" rx="21.5" fill="#FFFBE4" />
+                    <rect x="0.5" y="0.5" width="43" height="43" rx="21.5" stroke="black" />
+                    <g clip-path="url(#clip0_6406_2176)">
+                        <path
+                            d="M10.8049 31C11.2738 30.8529 11.7427 30.7318 12.2038 30.5501C15.7596 29.1485 18.0259 25.2811 17.6665 21.2579C17.2992 17.2088 14.4233 13.8951 10.7112 13.2462C10.4689 13.2029 10.2344 13.1683 10 13.1078C13.0009 12.7963 15.9472 13.1337 18.7137 14.4661C20.3782 15.2707 21.9803 16.2484 23.5277 17.3126C25.7784 18.8613 28.0447 20.3667 30.6314 21.1108C32.1866 21.5607 33.7652 21.9068 35 22.2183C33.6402 22.5643 31.9444 22.9277 30.2798 23.4209C28.1385 24.0525 26.1847 25.1859 24.2701 26.4145C22.3789 27.6257 20.4798 28.837 18.4011 29.6243C16.5489 30.3251 14.6499 30.7577 12.704 30.9048C12.5242 30.9221 12.3445 30.9654 12.1647 31H10.7971H10.8049Z"
+                            fill="black" />
+                    </g>
+                    <defs>
+                        <clippath id="clip0_6406_2176">
+                            <rect width="24" height="24" fill="white" transform="matrix(-1 0 0 -1 34 34)" />
+                        </clippath>
+                    </defs>
+                </svg>
+            </div>
+            <div class="breadcrumbs">
+                <!-- Navigation dots created using JavaScript-->
+            </div>
+        </div>
+    </section>
+
+    <!-- Language PDF & audio files  -->
+    <section class="row-3">
+        <div class="bg-container">
+            <div class="container">
+                <h2 class="amarante font-lg">Full Lessons</h2>
+                <div class="full-lessons">
+                    <div class="lesson">
+                        <h3 class="font-sm amarante">Intro Lesson 1</h3>
+                        <p class="font-xsm fira-sans">Learn about greetings - this is the lesson displayed above</p>
+                        <div class="font-xsm">
+                            <a class="btn" href="lessons/Binder-Eval-Lesson-1.pdf" download>PDF</a>
+                            <a class="audio-file" href="lessons/Audio-Lesson-1.mp3" download>Audio File</a>
+                        </div>
+                    </div>
+                    <div class="lesson">
+                        <h3 class="font-sm amarante">Intro Lesson 2</h3>
+                        <p class="font-xsm fira-sans">Learn to ask and answer questions about animals</p>
+                        <div class="font-xsm">
+                            <a class="btn" href="lessons/Binder-Eval-Lesson-2.pdf" download>PDF</a>
+                            <a class="audio-file" href="lessons/Audio-Lesson-2.mp3" download>Audio File</a>
+                        </div>
+                    </div>
+                    <div class="lesson">
+                        <h3 class="font-sm amarante">Intro Lesson 3</h3>
+                        <p class="font-xsm fira-sans">Learn to construct more complicated questions about animals</p>
+                        <div class="font-xsm">
+                            <a class="btn" href="lessons/Binder-Eval-Lesson-3.pdf" download>PDF</a>
+                            <a class="audio-file" href="lessons/Audio-Lesson-3.mp3" download>Audio File</a>
+                        </div>
+                    </div>
+                    <div class="lesson">
+                        <h3 class="font-sm amarante">Intro Lesson 4</h3>
+                        <p class="font-xsm fira-sans">Learn to ask answer questions about people</p>
+                        <div class="font-xsm">
+                            <a class="btn" href="lessons/Binder-Eval-Lesson-4.pdf" download>PDF</a>
+                            <a class="audio-file" href="lessons/Audio-Lesson-4.mp3" download>Audio File</a>
+                        </div>
+                    </div>
+                    <div class="lesson">
+                        <h3 class="font-sm amarante">Intro Lesson 5</h3>
+                        <p class="font-xsm fira-sans">Learn to construct more complicated questions about people</p>
+                        <div class="font-xsm">
+                            <a class="btn" href="lessons/Binder-Eval-Lesson-5.pdf" download>PDF</a>
+                            <a class="audio-file" href="lessons/Audio-Lesson-5.mp3" download>Audio File</a>
+                        </div>
+                    </div>
+                    <div class="lesson">
+                        <h3 class="font-sm amarante">Prayer</h3>
+                        <p class="font-xsm fira-sans">Learn a short prayer</p>
+                        <div class="font-xsm">
+                            <a class="btn" href="lessons/Prayer.pdf" download>PDF</a>
+                            <a class="audio-file" href="lessons/Audio-Prayer-Lesson.mp3" download>Audio File</a>
+                        </div>
+                    </div>
+                    <div class="lesson">
+                        <h3 class="font-sm amarante">Bedroom</h3>
+                        <p class="font-xsm fira-sans">Learn about greetings - this is the lesson displayed above</p>
+                        <div class="font-xsm">
+                            <a class="btn" href="lessons/Bedroom-Lessons-1-5.pdf" download>PDF</a>
+                            <a class="audio-file" href="lessons/Bedroom-Lessons.zip" download>Audio File</a>
+                        </div>
+                    </div>
+                    <div class="lesson">
+                        <h3 class="font-sm amarante">Kitchen</h3>
+                        <p class="font-xsm fira-sans">Learn words and phrases about cooking and washing</p>
+                        <div class="font-xsm">
+                            <a class="btn" href="lessons/Kitchen-Lessons-1-5.pdf" download>PDF</a>
+                            <a class="audio-file" href="lessons/Kitchen-Lessons.zip" download>Audio File</a>
+                        </div>
+                    </div>
+                    <div class="lesson">
+                        <h3 class="font-sm amarante">Plants</h3>
+                        <p class="font-xsm fira-sans">Learn words and phrases about foliage and nature</p>
+                        <div class="font-xsm">
+                            <a class="btn" href="lessons/Plants-Lessons-1-5.pdf" download>PDF</a>
+                            <a class="audio-file" href="lessons/Plants-Lessons.zip" download>Audio File</a>
+                        </div>
+                    </div>
+                    <div class="lesson">
+                        <h3 class="font-sm amarante">Little Silver Salmon</h3>
+                        <p class="font-xsm fira-sans">A children's-style short story</p>
+                        <div class="font-xsm">
+                            <a class="btn" href="lessons/Little-Silver-Salmon.pdf" download>PDF</a>
+                            <a class="audio-file" href="lessons/Audio-Little-Silver-Salmon.mp3" download>Audio File</a>
+                        </div>
+                    </div>
+                    <div class="lesson">
+                        <h3 class="font-sm amarante">The Oz Song</h3>
+                        <p class="font-xsm fira-sans">Learn about singing and chanting through this example song</p>
+                        <div class="font-xsm">
+                            <a class="btn" href="/lessons/Oz-song.pdf" download>PDF</a>
+                            <a class="audio-file" href="lessons/Audio-Oz-Paddle-Intro.mp3" download>Audio File</a>
+                        </div>
+                    </div>
+                    <!-- Moon top left -->
+                    <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1140.55 1159.11">
+                        <path
+                            d="M821.622 1070.26C787.782 1085.49 754.552 1102.16 720.072 1115.56C643.652 1145.14 564.032 1158.76 482.172 1159.11C476.832 1159.16 471.442 1158.74 461.752 1158.42C470.332 1152.68 475.472 1149.08 480.772 1145.71C666.952 1029.28 750.562 793.356 671.412 593.312C605.452 426.712 473.902 345.288 299.682 329.022C198.802 319.607 104.965 345.576 18.288 397.704C14.114 400.242 9.91997 402.625 5.62897 404.988C5.33897 405.182 4.662 404.796 0 403.717C21.333 370.007 40.325 336.183 62.821 304.967C183.832 136.808 345.462 32.081 551.742 4.70398C728.062 -18.677 874.332 46.37 996.162 171.607C1007.97 183.759 1019.09 196.628 1030.47 209.149L1073.16 273.042C1081.17 290.672 1090.3 307.971 1097.05 326.105C1182.81 554.861 1140.76 759.996 979.732 941.812C954.062 970.782 923.142 995.052 894.652 1021.55L821.542 1070.4L821.622 1070.26Z"
+                            fill="#2D302C" fill-opacity="0.07"></path>
+                    </svg>
+                    <!-- Moon top right -->
+                    <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0.42 0.97 1171.59 1150.29">
+                        <path
+                            d="M650.822 1.49012C602.812 35.8401 561.639 72.0141 530.245 117.55C434.019 257.125 408.81 406.95 476.296 565.32C528.23 687.24 625.241 761.88 751.065 796.91C896.94 837.47 1032.71 812.44 1156.39 724.5C1159.31 722.47 1162.37 720.51 1165.32 718.53C1167.53 719.08 1169.8 719.58 1172.01 720.12C1169.9 722.37 1166.98 724.15 1165.81 726.79C1062.7 964.16 885.802 1111.79 628.257 1145.77C435.684 1171.15 266.507 1108.39 135.816 961.13C-13.2574 793.01 -71.8578 500.43 131.278 261.744C265.196 104.387 436.592 21.3241 640.445 1.0221C642.245 0.829105 644.085 1.19715 650.765 1.52815L650.822 1.49012Z"
+                            fill="#2D302C" fill-opacity="0.07"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learn more -->
+    <section class="bg-blk row-4">
+        <div class="container">
+            <h2 class="font-white amarante font-base">Want to Learn More?</h2>
+            <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 274.27 40"> <g clip-path="url(#clip0_84_4003)"> <path d="M60.78 39.36C53.565 39.955 46.535 39.19 39.98 36.21C35.38 34.12 30.91 31.65 26.655 28.93C18.85 23.945 10.405 20.925 1.245 19.71C1.03 19.68 0.825 19.565 0 19.27C2.18 18.88 3.8 18.605 5.415 18.3C13.265 16.83 20.5 13.83 27.3 9.735C34.545 5.37 42.125 1.81 50.645 0.675C53.42 0.305 56.22 0.12 59.08 0C48.86 3.265 42.505 9.795 43.125 20.68C43.73 31.25 50.535 37.1 60.78 39.36Z" fill="#FFFBE4"></path> <path d="M214.09 39.23C225.8 35.7 231.585 29.495 231.865 20.16C232.14 10.965 226.81 4.345 215.365 0C223.895 0.065 231.675 1.64 238.985 5.17C242.255 6.75 245.435 8.52 248.57 10.355C256.515 15 265.03 17.96 274.27 19.445C273.12 19.68 271.975 19.95 270.82 20.15C262.955 21.505 255.625 24.19 248.91 28.525C242.355 32.755 235.73 36.975 227.875 38.41C223.36 39.235 218.735 39.49 214.16 40L214.1 39.23H214.09Z" fill="#FFFBE4"></path> <path d="M187.81 35.375C197.715 34.1 203.685 29.005 204.09 21.48C204.53 13.315 199.785 8.35 189.01 5.69C197.26 0.0849996 210.67 1.645 216.635 8.415C223.325 16.005 222.795 26.92 215.355 34.045C208.165 40.93 194.61 41.585 187.81 35.38V35.375Z" fill="#FFFBE4"></path> <path d="M85.3151 4.26C74.1651 6.81 69.1001 12.295 69.8551 20.625C70.5251 28.015 77.1751 33.475 86.0401 33.9C86.0501 34.02 86.1101 34.215 86.0551 34.26C77.5201 40.825 63.6151 39.185 56.8351 30.825C47.8551 19.755 53.8151 4.04 67.9801 1.375C73.9701 0.249999 79.5651 1.265 85.3151 4.265V4.26Z" fill="#FFFBE4"></path> <path d="M138.305 2.08C146.875 1.36 154.875 3.225 162.32 7.46C164.36 8.62 166.41 9.78 168.36 11.08C175.23 15.66 182.785 18.39 190.96 19.52C191.485 19.595 192.005 19.715 192.525 19.835C192.645 19.865 192.745 19.985 192.97 20.15C183.455 21.095 174.91 24.43 166.935 29.33C158.835 34.31 150.08 37.205 140.475 37.345C140.18 37.345 139.885 37.345 139.41 37.345C149.735 33.28 154.545 27.29 154.1 19.21C153.63 10.655 148.605 5.255 138.305 2.075V2.08Z" fill="#FFFBE4"></path> <path d="M79.1899 19.14C88.8199 18.03 97.5099 14.485 105.695 9.505C113.885 4.52 122.765 1.785 132.95 1.835C123.6 4.585 118.25 10.18 118.01 19.65C117.895 24.105 119.73 27.995 122.81 31.26C125.8 34.425 129.59 36.125 133.825 37.06C127.045 37.645 120.515 36.76 114.365 33.935C111.275 32.515 108.2 30.965 105.39 29.075C97.4499 23.735 88.8099 20.355 79.1949 19.14H79.1899Z" fill="#FFFBE4"></path> </g> <defs> <clippath id="clip0_84_4003"> <rect width="274.265" height="40" fill="white"></rect> </clippath> </defs> </svg>
+            <p class="fira-sans font-white font-xsm">
+                If you are interested in learning more, check out our events page for upcoming language learning events,
+                or contact mevans@snohomishtribe.org and inquire directly.
+            </p>
+            <!-- Links -->
+            <div class="btn-container roboto">
+                <a class="btn" href="events.html">Events</a>
+            </div>
+
+            <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="22.93 3.55 769.82 521.17"> <path d="M360.782 443.761C446.012 361.126 471.441 278.053 438.655 188.542C406.398 100.361 336.705 60.001 224.025 67.0446C296.041 31.8294 367.417 14.0493 442.174 16.6929C475.615 17.8548 509.042 21.3627 542.329 25.4715C626.675 36.0841 709.493 28.3238 792.742 3.55246C783.921 10.6144 775.321 17.9918 766.359 24.6988C705.295 70.6041 653.692 126.775 613.448 196.091C574.2 263.632 534.322 331.488 473.54 378.103C438.624 404.892 400.693 426.703 364.064 450.84L360.703 443.8L360.782 443.761Z" fill="black"></path> <path d="M124.234 517.322C202.874 463.617 234.017 390.311 209.171 317.463C182.249 238.433 123.676 211.411 22.9258 231.566C71.3483 143.898 190.126 102.214 265.791 141.087C350.628 184.722 387.065 290.109 351.127 388.742C316.406 484.007 204.779 547.282 124.164 517.145L124.234 517.322Z" fill="black"></path> </svg>            
+        </div>
+    </section>
+{{end}}
+
+{{define "js"}}
+<script src="static/js/app.js"></script>
+{{end}}

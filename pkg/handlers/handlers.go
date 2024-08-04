@@ -101,7 +101,7 @@ func Events(w http.ResponseWriter, r *http.Request) {
 }
 
 func Language(w http.ResponseWriter, r *http.Request) {
-	tmpl, _ := template.ParseFiles("static/templates/language-learning.html")
+	tmpl, _ := template.ParseFiles("static/templates/language-learning.html", "static/templates/main.layout.html")
 
 	if err := tmpl.Execute(w, nil); err != nil {
 		log.Fatal("Failed to parse template ", err)
@@ -109,7 +109,7 @@ func Language(w http.ResponseWriter, r *http.Request) {
 }
 
 func Membership(w http.ResponseWriter, r *http.Request) {
-	tmpl, _ := template.ParseFiles("static/templates/membership.html")
+	tmpl, _ := template.ParseFiles("static/templates/membership.html", "static/templates/main.layout.html")
 
 	if err := tmpl.Execute(w, nil); err != nil {
 		log.Fatal("Failed to parse template ", err)
@@ -117,7 +117,7 @@ func Membership(w http.ResponseWriter, r *http.Request) {
 }
 
 func Programs(w http.ResponseWriter, r *http.Request) {
-	tmpl, _ := template.ParseFiles("static/templates/programs.html")
+	tmpl, _ := template.ParseFiles("static/templates/programs.html", "static/templates/main.layout.html")
 
 	if err := tmpl.Execute(w, nil); err != nil {
 		log.Fatal("Failed to parse template ", err)
