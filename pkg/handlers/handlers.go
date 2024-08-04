@@ -22,7 +22,7 @@ func Index(w http.ResponseWriter, r *http.Request) {
 }
 
 func About(w http.ResponseWriter, r *http.Request) {
-	tmpl, _ := template.ParseFiles("static/templates/about.html")
+	tmpl, _ := template.ParseFiles("static/templates/about.html", "static/templates/main.layout.html")
 
 	if err := tmpl.Execute(w, nil); err != nil {
 		log.Fatal("Failed to parse template ", err)

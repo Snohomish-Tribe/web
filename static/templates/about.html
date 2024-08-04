@@ -1,16 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
-    <link rel="stylesheet" href="static/stylesheets/about.css">
-</head>
-<body>
+{{template "main" .}}
+{{define "css"}}<link rel="stylesheet" href="static/stylesheets/about.css">{{end}}
+{{define "title"}}About{{end}}
+{{define "content"}}
     <h1>About page</h1>
-    <img src="/static/images/ancestral-territory.png" alt="">
-    <a href="/">Home</a>
-</body>
+{{end}}
 
+{{define "js"}}    
 <script src="/static/js/app.js"></script>
-</html>
+{{end}}
