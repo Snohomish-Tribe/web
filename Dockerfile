@@ -1,19 +1,17 @@
 FROM golang:1.22.1
 
 WORKDIR /app
-# WORKDIR /cmd/web
 
 COPY go.mod go.sum ./
 
 RUN go mod download
 
-COPY *.go ./
+# Copies all files
+COPY . ./
 
-# ENV
-
-RUN CGO_ENABLED=0 GOOS=linux go build -o /docker-gs-ping
+# ./ build here
+RUN go build -o ./snohomishtribe ./cmd/web
 
 EXPOSE 3000
 
-# CMD ["go", "run" "cmd/web/*.go"]
-CMD ["/docker-gs-ping"]
+CMD ["./snohomishtribe"]
