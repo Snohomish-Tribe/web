@@ -75,6 +75,10 @@ button {
   display: block;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 .success-msg {
   height: 50vh;
   display: flex;
@@ -82,7 +86,6 @@ button {
   justify-content: center;
   text-align: center;
 }
-
 
 .address {
   width: 70%;
