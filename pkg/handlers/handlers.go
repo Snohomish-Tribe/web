@@ -62,19 +62,25 @@ func Contact(w http.ResponseWriter, r *http.Request) {
 		fmt.Println(mail)
 		// send an email
 		from := gomap.NewAddress(msg.Name, "daniel@devonfarm.xyz")
-		to := gomap.NewAddress("Snohomish Tribe Guest user", "daniel@devonfarm.xyz")
+		to := gomap.NewAddress("Snohomish Tribe Website Contact Form Question", "daniel@devonfarm.xyz") // Email subject title
 
 		if err := mail.SendEmail(
 			gomap.NewAddresses(from),
 			gomap.NewAddresses(to),
-			fmt.Sprintf("Contact Page Question: %s", msg.Question), // Email subject title
-			fmt.Sprintf("From %s \n %s", msg.Email, msg.Message),   // Message
+			fmt.Sprintf("Contact Page Question: %s", msg.Question),
+			fmt.Sprintf("From %s \n\n %s", msg.Email, msg.Message), // Message
 			false,
 		); err != nil {
-			log.Fatal(err, " line 71")
+			log.Fatal(err, " line 74")
 		}
 
-		w.WriteHeader(http.StatusOK)
+		fmt.Println(msg.Question)
+
+		// tmpl, _ := template.ParseFiles("static/templates/success.html", "static/templates/main.layout.html")
+		// if err := tmpl.Execute(w, nil); err != nil {
+		// 	log.Fatal("Failed to parse template ", err)
+		// }
+		// return
 	}
 
 	tmpl, _ := template.ParseFiles("static/templates/contact.html", "static/templates/main.layout.html")

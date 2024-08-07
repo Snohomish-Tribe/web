@@ -41,6 +41,7 @@ form select {
   display: block;
 }
 
+input[type="email"],
 input[type="text"],
 select, 
 textarea {
@@ -73,6 +74,10 @@ button {
   background-color: #000000;
   color: #fff;
   display: block;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 .address {

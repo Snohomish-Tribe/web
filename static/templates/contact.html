@@ -25,29 +25,29 @@
                 <form class="fira-sans" method="POST">
                     <label for="name">
                         Full Name
-                        <input id="name" type="text">
+                        <input id="name" type="text" name="name">
                     </label>
                     <label for="email">
                         Email Address
-                        <input id="email" type="text">
+                        <input id="email" type="email" name="email">
                     </label>
                     <label for="questions">
                         I have a question about
-                        <select name="" id="questions">
+                        <select name="questions" id="questions">
                             <option value="" disabled selected>Select a category</option>
-                            <option value="membership">Membership</option>
-                            <option value="events">Events</option>
-                            <option value="language">Language Learning</option>
-                            <option value="programs">Programs</option>
-                            <option value="general">General</option>
+                            <option value="Membership">Membership</option>
+                            <option value="Events">Events</option>
+                            <option value="Language">Language Learning</option>
+                            <option value="Programs">Programs</option>
+                            <option value="General">General</option>
                         </select>
                     </label>
                     <label for="message">
                         Message
-                        <textarea rows="8" name="" id="message"></textarea>
+                        <textarea rows="8" name="message" id="message"></textarea>
                     </label>
                     <div class="form-group">
-                        <input type="checkbox" name="" id="terms">
+                        <input type="checkbox" name="terms" id="terms">
                         <label class="roboto" for="terms">
                             I agree to the Terms</label>
                         <button class="roboto" type="submit">Send</button>
@@ -119,6 +119,10 @@
             if (textarea.value.trim() === '') event.preventDefault();
             if (checkbox.value !== 'on') event.preventDefault();
             if(select.value === '') event.preventDefault(); 
+        })
+
+        select.addEventListener('change', () => {
+            console.log(select.value)
         })
     </script>
 {{end}}
