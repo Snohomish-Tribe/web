@@ -100,7 +100,14 @@ button:hover {
   margin: 0 auto;
 }
 
-
+.success-msg{
+  padding: 3rem 0;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
 
 /* ================================= 
   MEDIA QUERIES 768px 
@@ -149,4 +156,13 @@ button:hover {
   .address {
     width: 20%;
   }
+
+
+  .success-msg{
+    padding: 3rem 0;
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  
 }

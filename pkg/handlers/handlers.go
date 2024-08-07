@@ -31,8 +31,9 @@ func About(w http.ResponseWriter, r *http.Request) {
 
 func Contact(w http.ResponseWriter, r *http.Request) {
 	// recipient := ""
+	godotenv.Load()
+
 	if r.Method == "POST" {
-		godotenv.Load()
 		msg := models.Reqbody{
 			Name:     r.FormValue("name"),
 			Email:    r.FormValue("email"),
@@ -61,8 +62,8 @@ func Contact(w http.ResponseWriter, r *http.Request) {
 		}
 		fmt.Println(mail)
 		// send an email
-		from := gomap.NewAddress(msg.Name, "daniel@devonfarm.xyz")
-		to := gomap.NewAddress("Snohomish Tribe Website Contact Form Question", "daniel@devonfarm.xyz") // Email subject title
+		from := gomap.NewAddress(msg.Name, os.Getenv("EMAIL_ACCOUNT"))
+		to := gomap.NewAddress("Snohomish Tribe Website Contact Form Question", os.Getenv("EMAIL_ACCOUNT")) // Email subject title
 
 		if err := mail.SendEmail(
 			gomap.NewAddresses(from),
@@ -71,16 +72,15 @@ func Contact(w http.ResponseWriter, r *http.Request) {
 			fmt.Sprintf("From %s \n\n %s", msg.Email, msg.Message), // Message
 			false,
 		); err != nil {
-			log.Fatal(err, " line 74")
+			log.Fatal(err, " line 75")
 		}
 
-		fmt.Println(msg.Question)
+		tmpl, _ := template.ParseFiles("static/templates/success.html", "static/templates/main.layout.html")
+		if err := tmpl.Execute(w, nil); err != nil {
+			log.Fatal("Failed to parse template ", err)
+		}
 
-		// tmpl, _ := template.ParseFiles("static/templates/success.html", "static/templates/main.layout.html")
-		// if err := tmpl.Execute(w, nil); err != nil {
-		// 	log.Fatal("Failed to parse template ", err)
-		// }
-		// return
+		return
 	}
 
 	tmpl, _ := template.ParseFiles("static/templates/contact.html", "static/templates/main.layout.html")
