@@ -21,5 +21,3 @@ menuBtn.addEventListener("click", (event) => {
   if (isMenuOpen === false) menuIcn.src = "images/hamburger.svg"; 
   
 });
-
-console.log("app")
