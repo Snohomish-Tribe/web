@@ -40,7 +40,7 @@ section {
 .date p {
   margin: 0.5rem 0;
   padding-left: 0.5rem;
-  width: max-content;
+  /* width: max-content; */
 }
 
 .event-btn {
@@ -80,16 +80,13 @@ section {
   .container > p:last-of-type {
     margin-bottom: 4rem;
   }
-  
-  .row {
-    display: flex;
-    padding: 2.5rem 0;
-  }
 
-  .date {
-    margin-right: 3rem;
-    padding-top: 0;
-  }
+  .row {
+    padding: 2.5rem 0;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+}
 
   .event-name h3 {
     margin-top: 0;
@@ -101,6 +98,10 @@ section {
     width: 80%;
     max-width: 1200px;
     margin: 0 auto 0 3rem;
+  }
+
+  .row {
+    grid-template-columns: 1fr 3fr; 
   }
 
   .moon:first-of-type {
