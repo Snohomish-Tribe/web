@@ -216,6 +216,15 @@ section {
   margin-top: 0; 
 }
 
+.events-btn {
+  color: #FFFBE4;
+  border:1px solid #FFFBE4;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  display: inline-block;
+  padding: 1rem 1.5rem;
+}
+
 /* ================================= 
   Ancestral Territory
 ==================================== */
@@ -434,16 +443,6 @@ section {
   .row-2 .bt-point >div:last-child{
     margin-left: auto;
     width: 85%;
-  }
-
-  .events-btn {
-    background-color: #2D302C;
-    color: #FFFBE4;
-    border:1px solid #FFFBE4;
-    margin-top: 1rem;
-    margin-bottom: 3rem;
-    display: inline-block;
-    padding: 1rem 1.5rem;
   }
 
   /* =========== Ancestral Territory =========== */
