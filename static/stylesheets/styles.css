@@ -203,6 +203,11 @@ footer {
   padding: 3rem 0;
 }
 
+footer img {
+  width: max-content;
+  margin: 0 auto;
+}
+
 footer ul li {
   padding: 0.5rem 0; 
   margin-bottom: 1rem;
