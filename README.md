@@ -51,4 +51,4 @@ docker push "${TAG}"
 
 TODO:
 
-- Terraform for container instance
+- Pass environment variables to container definition

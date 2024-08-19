@@ -29,8 +29,18 @@ resource "oci_container_instances_container_instance" "web" {
   }
 }
 
-resource "oci_core_subnet" "web" {
+resource "oci_identity_dynamic_group" "container_instances" {
   compartment_id = var.compartment_id
-  vcn_id         = oci_core_vcn.internal.id
-  cidr_block     = "172.16.1.0/24"
+  name           = "all-container-instances"
+  description    = "All Container Instances"
+  matching_rule  = "ALL {resource.type='computecontainerinstance'}"
+}
+
+resource "oci_identity_policy" "allow_registry_pull" {
+  compartment_id = var.compartment_id
+  name           = "allow-image-pull-from-container-instances"
+  description    = "Allow Container Instances to pull images from Container Registry"
+  statements = [
+    "Allow dynamic-group ${oci_identity_dynamic_group.container_instances.name} to read repos in tenancy"
+  ]
 }
