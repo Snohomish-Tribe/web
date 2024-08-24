@@ -155,15 +155,14 @@ section {
   position: relative;
 }
 
-.bt-pt:before {
-  left: -1.125rem;
+.bt-pt > div {
   position: absolute;
-  content: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iMzEiIHZpZXdCb3g9IjAgMCA0OCAzMSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEuNiAzMS4xOUMyLjQ5IDMwLjkzIDMuNCAzMC43MiA0LjI4IDMwLjQxQzExLjA5IDI3Ljk3IDE1LjQzIDIxLjI1IDE0LjczIDE0LjI5QzE0LjAxIDcuMjcwMDEgOC40OSAxLjU0MDAxIDEuMzcgMC40MzAwMTJDMC45MSAwLjM2MDAxMiAwLjQ1IDAuMzAwMDEyIDAgMC4yMDAwMTJDNS43NiAtMC4zNTk5ODggMTEuNDEgMC4yMzAwMTIgMTYuNzMgMi41MzAwMUMxOS45MiAzLjkxMDAxIDIzLjAxIDUuNjEwMDEgMjUuOTcgNy40NDAwMUMzMC4zIDEwLjExIDM0LjY0IDEyLjcxIDM5LjYxIDE0QzQyLjU5IDE0Ljc3IDQ1LjYyIDE1LjM3IDQ4IDE1LjlDNDUuMzkgMTYuNSA0Mi4xNCAxNy4xNSAzOC45NSAxOC4wMUMzNC44NCAxOS4xMSAzMS4xIDIxLjA4IDI3LjQ0IDIzLjIxQzIzLjgxIDI1LjMyIDIwLjE4IDI3LjQyIDE2LjE5IDI4Ljc5QzEyLjY0IDMwLjAxIDkuMDEgMzAuNzcgNS4yNiAzMS4wMkM0LjkxIDMxLjA0IDQuNTcgMzEuMTMgNC4yMyAzMS4xOEgxLjZWMzEuMTlaIiBmaWxsPSJibGFjayIvPgo8L3N2Zz4K'); 
+  left: -1.5rem;
   background-color: #FFFBE4;
 }
 
 .bt-pt h4 {
-  margin-bottom:auto 0 1.25rem;  
+  margin-bottom: 0;  
 }
 
 .bt-pt p {
@@ -198,18 +197,12 @@ section {
 }
 
 .item svg {
-  width: 25%;
-  display: none;
+  position: absolute;
+  left: 0;
 }
 
 .row-2 h4 {
   margin: 0 0 0.75rem 1rem;
-}
-
-.row-2 h4:before {
-  content: url('data:image/svg+xml;base64,ICAgICAgICAgICAgICAgICAgICAgICAgPHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCA0OCAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZD0iTTEuNiAzMS42OUMyLjQ5IDMxLjQzIDMuNCAzMS4yMiA0LjI4IDMwLjkxQzExLjA5IDI4LjQ3IDE1LjQzIDIxLjc1IDE0LjczIDE0Ljc5QzE0LjAxIDcuNzcwMDEgOC40OSAyLjA0MDAxIDEuMzcgMC45MzAwMTJDMC45MSAwLjg2MDAxMiAwLjQ1IDAuODAwMDEyIDAgMC43MDAwMTJDNS43NiAwLjE0MDAxMiAxMS40MSAwLjczMDAxMiAxNi43MyAzLjAzMDAxQzE5LjkyIDQuNDEwMDEgMjMuMDEgNi4xMTAwMSAyNS45NyA3Ljk0MDAxQzMwLjMgMTAuNjEgMzQuNjQgMTMuMjEgMzkuNjEgMTQuNUM0Mi41OSAxNS4yNyA0NS42MiAxNS44NyA0OCAxNi40QzQ1LjM5IDE3IDQyLjE0IDE3LjY1IDM4Ljk1IDE4LjUxQzM0Ljg0IDE5LjYxIDMxLjEgMjEuNTggMjcuNDQgMjMuNzFDMjMuODEgMjUuODIgMjAuMTggMjcuOTIgMTYuMTkgMjkuMjlDMTIuNjQgMzAuNTEgOS4wMSAzMS4yNyA1LjI2IDMxLjUyQzQuOTEgMzEuNTQgNC41NyAzMS42MyA0LjIzIDMxLjY4SDEuNlYzMS42OVoiCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZmlsbD0iI0ZGRkJFNCIgLz4KICAgICAgICAgICAgICAgICAgICAgICAgPC9zdmc+');
-  position: absolute;
-  left: 0;
 }
 
 .row-2 .item p {
@@ -318,10 +311,6 @@ section {
   .btn {
     position: relative;
     z-index: 1;
-  }
-
-  .bt-pt:before {
-    left: -1.5rem;
   }
 
   .row-1 .container, 
