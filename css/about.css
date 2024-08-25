@@ -125,7 +125,16 @@ section,
   width: 90%;
   margin: 0 auto;
   height: 450px;
-  overflow: hidden;  
+  overflow: hidden;
+  transition: height 0.9s ease-in;
+}
+
+.expand {
+  height: 1000px !important;
+}
+
+.full {
+  height: auto !important; 
 }
 
 aside {
@@ -159,10 +168,6 @@ aside {
 
 .timeline li:first-child {
   padding-top: 2rem;
-}
-
-.expand {
-  height: 100% !important;
 }
 
 .item {
@@ -242,7 +247,6 @@ aside {
 }
 
 .breadcrumbs {
-  /* width: 50%; */
   padding: 1rem 0;
   display: flex; 
   justify-content: space-evenly;
