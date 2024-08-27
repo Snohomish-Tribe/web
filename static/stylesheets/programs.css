@@ -332,15 +332,20 @@ h3 span {
   MEDIA QUERIES 1024px 
 ==================================== */
 @media (min-width: 1024px) {
+  .bg-container .container {
+    max-width: 1400px;
+  } 
+
+  .container, 
+  .row-3 h2 {
+    max-width: 1200px;
+  }
+
   .row-1 {
     height: 90vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
-  }
-
-  .row-1 .container {
-    max-width: 1200px;
   }
 
   .row-3 .col-1, .row
@@ -360,6 +365,10 @@ h3 span {
 
   .row-3 .heading {
     width: 90%;
+  }
+
+  .row-3 h2 {
+    margin: 0 auto;
   }
 
   .row-4 p {

@@ -332,6 +332,10 @@ h3 span {
   MEDIA QUERIES 1024px 
 ==================================== */
 @media (min-width: 1024px) {
+  .bg-container .container {
+    max-width: 1400px;
+  } 
+
   .container, 
   .row-3 h2 {
     max-width: 1200px;
