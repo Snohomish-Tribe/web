@@ -53,7 +53,7 @@ section,
 }
 
 .values-list .row-1,  
-.values-list .row-2{
+.values-list .row-2 {
   color: #000000;
 }
 
@@ -80,7 +80,6 @@ section,
   line-height: 2.75rem;
 }
 
-.row-1 .col-1 svg, 
 .moon, 
 .row-2 svg, 
 .svg-container svg:nth-of-type(6), 
