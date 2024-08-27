@@ -509,7 +509,6 @@ section {
     max-width: 1200px;    
   }
 
-
   .bg-footer {
     width: 50%;
     margin: auto auto 0; 
@@ -527,6 +526,7 @@ section {
   .bg-footer {
     width: 60%;
   }
+
  /* =========== Standing Strong =========== */
   .moon {
     width: 40%; 

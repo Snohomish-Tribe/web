@@ -138,6 +138,10 @@ button:hover {
   MEDIA QUERIES 1024px 
 ==================================== */
 @media (min-width: 1024px) {
+  .container {
+    max-width: 1200px;
+  }
+  
   .col-1 {
     width: 35%;
   }

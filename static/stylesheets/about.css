@@ -53,7 +53,7 @@ section,
 }
 
 .values-list .row-1,  
-.values-list .row-2{
+.values-list .row-2 {
   color: #000000;
 }
 
@@ -80,7 +80,6 @@ section,
   line-height: 2.75rem;
 }
 
-.row-1 .col-1 svg, 
 .moon, 
 .row-2 svg, 
 .svg-container svg:nth-of-type(6), 
@@ -125,7 +124,16 @@ section,
   width: 90%;
   margin: 0 auto;
   height: 450px;
-  overflow: hidden;  
+  overflow: hidden;
+  transition: height 0.9s ease-in;
+}
+
+.expand {
+  height: 1000px !important;
+}
+
+.full {
+  height: auto !important; 
 }
 
 aside {
@@ -159,10 +167,6 @@ aside {
 
 .timeline li:first-child {
   padding-top: 2rem;
-}
-
-.expand {
-  height: 100% !important;
 }
 
 .item {
@@ -242,7 +246,6 @@ aside {
 }
 
 .breadcrumbs {
-  /* width: 50%; */
   padding: 1rem 0;
   display: flex; 
   justify-content: space-evenly;
@@ -504,7 +507,9 @@ aside {
     line-height: 1.75rem;
   }
 }
-
+/* ================================= 
+  MEDIA QUERIES 1024px 
+==================================== */
 @media (min-width: 1024px) {
   .banner .container   
   .banner p, 
@@ -593,7 +598,7 @@ aside {
 
   .about .row-5 .container {
     padding: 0;
-    width: 50%;
+    width: 60%;
   }
 
   .row-5 .bg-container {
