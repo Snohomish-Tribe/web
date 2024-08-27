@@ -40,7 +40,6 @@ section {
 .date p {
   margin: 0.5rem 0;
   padding-left: 0.5rem;
-  /* width: max-content; */
 }
 
 .event-btn {
@@ -92,7 +91,9 @@ section {
     margin-top: 0;
   }
 }
-
+/* ================================= 
+  MEDIA QUERIES 1024px 
+==================================== */
 @media (min-width: 1024px) {
  main .container {
     max-width: 1200px;
