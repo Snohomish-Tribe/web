@@ -10,19 +10,34 @@ output "container_repo_image_tag" {
 }
 
 locals {
-  container_image_tag = "ocir.${var.region}.oci.oraclecloud.com/${oci_artifacts_container_repository.web.namespace}/${oci_artifacts_container_repository.web.display_name}"
+  container_image_tag   = "ocir.${var.region}.oci.oraclecloud.com/${oci_artifacts_container_repository.web.namespace}/${oci_artifacts_container_repository.web.display_name}"
+  fastmail_token_secret = data.oci_vault_secrets.fastmail_token.secrets[0]
+}
+
+data "oci_vault_secrets" "fastmail_token" {
+  compartment_id = var.compartment_id
+  name           = "FASTMAIL_TOKEN"
+}
+
+data "oci_secrets_secretbundle" "fastmail_token" {
+  secret_id      = local.fastmail_token_secret.id
+  version_number = local.fastmail_token_secret.current_version_number
 }
 
 resource "oci_container_instances_container_instance" "web" {
   availability_domain = "${var.region}-ad-1"
   compartment_id      = var.compartment_id
   containers {
-    image_url = "${container_image_tag}:latest"
+    image_url = "${local.container_image_tag}:latest"
+    environment_variables = {
+      SENDER_EMAIL   = var.sender_email_address
+      FASTMAIL_TOKEN = base64decode(data.oci_secrets_secretbundle.fastmail_token.secret_bundle_content[0].content)
+    }
   }
   shape = "CI.Standard.A1.Flex"
   shape_config {
     ocpus         = 1
-    memory_in_gbs = 5
+    memory_in_gbs = 4
   }
   vnics {
     subnet_id = oci_core_subnet.web.id

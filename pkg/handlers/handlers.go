@@ -53,7 +53,7 @@ func Contact(w http.ResponseWriter, r *http.Request) {
 
 		mail, err := gomap.NewClient(
 			"https://api.fastmail.com/jmap/session",
-			os.Getenv("BEARER_TOKEN"),
+			os.Getenv("FASTMAIL_TOKEN"),
 			gomap.DefaultDrafts,
 			gomap.DefaultSent,
 		)
@@ -62,8 +62,8 @@ func Contact(w http.ResponseWriter, r *http.Request) {
 		}
 		fmt.Println(mail)
 		// send an email
-		from := gomap.NewAddress(msg.Name, os.Getenv("EMAIL_ACCOUNT"))
-		to := gomap.NewAddress("Snohomish Tribe Website Contact Form Question", os.Getenv("EMAIL_ACCOUNT")) // Email subject title
+		from := gomap.NewAddress(msg.Name, os.Getenv("SENDER_EMAIL"))
+		to := gomap.NewAddress("Snohomish Tribe Website Contact Form Question", os.Getenv("SENDER_EMAIL")) // Email subject title
 
 		if err := mail.SendEmail(
 			gomap.NewAddresses(from),
