@@ -342,6 +342,10 @@ h1,
 }
 
 @media (min-width: 1024px) {
+  .banner .container {
+    max-width: 1400px;
+  } 
+
   .row-1 {
     height: 75vh;
   }
@@ -377,12 +381,7 @@ h1,
   }
 
   /* =========== Lesson Images =========== */
-  /* .carousel-container {
-    width: 850px;
-  } */
-
   .carousel-img {
-    /* width: 40%; */
     object-fit: contain;
   }
 
