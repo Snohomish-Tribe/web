@@ -208,6 +208,10 @@ h1,
 ==================================== */
 @media (min-width: 1024px) {
   /* =========== Experience Support =========== */
+  .container {
+    max-width: 1200px;
+  }
+
   .row-1 {
     height: 85vh; 
   }
@@ -222,7 +226,6 @@ h1,
 
   .row-1 .container {
     justify-content: space-between;
-    max-width: 1200px;
   }
 
   .row-1 .col-1, 
@@ -240,6 +243,6 @@ h1,
   }
 
   .faqs {
-    width: 75%;
+    width: 85%;
   }
 }
