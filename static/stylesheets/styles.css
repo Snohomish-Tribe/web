@@ -156,7 +156,8 @@ header {
 }
 
 .main-header {
-  padding-bottom: 0.5rem;
+  padding: 0.25rem 0;
+  height: 9vh;
 }
 
 .main-nav li {
@@ -193,7 +194,7 @@ nav {
 }
 
 .show-links {
-  height: 90vh;
+  height: 91vh;
 }
 
 /* ================================= 
@@ -243,6 +244,11 @@ footer ul li,
     display: flex;
     width: 90%;
     margin: 0 auto;
+  }
+
+  .main-header {
+    padding: 0.5rem 0 0;
+    height: unset;
   }
 
   .toggle {
