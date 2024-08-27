@@ -507,7 +507,9 @@ aside {
     line-height: 1.75rem;
   }
 }
-
+/* ================================= 
+  MEDIA QUERIES 1024px 
+==================================== */
 @media (min-width: 1024px) {
   .banner .container   
   .banner p, 
@@ -596,7 +598,7 @@ aside {
 
   .about .row-5 .container {
     padding: 0;
-    width: 50%;
+    width: 60%;
   }
 
   .row-5 .bg-container {
