@@ -1,10 +1,13 @@
 package main
 
 import (
+	"fmt"
 	"net/http"
 
 	"github.com/snohomishtribe/pkg/handlers"
 )
+
+const PORT = 3000
 
 func main() {
 	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
@@ -18,5 +21,6 @@ func main() {
 	http.HandleFunc("/membership", handlers.Membership)
 	http.HandleFunc("/programs", handlers.Programs)
 
-	http.ListenAndServe(":3000", nil)
+	fmt.Printf("Listening on port %d\n", PORT)
+	http.ListenAndServe(fmt.Sprintf(":%d", PORT), nil)
 }

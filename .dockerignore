@@ -4,3 +4,8 @@ LICENSE
 README.md
 Dockerfile
 .dockerignore
+tmp/
+.air.toml
+terraform/
+.github/
+.editorconfig
