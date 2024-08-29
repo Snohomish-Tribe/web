@@ -13,6 +13,9 @@ import (
 	"github.com/snohomishtribe/pkg/models"
 )
 
+// TODO: switch to snohomishtribe.org once validated
+const RECIPIENT_EMAIL_DOMAIN = "devonfarm.xyz"
+
 func Index(w http.ResponseWriter, r *http.Request) {
 	tmpl, _ := template.ParseFiles("static/templates/index.html", "static/templates/main.layout.html")
 
@@ -42,22 +45,26 @@ func Contact(w http.ResponseWriter, r *http.Request) {
 			Message:  r.FormValue("Message"),
 		}
 
+		recipientPrefix := ""
+
 		switch msg.Question {
 		case "Events":
-			recipientEmail = "bporter@devonfarm.xyz"
+			recipientPrefix = "bporter"
 			recipientName = "Events"
 		case "Membership":
-			recipientEmail = "lloeber@devonfarm.xyz"
+			recipientPrefix = "lloeber"
 			recipientName = "Membership"
 		case "Language":
-			recipientEmail = "mevans@snohomishtribe.org"
+			recipientPrefix = "mevans"
 			recipientName = "Language"
-		// case "Programs":
-		// 	recipientEmail = "mevans@snohomishtribe.org"
-		// 	recipientName = "Programs"
+		case "Programs":
+			recipientPrefix = "lceniceros"
+			recipientName = "Programs"
 		default:
-			recipientEmail = "contact@devonfarm.xyz"
+			recipientPrefix = "contact"
 		}
+
+		recipientEmail = fmt.Sprintf("%s@%s", recipientPrefix, RECIPIENT_EMAIL_DOMAIN)
 
 		mail, err := gomap.NewClient(
 			"https://api.fastmail.com/jmap/session",
