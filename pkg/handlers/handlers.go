@@ -30,26 +30,34 @@ func About(w http.ResponseWriter, r *http.Request) {
 }
 
 func Contact(w http.ResponseWriter, r *http.Request) {
-	// recipient := ""
 	godotenv.Load()
+	recipientEmail := ""
+	recipientName := "Contact"
 
 	if r.Method == "POST" {
 		msg := models.Reqbody{
 			Name:     r.FormValue("name"),
 			Email:    r.FormValue("email"),
 			Question: r.FormValue("questions"),
-			Message:  r.FormValue("message"),
+			Message:  r.FormValue("Message"),
 		}
 
-		// switch msg.Question {
-		// case "events":
-		// 	recipient = " bporter@snohomishtribe.org"
-		// case "membership":
-		// 	recipient = "lloeber@snohomishtribe.org"
-		// default:
-		// 	recipient = "contact@snohomishtribe.org"
-		// }
-		// fmt.Println(recipient)
+		switch msg.Question {
+		case "Events":
+			recipientEmail = "bporter@devonfarm.xyz"
+			recipientName = "Events"
+		case "Membership":
+			recipientEmail = "lloeber@devonfarm.xyz"
+			recipientName = "Membership"
+		case "Language":
+			recipientEmail = "mevans@snohomishtribe.org"
+			recipientName = "Language"
+		// case "Programs":
+		// 	recipientEmail = "mevans@snohomishtribe.org"
+		// 	recipientName = "Programs"
+		default:
+			recipientEmail = "contact@devonfarm.xyz"
+		}
 
 		mail, err := gomap.NewClient(
 			"https://api.fastmail.com/jmap/session",
@@ -61,18 +69,18 @@ func Contact(w http.ResponseWriter, r *http.Request) {
 			log.Fatal(err)
 		}
 		fmt.Println(mail)
-		// send an email
+		// sends the email
 		from := gomap.NewAddress(msg.Name, os.Getenv("EMAIL_ACCOUNT"))
-		to := gomap.NewAddress("Snohomish Tribe Website Contact Form Question", os.Getenv("EMAIL_ACCOUNT")) // Email subject title
+		to := gomap.NewAddress(fmt.Sprintf("Snohomish Tribe %s", recipientName), recipientEmail) // Email subject title
 
 		if err := mail.SendEmail(
 			gomap.NewAddresses(from),
 			gomap.NewAddresses(to),
 			fmt.Sprintf("Contact Page Question: %s", msg.Question),
-			fmt.Sprintf("From %s \n\n %s", msg.Email, msg.Message), // Message
+			fmt.Sprintf("From %s \n\n %s", msg.Email, msg.Message), // Email message
 			false,
 		); err != nil {
-			log.Fatal(err, " line 75")
+			log.Fatal(err, " line 76")
 		}
 
 		tmpl, _ := template.ParseFiles("static/templates/success.html", "static/templates/main.layout.html")
