@@ -41,7 +41,7 @@ form select {
   display: block;
 }
 
-input[type="text"],
+form input,
 select, 
 textarea {
   padding: 0.75rem 0;

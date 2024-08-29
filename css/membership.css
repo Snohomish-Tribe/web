@@ -37,6 +37,11 @@ h3 {
   display: flex;
 }
 
+.title, 
+.banner .container {
+  height: 100%;
+}
+
 h1, 
 .row-3 h2 {
   margin-top: 0;
@@ -243,6 +248,6 @@ h1,
   }
 
   .faqs {
-    width: 85%;
+    width: 75%;
   }
 }
