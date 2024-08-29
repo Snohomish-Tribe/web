@@ -1,11 +1,11 @@
 .env
 .gitignore
 LICENSE 
-README.md
+*.md
 Dockerfile
 .dockerignore
 tmp/
-.air.toml
+*.toml
 terraform/
 .github/
 .editorconfig
