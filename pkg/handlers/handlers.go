@@ -17,6 +17,16 @@ import (
 const RECIPIENT_EMAIL_DOMAIN = "devonfarm.xyz"
 
 func Index(w http.ResponseWriter, r *http.Request) {
+	if r.URL.Path != "/" {
+		tmpl, err := template.ParseFiles("static/templates/404.html", "static/templates/main.layout.html")
+		if err != nil {
+			log.Fatalf("failed to parse 404 template: %v", err)
+		}
+		if err := tmpl.Execute(w, nil); err != nil {
+			log.Fatalf("failed to execute template: %v", err)
+		}
+	}
+
 	tmpl, _ := template.ParseFiles("static/templates/index.html", "static/templates/main.layout.html")
 
 	if err := tmpl.Execute(w, nil); err != nil {
