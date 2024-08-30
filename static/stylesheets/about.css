@@ -511,7 +511,7 @@ aside {
   MEDIA QUERIES 1024px 
 ==================================== */
 @media (min-width: 1024px) {
-  .banner .container   
+  .banner .container,   
   .banner p, 
   .banner h1,
   .row-1 .container,

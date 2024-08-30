@@ -3,7 +3,8 @@
 ==================================== */
 const menuBtn = document.querySelector(".toggle");
 const mainNav = document.querySelector(".main-nav");
-const menuIcn = document.querySelector(".toggle img");
+const closeIcn = document.querySelector(".close");
+const menuIcn = document.querySelector(".menu");
 
 let isMenuOpen = false;
 
@@ -15,9 +16,7 @@ menuBtn.addEventListener("click", (event) => {
   const btn = event.currentTarget;
   if (btn.classList.contains("toggle")) {
     mainNav.classList.toggle("show-links");
+    closeIcn.classList.toggle("hide");
+    menuIcn.classList.toggle("hide");
   }
-
-  if (isMenuOpen === true) menuIcn.src = "images/close.svg"; 
-  if (isMenuOpen === false) menuIcn.src = "images/hamburger.svg"; 
-  
 });

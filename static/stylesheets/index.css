@@ -408,6 +408,10 @@ section {
     margin-top: 1.5rem;
   }
 
+  .row-2 .col-1 > p:last-of-type {
+    margin-bottom: 2rem;
+  }
+
   .tan-arrw {
     width: 100%;
     position: absolute;

@@ -81,6 +81,8 @@ h1,
 
 .carousel img {
   margin: 0 auto;
+  width: 100%;
+  flex-shrink: 0;
 }
 
 .carousel .img-container {
@@ -343,7 +345,7 @@ h1,
 
 @media (min-width: 1024px) {
   .banner .container {
-    max-width: 1400px;
+    max-width: 1200px;
   } 
 
   .row-1 {

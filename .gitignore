@@ -7,3 +7,5 @@ terraform/.terraform
 *.tfstate*
 
 .DS_Store
+
+tmp

@@ -511,7 +511,7 @@ aside {
   MEDIA QUERIES 1024px 
 ==================================== */
 @media (min-width: 1024px) {
-  .banner .container   
+  .banner .container,   
   .banner p, 
   .banner h1,
   .row-1 .container,
@@ -520,6 +520,7 @@ aside {
   .row-5 .wrapper {
     max-width: 1200px;
   }
+
 
   .banner p:last-child {
     width: 50%;

@@ -243,10 +243,10 @@ h3 span {
   .row-2 .container svg:last-of-type {
     display: block;
     position: absolute;
-    bottom: -15%;
-    right: 0;
-    width: 60%;
-  }
+    top: -15%;
+    right: 2rem;
+    width: 70%;
+}
 
   .row-2 p, 
   .row-3 p, 
@@ -332,10 +332,7 @@ h3 span {
   MEDIA QUERIES 1024px 
 ==================================== */
 @media (min-width: 1024px) {
-  .bg-container .container {
-    max-width: 1400px;
-  } 
-
+  .bg-container .container,
   .container, 
   .row-3 h2 {
     max-width: 1200px;

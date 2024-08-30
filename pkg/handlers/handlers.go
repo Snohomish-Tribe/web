@@ -13,7 +13,20 @@ import (
 	"github.com/snohomishtribe/pkg/models"
 )
 
+// TODO: switch to snohomishtribe.org once validated
+const RECIPIENT_EMAIL_DOMAIN = "devonfarm.xyz"
+
 func Index(w http.ResponseWriter, r *http.Request) {
+	if r.URL.Path != "/" {
+		tmpl, err := template.ParseFiles("static/templates/404.html", "static/templates/main.layout.html")
+		if err != nil {
+			log.Fatalf("failed to parse 404 template: %v", err)
+		}
+		if err := tmpl.Execute(w, nil); err != nil {
+			log.Fatalf("failed to execute template: %v", err)
+		}
+	}
+
 	tmpl, _ := template.ParseFiles("static/templates/index.html", "static/templates/main.layout.html")
 
 	if err := tmpl.Execute(w, nil); err != nil {
@@ -30,26 +43,38 @@ func About(w http.ResponseWriter, r *http.Request) {
 }
 
 func Contact(w http.ResponseWriter, r *http.Request) {
-	// recipient := ""
 	godotenv.Load()
+	recipientEmail := ""
+	recipientName := "Contact"
 
 	if r.Method == "POST" {
 		msg := models.Reqbody{
 			Name:     r.FormValue("name"),
 			Email:    r.FormValue("email"),
 			Question: r.FormValue("questions"),
-			Message:  r.FormValue("message"),
+			Message:  r.FormValue("Message"),
 		}
 
-		// switch msg.Question {
-		// case "events":
-		// 	recipient = " bporter@snohomishtribe.org"
-		// case "membership":
-		// 	recipient = "lloeber@snohomishtribe.org"
-		// default:
-		// 	recipient = "contact@snohomishtribe.org"
-		// }
-		// fmt.Println(recipient)
+		recipientPrefix := ""
+
+		switch msg.Question {
+		case "Events":
+			recipientPrefix = "bporter"
+			recipientName = "Events"
+		case "Membership":
+			recipientPrefix = "lloeber"
+			recipientName = "Membership"
+		case "Language":
+			recipientPrefix = "mevans"
+			recipientName = "Language"
+		case "Programs":
+			recipientPrefix = "lceniceros"
+			recipientName = "Programs"
+		default:
+			recipientPrefix = "contact"
+		}
+
+		recipientEmail = fmt.Sprintf("%s@%s", recipientPrefix, RECIPIENT_EMAIL_DOMAIN)
 
 		mail, err := gomap.NewClient(
 			"https://api.fastmail.com/jmap/session",
@@ -61,18 +86,18 @@ func Contact(w http.ResponseWriter, r *http.Request) {
 			log.Fatal(err)
 		}
 		fmt.Println(mail)
-		// send an email
+		// sends the email
 		from := gomap.NewAddress(msg.Name, os.Getenv("SENDER_EMAIL"))
-		to := gomap.NewAddress("Snohomish Tribe Website Contact Form Question", os.Getenv("SENDER_EMAIL")) // Email subject title
+		to := gomap.NewAddress(fmt.Sprintf("Snohomish Tribe %s", recipientName), recipientEmail)
 
 		if err := mail.SendEmail(
 			gomap.NewAddresses(from),
 			gomap.NewAddresses(to),
 			fmt.Sprintf("Contact Page Question: %s", msg.Question),
-			fmt.Sprintf("From %s \n\n %s", msg.Email, msg.Message), // Message
+			fmt.Sprintf("From %s \n\n %s", msg.Email, msg.Message), // Email message
 			false,
 		); err != nil {
-			log.Fatal(err, " line 75")
+			log.Fatal(err, " line 76")
 		}
 
 		tmpl, _ := template.ParseFiles("static/templates/success.html", "static/templates/main.layout.html")

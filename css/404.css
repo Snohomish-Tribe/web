@@ -42,8 +42,8 @@ p {
     overflow: hidden;
   }
 
-  h1,
-  .svg-container {
+  #not-found h1,
+  #not-found .svg-container {
     width: 50%;
     margin-left: auto;
     margin-right: auto;
@@ -59,6 +59,12 @@ p {
 
   .container {
     margin-top: 5rem;
+  }
+
+  #not-found .container {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
   }
 
   .bg-svg:first-of-type {
@@ -80,7 +86,7 @@ p {
 
   .row-1 p {
     width: 65%;
-    margin: 0 auto;
+    margin: 2rem auto 0;
   }
 }
 
