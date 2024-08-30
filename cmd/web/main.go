@@ -5,11 +5,14 @@ import (
 	"net/http"
 
 	"github.com/snohomishtribe/pkg/handlers"
+
+	"github.com/joho/godotenv"
 )
 
 const PORT = 3000
 
 func main() {
+	godotenv.Load()
 	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
 
 	http.HandleFunc("/", handlers.Index)
