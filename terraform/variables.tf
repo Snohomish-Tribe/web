@@ -15,3 +15,8 @@ variable "config_profile" {
   type        = string
   sensitive   = true
 }
+
+variable "sender_email_address" {
+  description = "Sender email address. Should be owned by the same user who generated the FASTMAIL_TOKEN secret."
+  type        = string
+}
