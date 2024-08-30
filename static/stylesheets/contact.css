@@ -57,15 +57,6 @@ select {
   padding-left: 0.5rem;
 }
 
-.form-group input, 
-.form-group label {
-  display: inline-block;
-}
-
-.form-group input {
-  margin-right: 0.5rem;
-}
-
 button {
   border: 0;
   margin-top: 2.5rem;
