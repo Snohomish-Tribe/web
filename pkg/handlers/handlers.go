@@ -13,8 +13,7 @@ import (
 	"github.com/snohomishtribe/pkg/models"
 )
 
-// TODO: switch to snohomishtribe.org once validated
-const RECIPIENT_EMAIL_DOMAIN = "devonfarm.xyz"
+const RECIPIENT_EMAIL_DOMAIN = "snohomishtribe.org"
 
 func Index(w http.ResponseWriter, r *http.Request) {
 	if r.URL.Path != "/" {
