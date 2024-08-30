@@ -9,21 +9,27 @@ import (
 	"os"
 
 	"github.com/cwinters8/gomap"
-	"github.com/joho/godotenv"
 	"github.com/snohomishtribe/pkg/models"
 )
 
 const RECIPIENT_EMAIL_DOMAIN = "snohomishtribe.org"
 
-func Index(w http.ResponseWriter, r *http.Request) {
-	if r.URL.Path != "/" {
+func checkPath(expectedPath string, w http.ResponseWriter, r *http.Request) error {
+	if r.URL.Path != expectedPath {
 		tmpl, err := template.ParseFiles("static/templates/404.html", "static/templates/main.layout.html")
 		if err != nil {
-			log.Fatalf("failed to parse 404 template: %v", err)
+			return fmt.Errorf("failed to parse 404 template: %w", err)
 		}
 		if err := tmpl.Execute(w, nil); err != nil {
-			log.Fatalf("failed to execute template: %v", err)
+			return fmt.Errorf("failed to execute template: %w", err)
 		}
+	}
+	return nil
+}
+
+func Index(w http.ResponseWriter, r *http.Request) {
+	if err := checkPath("/", w, r); err != nil {
+		log.Fatal(err)
 	}
 
 	tmpl, _ := template.ParseFiles("static/templates/index.html", "static/templates/main.layout.html")
@@ -34,6 +40,10 @@ func Index(w http.ResponseWriter, r *http.Request) {
 }
 
 func About(w http.ResponseWriter, r *http.Request) {
+	if err := checkPath("/about", w, r); err != nil {
+		log.Fatal(err)
+	}
+
 	tmpl, _ := template.ParseFiles("static/templates/about.html", "static/templates/main.layout.html")
 
 	if err := tmpl.Execute(w, nil); err != nil {
@@ -42,7 +52,10 @@ func About(w http.ResponseWriter, r *http.Request) {
 }
 
 func Contact(w http.ResponseWriter, r *http.Request) {
-	godotenv.Load()
+	if err := checkPath("/contact", w, r); err != nil {
+		log.Fatal(err)
+	}
+
 	recipientEmail := ""
 	recipientName := "Contact"
 
@@ -114,6 +127,9 @@ func Contact(w http.ResponseWriter, r *http.Request) {
 }
 
 func Credits(w http.ResponseWriter, r *http.Request) {
+	if err := checkPath("/credits", w, r); err != nil {
+		log.Fatal(err)
+	}
 	tmpl, _ := template.ParseFiles("static/templates/credits.html", "static/templates/main.layout.html")
 
 	if err := tmpl.Execute(w, nil); err != nil {
@@ -122,6 +138,9 @@ func Credits(w http.ResponseWriter, r *http.Request) {
 }
 
 func Events(w http.ResponseWriter, r *http.Request) {
+	if err := checkPath("/events", w, r); err != nil {
+		log.Fatal(err)
+	}
 	tmpl, _ := template.ParseFiles("static/templates/events.html", "static/templates/main.layout.html")
 
 	if err := tmpl.Execute(w, nil); err != nil {
@@ -130,6 +149,9 @@ func Events(w http.ResponseWriter, r *http.Request) {
 }
 
 func Language(w http.ResponseWriter, r *http.Request) {
+	if err := checkPath("/language-learning", w, r); err != nil {
+		log.Fatal(err)
+	}
 	tmpl, _ := template.ParseFiles("static/templates/language-learning.html", "static/templates/main.layout.html")
 
 	if err := tmpl.Execute(w, nil); err != nil {
@@ -138,6 +160,9 @@ func Language(w http.ResponseWriter, r *http.Request) {
 }
 
 func Membership(w http.ResponseWriter, r *http.Request) {
+	if err := checkPath("/membership", w, r); err != nil {
+		log.Fatal(err)
+	}
 	tmpl, _ := template.ParseFiles("static/templates/membership.html", "static/templates/main.layout.html")
 
 	if err := tmpl.Execute(w, nil); err != nil {
@@ -146,6 +171,9 @@ func Membership(w http.ResponseWriter, r *http.Request) {
 }
 
 func Programs(w http.ResponseWriter, r *http.Request) {
+	if err := checkPath("/programs", w, r); err != nil {
+		log.Fatal(err)
+	}
 	tmpl, _ := template.ParseFiles("static/templates/programs.html", "static/templates/main.layout.html")
 
 	if err := tmpl.Execute(w, nil); err != nil {
