@@ -128,7 +128,7 @@ func Events(w http.ResponseWriter, r *http.Request) {
 
 func Index(w http.ResponseWriter, r *http.Request) {
 	// showErrorPage(w, r, "/")
-
+	// Redirects user if endpoint does not exist
 	if r.URL.Path != "/" {
 		http.Redirect(w, r, "/not-found", http.StatusNotFound)
 	}
