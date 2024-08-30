@@ -84,7 +84,6 @@ func Contact(w http.ResponseWriter, r *http.Request) {
 		if err != nil {
 			log.Fatal(err)
 		}
-		fmt.Println(mail)
 		// sends the email
 		from := gomap.NewAddress(msg.Name, os.Getenv("SENDER_EMAIL"))
 		to := gomap.NewAddress(fmt.Sprintf("Snohomish Tribe %s", recipientName), recipientEmail)
