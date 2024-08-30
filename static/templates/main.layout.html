@@ -1,84 +1,91 @@
 {{define "main"}}
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Normalize.css makes HTML look consistent in all browsers -->
-        <link rel="stylesheet" href="static/stylesheets/normalize.css">
-        <link rel="stylesheet" href="static/stylesheets/styles.css">
-        <link rel="icon" type="image/x-icon" href="static/images/header-logo.svg">
-        {{template "css" .}}
-        <!-- Add css file  -->
-        <title>{{template "title" .}}</title>
-    </head>
-    
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Normalize.css makes HTML look consistent in all browsers -->
+  <link rel="stylesheet" href="/static/stylesheets/normalize.css">
+  <link rel="stylesheet" href="/static/stylesheets/styles.css">
+  <link rel="icon" type="image/x-icon" href="/static/images/header-logo.svg">
+  {{template "css" .}}
+  <!-- Add css file  -->
+  <title>{{template "title" .}}</title>
+</head>
+
 <body>
-    <header>
-        <div>
-            <div class="main-header">
-                <!-- Main Logo -->
-                <div class="nav">
-                    <a href="/">
-                        <img src="static/images/header-logo.svg" alt="Snohomish Tribe logo">
-                    </a>
+  <header>
+    <div>
+      <div class="main-header">
+        <!-- Main Logo -->
+        <div class="nav">
+          <a href="/">
+            <img src="/static/images/header-logo.svg" alt="Snohomish Tribe logo">
+          </a>
 
-                    <!-- Close logo -->
-                    <button class="toggle">
-                        <!-- Hamburger icon -->
-                        <svg class="menu" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3.75 6.75H20.25M3.75 12H20.25M3.75 17.25H20.25" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        <!-- Close icon -->
-                        <svg class="close hide" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.192 6.34424L11.949 10.5862L7.70697 6.34424L6.29297 7.75824L10.535 12.0002L6.29297 16.2422L7.70697 17.6562L11.949 13.4142L16.192 17.6562L17.606 16.2422L13.364 12.0002L17.606 7.75824L16.192 6.34424Z" fill="black" /></svg>
-                    </button>
-                </div>
-            </div>
-
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/events">Events</a></li>
-                    <li><a href="/membership">Membership</a></li>
-                    <li><a href="/programs">Programs</a></li>
-                    <li><a href="/contact">Contact</a></li>
-                </ul>
-            </nav>
+          <!-- Close logo -->
+          <button class="toggle">
+            <!-- Hamburger icon -->
+            <svg class="menu" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3.75 6.75H20.25M3.75 12H20.25M3.75 17.25H20.25" stroke="black" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <!-- Close icon -->
+            <svg class="close hide" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M16.192 6.34424L11.949 10.5862L7.70697 6.34424L6.29297 7.75824L10.535 12.0002L6.29297 16.2422L7.70697 17.6562L11.949 13.4142L16.192 17.6562L17.606 16.2422L13.364 12.0002L17.606 7.75824L16.192 6.34424Z"
+                fill="black" />
+            </svg>
+          </button>
         </div>
-    </header>
+      </div>
 
-    {{template "content" .}}
+      <nav class="main-nav">
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/events">Events</a></li>
+          <li><a href="/membership">Membership</a></li>
+          <li><a href="/programs">Programs</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <footer>
-        <div class="container">
-            <!-- Logo -->
-            <img src="static/images/footer-logo.svg" alt="Snohomish Tribe logo">
+  {{template "content" .}}
 
-            <ul class="page-links font-xsm fira-sans">
-                <li><a href="/about">About</a></li>
-                <li><a href="/events">Events</a></li>
-                <li><a href="/membership">Membership</a></li>
-                <li> <a href="/programs">Programs</a></li>
-                <li><a href="/contact">Contact</a></li>
-            </ul>
+  <footer>
+    <div class="container">
+      <!-- Logo -->
+      <img src="/static/images/footer-logo.svg" alt="Snohomish Tribe logo">
 
-            <div class="privacy">
-                <ul class="privacy-links fira-sans">
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Service</a></li>
-                    <li><a href="#">Cookies Settings</a></li>
-                    <li><a href="/credits">Credits</a></li>
-                </ul>
+      <ul class="page-links font-xsm fira-sans">
+        <li><a href="/about">About</a></li>
+        <li><a href="/events">Events</a></li>
+        <li><a href="/membership">Membership</a></li>
+        <li> <a href="/programs">Programs</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
 
-                <div class="copyright">
-                    <p>&copy; 2024 Snohomish Tribe of Indians</p>
-                    <p>All rights reserved</p>
-                </div>
-            </div>
+      <div class="privacy">
+        <ul class="privacy-links fira-sans">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Cookies Settings</a></li>
+          <li><a href="/credits">Credits</a></li>
+        </ul>
+
+        <div class="copyright">
+          <p>&copy; 2024 Snohomish Tribe of Indians</p>
+          <p>All rights reserved</p>
         </div>
-    </footer>
+      </div>
+    </div>
+  </footer>
 
-    {{template "js" .}}
+  {{template "js" .}}
 </body>
 
 </html>
