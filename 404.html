@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Normalize.css makes HTML look consistent in all browsers -->
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/404.css">
+    <link rel="stylesheet" href="static/stylesheets/normalize.css">
+    <link rel="stylesheet" href="static/stylesheets/styles.css">
+    <link rel="stylesheet" href="static/stylesheets/404.css">
     <title>Not Found</title>
 </head>
 
@@ -18,23 +18,28 @@
                 <!-- Main Logo -->
                 <div class="nav">
                     <a href="/">
-                        <img src="images/header-logo.svg" alt="Snohomish Tribe logo">
+                        <img src="static/images/header-logo.svg" alt="Snohomish Tribe logo">
                     </a>
 
                     <!-- Close logo -->
                     <button class="toggle">
-                        <img src="images/hamburger.svg" alt="menu icon">
+                        <!-- Hamburger icon -->
+                        <svg class="menu" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.75 6.75H20.25M3.75 12H20.25M3.75 17.25H20.25" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <!-- Close icon -->
+                        <svg class="close hide" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.192 6.34424L11.949 10.5862L7.70697 6.34424L6.29297 7.75824L10.535 12.0002L6.29297 16.2422L7.70697 17.6562L11.949 13.4142L16.192 17.6562L17.606 16.2422L13.364 12.0002L17.606 7.75824L16.192 6.34424Z" fill="black" /></svg>
                     </button>
                 </div>
             </div>
 
             <nav class="main-nav">
                 <ul>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/events">Events</a></li>
-                    <li><a href="/membership">Membership</a></li>
-                    <li><a href="/programs">Programs</a></li>
-                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/events.html">Events</a></li>
+                    <li><a href="/membership.html">Membership</a></li>
+                    <li><a href="/programs.html">Programs</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -130,24 +135,24 @@
 
     <!-- Footer -->
     <footer>
-        <div class="container">
+        <div class="container fira-sans">
             <!-- Logo -->
-            <img src="images/footer-logo.svg" alt="Snohomish Tribe logo">
+            <img src="static/images/footer-logo.svg" alt="Snohomish Tribe logo">
 
             <ul class="page-links font-xsm">
-                <li><a href="/about">About</a></li>
-                <li><a href="/events">Events</a></li>
-                <li><a href="/membership">Membership</a></li>
-                <li> <a href="/programs">Programs</a></li>
-                <li><a href="/contact">Contact</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/events.html">Events</a></li>
+                <li><a href="/membership.html">Membership</a></li>
+                <li> <a href="/programs.html">Programs</a></li>
+                <li><a href="/contact.html">Contact</a></li>
             </ul>
 
             <div class="privacy">
-                <ul class="privacy-links">
+                <ul class="privacy-links ">
                     <li><a href="#">Privacy Policy</a></li>
                     <li><a href="#">Terms of Service</a></li>
                     <li><a href="#">Cookies Settings</a></li>
-                    <li><a href="/credits">Credits</a></li>
+                    <li><a href="/credits.html">Credits</a></li>
                 </ul>
 
                 <div class="copyright">
