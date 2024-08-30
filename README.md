@@ -12,7 +12,21 @@ go run cmd/web/*.go
 
 -[Gomap](https://pkg.go.dev/github.com/cwinters8/gomap#section-readme)
 
+## Terraform
+
+It's useless - don't bother with it for now. OCI is not working, so the app is deployed to fly.io.
+
+### OCI auth
+
+This authentication is mainly used for Terraform, but the CLI can be useful in other cases as well.
+
+```sh
+oci session authenticate --region us-sanjose-1 --profile-name snohomish
+```
+
 ## Push docker image to OCI Container Registry
+
+Don't bother with this either.
 
 ### Prerequisite
 
@@ -40,7 +54,7 @@ Build and tag the Docker image
 
 ```sh
 TAG="${IMAGE_TAG}:latest"
-docker build -t "${TAG}" .
+docker build --platform linux/arm64 -t "${TAG}" .
 ```
 
 ### Push
@@ -51,4 +65,4 @@ docker push "${TAG}"
 
 TODO:
 
-- Terraform for container instance
+- Pass environment variables to container definition
