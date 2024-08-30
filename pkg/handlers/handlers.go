@@ -15,25 +15,22 @@ import (
 
 const RECIPIENT_EMAIL_DOMAIN = "snohomishtribe.org"
 
-func Index(w http.ResponseWriter, r *http.Request) {
-	if r.URL.Path != "/" {
-		tmpl, err := template.ParseFiles("static/templates/404.html", "static/templates/main.layout.html")
-		if err != nil {
-			log.Fatalf("failed to parse 404 template: %v", err)
-		}
-		if err := tmpl.Execute(w, nil); err != nil {
-			log.Fatalf("failed to execute template: %v", err)
-		}
-	}
-
-	tmpl, _ := template.ParseFiles("static/templates/index.html", "static/templates/main.layout.html")
-
-	if err := tmpl.Execute(w, nil); err != nil {
-		log.Fatal("Failed to parse template ", err)
-	}
-}
+// Redirects user if endpoint does not exist
+// func showErrorPage(w http.ResponseWriter, r *http.Request, endpoint string) {
+// 	if r.URL.Path != endpoint {
+// 		tmpl, err := template.ParseFiles("static/templates/404.html", "static/templates/main.layout.html")
+// 		if err != nil {
+// 			log.Fatalf("failed to parse 404 template: %v", err)
+// 		}
+// 		if err := tmpl.Execute(w, nil); err != nil {
+// 			log.Fatalf("failed to execute template: %v", err)
+// 		}
+// 	}
+// }
 
 func About(w http.ResponseWriter, r *http.Request) {
+	// showErrorPage(w, r, "/about")
+
 	tmpl, _ := template.ParseFiles("static/templates/about.html", "static/templates/main.layout.html")
 
 	if err := tmpl.Execute(w, nil); err != nil {
@@ -129,6 +126,20 @@ func Events(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+func Index(w http.ResponseWriter, r *http.Request) {
+	// showErrorPage(w, r, "/")
+
+	if r.URL.Path != "/" {
+		http.Redirect(w, r, "/not-found", http.StatusFound)
+	}
+
+	tmpl, _ := template.ParseFiles("static/templates/index.html", "static/templates/main.layout.html")
+
+	if err := tmpl.Execute(w, nil); err != nil {
+		log.Fatal("Failed to parse template ", err)
+	}
+}
+
 func Language(w http.ResponseWriter, r *http.Request) {
 	tmpl, _ := template.ParseFiles("static/templates/language-learning.html", "static/templates/main.layout.html")
 
@@ -139,6 +150,14 @@ func Language(w http.ResponseWriter, r *http.Request) {
 
 func Membership(w http.ResponseWriter, r *http.Request) {
 	tmpl, _ := template.ParseFiles("static/templates/membership.html", "static/templates/main.layout.html")
+
+	if err := tmpl.Execute(w, nil); err != nil {
+		log.Fatal("Failed to parse template ", err)
+	}
+}
+
+func NotFound(w http.ResponseWriter, r *http.Request) {
+	tmpl, _ := template.ParseFiles("static/templates/404.html", "static/templates/main.layout.html")
 
 	if err := tmpl.Execute(w, nil); err != nil {
 		log.Fatal("Failed to parse template ", err)
