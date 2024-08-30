@@ -130,7 +130,7 @@ func Index(w http.ResponseWriter, r *http.Request) {
 	// showErrorPage(w, r, "/")
 
 	if r.URL.Path != "/" {
-		http.Redirect(w, r, "/not-found", http.StatusFound)
+		http.Redirect(w, r, "/not-found", http.StatusNotFound)
 	}
 
 	tmpl, _ := template.ParseFiles("static/templates/index.html", "static/templates/main.layout.html")
