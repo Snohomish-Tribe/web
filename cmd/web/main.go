@@ -20,7 +20,6 @@ func main() {
 	http.HandleFunc("/language-learning", handlers.Language)
 	http.HandleFunc("/membership", handlers.Membership)
 	http.HandleFunc("/programs", handlers.Programs)
-	http.HandleFunc("/not-found", handlers.NotFound)
 
 	fmt.Printf("Listening on port %d\n", PORT)
 	http.ListenAndServe(fmt.Sprintf(":%d", PORT), nil)
