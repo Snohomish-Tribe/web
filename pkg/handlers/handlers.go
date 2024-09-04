@@ -15,21 +15,7 @@ import (
 
 const RECIPIENT_EMAIL_DOMAIN = "snohomishtribe.org"
 
-// Redirects user if endpoint does not exist
-// func showErrorPage(w http.ResponseWriter, r *http.Request, endpoint string) {
-// 	if r.URL.Path != endpoint {
-// 		tmpl, err := template.ParseFiles("static/templates/404.html", "static/templates/main.layout.html")
-// 		if err != nil {
-// 			log.Fatalf("failed to parse 404 template: %v", err)
-// 		}
-// 		if err := tmpl.Execute(w, nil); err != nil {
-// 			log.Fatalf("failed to execute template: %v", err)
-// 		}
-// 	}
-// }
-
 func About(w http.ResponseWriter, r *http.Request) {
-	// showErrorPage(w, r, "/about")
 
 	tmpl, _ := template.ParseFiles("static/templates/about.html", "static/templates/main.layout.html")
 
@@ -127,8 +113,6 @@ func Events(w http.ResponseWriter, r *http.Request) {
 }
 
 func Index(w http.ResponseWriter, r *http.Request) {
-	// showErrorPage(w, r, "/")
-	// Redirects user if endpoint does not exist
 	if r.URL.Path != "/" {
 		http.Redirect(w, r, "/not-found", http.StatusNotFound)
 	}
