@@ -1,118 +1,118 @@
 {{template "main" .}}
 {{define "css"}}
-<link rel="stylesheet" href="static/stylesheets/contact.css">{{end}}
+<link rel="stylesheet" href="/static/stylesheets/contact.css">{{end}}
 {{define "title"}} Contact {{end}}
 
 {{define "content"}}
 <!-- Banner -->
 <section class="banner">
-  <div class="bg-container">
-    <img class="top-img" src="/static/images/Nature-image.png" alt="Plant">
-    <div class="title">
-      <div class="container">
-        <p class="fira-sans font-white font-sm">Contact</p>
-        <h1 class="font-white amarante font-lg">Contact Us</h1>
-        <p class="fira-sans font-white font-xsm">We invite you to reach out to us with any questions,
-          comments, or inquiries you may have.</p>
-      </div>
-    </div>
-  </div>
+	<div class="bg-container">
+		<img class="top-img" src="/static/images/Nature-image.png" alt="Plant">
+		<div class="title">
+			<div class="container">
+				<p class="fira-sans font-white font-sm">Contact</p>
+				<h1 class="font-white amarante font-lg">Contact Us</h1>
+				<p class="fira-sans font-white font-xsm">We invite you to reach out to us with any questions,
+					comments, or inquiries you may have.</p>
+			</div>
+		</div>
+	</div>
 </section>
 
 <!-- Contact Form-->
 <section class="row-1">
-  <div class="container">
-    <div class="col-1">
-      <form class="fira-sans" method="POST">
-        <label for="name">
-          Full Name
-          <input id="name" type="text" name="name">
-        </label>
-        <label for="email">
-          Email Address
-          <input id="email" type="email" name="email">
-        </label>
-        <label for="questions">
-          I have a question about
-          <select name="questions" id="questions">
-            <option value="" disabled selected>Select a category</option>
-            <option value="Membership">Membership</option>
-            <option value="Events">Events</option>
-            <option value="Language">Language Learning</option>
-            <option value="Programs">Programs</option>
-            <option value="General">General</option>
-          </select>
-        </label>
-        <label for="Message">
-          Message
-          <textarea rows="8" name="Message" id="Message"></textarea>
-        </label>
-        <button class="roboto" type="submit">Send</button>
-      </form>
-    </div>
-    <div class="col-2">
-      <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1407 1275">
-        <g clip-path="url(#clip0_230_2314)">
-          <path
-            d="M1406.96 495.942C1380.58 485.527 1354.7 473.612 1327.77 464.904C1117.75 396.926 887.68 478.328 775.01 659.912C661.67 842.518 688.31 1083.91 839.51 1243.37C849.22 1253.61 859.18 1263.68 868.31 1274.52C718.76 1180.66 593.25 1061.39 507.56 906.645C456.14 813.783 413.346 715.218 375.784 615.833C320.902 470.651 264.573 326.892 168.215 203.233C110.446 129.084 48.4757 58.2562 0.927734 0.980469C75.0867 35.0483 165.719 79.9972 258.909 118.773C378.807 168.622 505.94 190.766 634.04 207.514C760.94 224.051 887.83 240.991 1009.92 282.145C1118.33 318.689 1220.43 368.139 1315.62 431.805C1324.39 437.659 1334.2 442.009 1343.5 447.027C1364.66 463.332 1385.85 479.665 1407 495.97L1406.96 495.942Z"
-            fill="#2D302C" fill-opacity="0.07"></path>
-        </g>
-        <defs>
-          <clippath id="clip0_230_2314">
-            <rect width="1407" height="1275" fill="white"></rect>
-          </clippath>
-        </defs>
-      </svg>
+	<div class="container">
+		<div class="col-1">
+			<form class="fira-sans" method="POST">
+				<label for="name">
+					Full Name
+					<input id="name" type="text" name="name">
+				</label>
+				<label for="email">
+					Email Address
+					<input id="email" type="email" name="email">
+				</label>
+				<label for="questions">
+					I have a question about
+					<select name="questions" id="questions">
+						<option value="" disabled selected>Select a category</option>
+						<option value="Membership">Membership</option>
+						<option value="Events">Events</option>
+						<option value="Language">Language Learning</option>
+						<option value="Programs">Programs</option>
+						<option value="General">General</option>
+					</select>
+				</label>
+				<label for="Message">
+					Message
+					<textarea rows="8" name="Message" id="Message"></textarea>
+				</label>
+				<button class="roboto" type="submit">Send</button>
+			</form>
+		</div>
+		<div class="col-2">
+			<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1407 1275">
+				<g clip-path="url(#clip0_230_2314)">
+					<path
+						d="M1406.96 495.942C1380.58 485.527 1354.7 473.612 1327.77 464.904C1117.75 396.926 887.68 478.328 775.01 659.912C661.67 842.518 688.31 1083.91 839.51 1243.37C849.22 1253.61 859.18 1263.68 868.31 1274.52C718.76 1180.66 593.25 1061.39 507.56 906.645C456.14 813.783 413.346 715.218 375.784 615.833C320.902 470.651 264.573 326.892 168.215 203.233C110.446 129.084 48.4757 58.2562 0.927734 0.980469C75.0867 35.0483 165.719 79.9972 258.909 118.773C378.807 168.622 505.94 190.766 634.04 207.514C760.94 224.051 887.83 240.991 1009.92 282.145C1118.33 318.689 1220.43 368.139 1315.62 431.805C1324.39 437.659 1334.2 442.009 1343.5 447.027C1364.66 463.332 1385.85 479.665 1407 495.97L1406.96 495.942Z"
+						fill="#2D302C" fill-opacity="0.07"></path>
+				</g>
+				<defs>
+					<clippath id="clip0_230_2314">
+						<rect width="1407" height="1275" fill="white"></rect>
+					</clippath>
+				</defs>
+			</svg>
 
-    </div>
-  </div>
+		</div>
+	</div>
 </section>
 
 <!-- Mailing Address -->
 <section class="bg-blk row-2 ">
-  <div class="container">
-    <svg width="33" height="40" viewBox="0 0 33 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path
-        d="M16.5001 24C20.9121 24 24.5001 20.412 24.5001 16C24.5001 11.588 20.9121 8 16.5001 8C12.0881 8 8.50012 11.588 8.50012 16C8.50012 20.412 12.0881 24 16.5001 24ZM16.5001 12C18.7061 12 20.5001 13.794 20.5001 16C20.5001 18.206 18.7061 20 16.5001 20C14.2941 20 12.5001 18.206 12.5001 16C12.5001 13.794 14.2941 12 16.5001 12ZM15.3402 39.628C15.6787 39.8697 16.0842 39.9997 16.5002 39.9997C16.9161 39.9997 17.3217 39.8697 17.6602 39.628C18.2682 39.198 32.5582 28.88 32.5002 16C32.5002 7.178 25.3222 0 16.5002 0C7.67818 0 0.500176 7.178 0.500176 15.99C0.442176 28.88 14.7322 39.198 15.3402 39.628ZM16.5002 4C23.1182 4 28.5002 9.382 28.5002 16.01C28.5422 24.886 19.7242 32.856 16.5002 35.47C13.2782 32.854 4.45818 24.882 4.50018 16C4.50018 9.382 9.88218 4 16.5002 4Z"
-        fill="#FFFBE4" />
-      <path
-        d="M16.5001 24C20.9121 24 24.5001 20.412 24.5001 16C24.5001 11.588 20.9121 8 16.5001 8C12.0881 8 8.50012 11.588 8.50012 16C8.50012 20.412 12.0881 24 16.5001 24ZM16.5001 12C18.7061 12 20.5001 13.794 20.5001 16C20.5001 18.206 18.7061 20 16.5001 20C14.2941 20 12.5001 18.206 12.5001 16C12.5001 13.794 14.2941 12 16.5001 12ZM15.3402 39.628C15.6787 39.8697 16.0842 39.9997 16.5002 39.9997C16.9161 39.9997 17.3217 39.8697 17.6602 39.628C18.2682 39.198 32.5582 28.88 32.5002 16C32.5002 7.178 25.3222 0 16.5002 0C7.67818 0 0.500176 7.178 0.500176 15.99C0.442176 28.88 14.7322 39.198 15.3402 39.628ZM16.5002 4C23.1182 4 28.5002 9.382 28.5002 16.01C28.5422 24.886 19.7242 32.856 16.5002 35.47C13.2782 32.854 4.45818 24.882 4.50018 16C4.50018 9.382 9.88218 4 16.5002 4Z"
-        fill="#FFFBE4" />
-    </svg>
+	<div class="container">
+		<svg width="33" height="40" viewBox="0 0 33 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path
+				d="M16.5001 24C20.9121 24 24.5001 20.412 24.5001 16C24.5001 11.588 20.9121 8 16.5001 8C12.0881 8 8.50012 11.588 8.50012 16C8.50012 20.412 12.0881 24 16.5001 24ZM16.5001 12C18.7061 12 20.5001 13.794 20.5001 16C20.5001 18.206 18.7061 20 16.5001 20C14.2941 20 12.5001 18.206 12.5001 16C12.5001 13.794 14.2941 12 16.5001 12ZM15.3402 39.628C15.6787 39.8697 16.0842 39.9997 16.5002 39.9997C16.9161 39.9997 17.3217 39.8697 17.6602 39.628C18.2682 39.198 32.5582 28.88 32.5002 16C32.5002 7.178 25.3222 0 16.5002 0C7.67818 0 0.500176 7.178 0.500176 15.99C0.442176 28.88 14.7322 39.198 15.3402 39.628ZM16.5002 4C23.1182 4 28.5002 9.382 28.5002 16.01C28.5422 24.886 19.7242 32.856 16.5002 35.47C13.2782 32.854 4.45818 24.882 4.50018 16C4.50018 9.382 9.88218 4 16.5002 4Z"
+				fill="#FFFBE4" />
+			<path
+				d="M16.5001 24C20.9121 24 24.5001 20.412 24.5001 16C24.5001 11.588 20.9121 8 16.5001 8C12.0881 8 8.50012 11.588 8.50012 16C8.50012 20.412 12.0881 24 16.5001 24ZM16.5001 12C18.7061 12 20.5001 13.794 20.5001 16C20.5001 18.206 18.7061 20 16.5001 20C14.2941 20 12.5001 18.206 12.5001 16C12.5001 13.794 14.2941 12 16.5001 12ZM15.3402 39.628C15.6787 39.8697 16.0842 39.9997 16.5002 39.9997C16.9161 39.9997 17.3217 39.8697 17.6602 39.628C18.2682 39.198 32.5582 28.88 32.5002 16C32.5002 7.178 25.3222 0 16.5002 0C7.67818 0 0.500176 7.178 0.500176 15.99C0.442176 28.88 14.7322 39.198 15.3402 39.628ZM16.5002 4C23.1182 4 28.5002 9.382 28.5002 16.01C28.5422 24.886 19.7242 32.856 16.5002 35.47C13.2782 32.854 4.45818 24.882 4.50018 16C4.50018 9.382 9.88218 4 16.5002 4Z"
+				fill="#FFFBE4" />
+		</svg>
 
-    <h2 class="amarante font-base">Mailing address</h2>
-    <p class="fira-sans font-xsm">
-      Mail in forms to:
-    </p>
-    <p class="address fira-sans font-xsm">
-      9792 Edmonds Way Box 267
-      Edmonds, WA 98020
-    </p>
-  </div>
+		<h2 class="amarante font-base">Mailing address</h2>
+		<p class="fira-sans font-xsm">
+			Mail in forms to:
+		</p>
+		<p class="address fira-sans font-xsm">
+			9792 Edmonds Way Box 267
+			Edmonds, WA 98020
+		</p>
+	</div>
 </section>
 {{end}}
 
 {{define "js"}}
-<script src="static/js/app.js"></script>
+<script src="/static/js/app.js"></script>
 
 <script>
-  /* ===========
-  Selected Elements
-  ============ */
-  const form = document.querySelector('form');
-  const nameInput = document.querySelector('#name');
-  const emailInput = document.querySelector('#email');
-  const textarea = document.querySelector('textarea');
-  const select = document.querySelector('select');
+	/* ===========
+	Selected Elements
+	============ */
+	const form = document.querySelector('form');
+	const nameInput = document.querySelector('#name');
+	const emailInput = document.querySelector('#email');
+	const textarea = document.querySelector('textarea');
+	const select = document.querySelector('select');
 
-  /* ===========
-  Event Listeners
-  ============ */
-  form.addEventListener('submit', (event) => {
-    if (nameInput.value.trim() === '') event.preventDefault();
-    if (emailInput.value.trim() === '') event.preventDefault();
-    if (textarea.value.trim() === '') event.preventDefault();
-    if (select.value === '') event.preventDefault();
-  })
+	/* ===========
+	Event Listeners
+	============ */
+	form.addEventListener('submit', (event) => {
+		if (nameInput.value.trim() === '') event.preventDefault();
+		if (emailInput.value.trim() === '') event.preventDefault();
+		if (textarea.value.trim() === '') event.preventDefault();
+		if (select.value === '') event.preventDefault();
+	})
 </script>
 {{end}}
