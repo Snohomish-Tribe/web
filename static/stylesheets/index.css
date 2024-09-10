@@ -8,7 +8,9 @@ Home Page
 }
 
 .nation-img {
-  height: 100vh; 
+  height: 100%; 
+  position: absolute;
+  z-index: -1;
 }
 
 .intro-section .container {
@@ -245,10 +247,6 @@ section {
   margin: 0; 
 }
 
-.row-4 .bg-container .container:last-child {
-  margin-top: 2rem; 
-}
-
 .trigon {
   position: absolute;
   z-index: -1;
@@ -264,12 +262,24 @@ section {
 /* ================================= 
   Sovereign Nation 
 ==================================== */
+.row-4 .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .row-4 p {
   text-align: center;
 }
 
 .row-4 .svg-container {
-  margin-bottom: 2rem;
+  margin: 1.75rem 0;
+}
+
+.row-4 .container > p:last-of-type {
+  padding-bottom: 0;
+  margin: 0;
 }
 
 .row-4 .img-container img {
@@ -480,11 +490,12 @@ section {
     width: 70%;
   }
 
-  .wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
+  .row-4 .container {
+    padding-top: 2rem;
+  }
+  
+  .row-4 .container > p:last-of-type {
+    padding-bottom: 0;
   }
 
   .row-4 h2 {
@@ -648,14 +659,26 @@ section {
     }
 
   /* =========== Sovereign Nation =========== */
-  .row-4 .bg-container {
+
+  .row-4 .container,
+  .row-4 .container > p:last-of-type  {
+    margin: 0 auto;
+  }
+
+  .row-4 .container {
+    width: 50%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
   }
 
   .row-4 h2,
-  .row-4 .container:first-of-type p:last-of-type  {
-    margin: inherit;
+  .row-4 .container > p:last-of-type {
+    width: 70%;
+  }
+
+  .row-4 .svg-container {
+    margin: 2.25rem 0;
   }
 
   .row-4 .container {
