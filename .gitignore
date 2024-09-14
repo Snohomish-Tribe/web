@@ -9,3 +9,5 @@ terraform/.terraform
 .DS_Store
 
 tmp
+
+html-pages

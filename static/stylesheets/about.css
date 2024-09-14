@@ -7,7 +7,9 @@
 }
 
 .nation-img {
-  height: 100vh; 
+  position: absolute;
+  height: 100%; 
+  z-index: -1;
 }
 
 /* =========== Banner Section =========== */
@@ -596,9 +598,13 @@ aside {
     gap: 2rem;
   }
 
-  .about .row-5 .container {
+  .row-5 .container {
     padding: 0;
-    width: 60%;
+    width: 50%;
+  }
+
+  .row-5 .bg-container {
+    height: 100vh;
   }
 
   .row-5 .bg-container {
