@@ -155,8 +155,12 @@ header {
   border-bottom: 1px solid #000000;
 }
 
+header img {
+  width: 3.125rem;
+}
+
 .main-header {
-  padding: 0.25rem 0;
+  padding: 0.5rem 0 0.25rem;
   height: 9vh;
 }
 
@@ -209,7 +213,7 @@ footer {
 }
 
 footer img {
-  width: max-content;
+  width: 35%;
   margin: 0 auto;
 }
 
@@ -248,10 +252,11 @@ footer ul li,
     display: flex;
     width: 90%;
     margin: 0 auto;
+    padding: 0.5rem;
   }
 
   .main-header {
-    padding: 0.5rem 0 0;
+    padding: 0;
     height: unset;
   }
 
@@ -291,8 +296,26 @@ footer ul li,
     justify-content: space-between;
   }
 
+  header img {
+    width: 4rem;
+  }
+
+  .nav {
+    height: 100%;
+  }
+
+  .nav a {
+    display: block;
+    height: max-content;
+    margin: auto;
+}
+
   .main-nav li {
     margin: 1rem 0;
+  }
+
+  footer img {
+    width: 20%;
   }
 
   .page-links {
@@ -334,6 +357,14 @@ footer ul li,
   header > div,
   footer .container {
     max-width: 1200px;
+  }
+
+  header img {
+    width: 4.75rem;
+  }
+
+  footer {
+    padding: 4rem 0;
   }
 
   .page-links {

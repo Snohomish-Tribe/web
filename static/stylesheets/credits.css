@@ -2,7 +2,7 @@
   Credits Page
 ==================================== */
 section {
-  height: 90vh;
+  min-height: 90vh;
   padding: 2rem 0;
 }
 

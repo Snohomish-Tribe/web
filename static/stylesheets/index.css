@@ -483,7 +483,7 @@ section {
 
   /* =========== Sovereign Nation =========== */
   .row-4 .bg-container {
-    height: 100vh; 
+    min-height: 100vh; 
   }
   
   .row-4 .container{
