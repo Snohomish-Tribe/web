@@ -22,4 +22,4 @@ primary_region = 'sea'
   cpus = 1
 
 [env]
-  SENDER_EMAIL = "contact@snohomishtribe.org"
+  SENDER_EMAIL = "contact@info.snohomishtribe.org"
