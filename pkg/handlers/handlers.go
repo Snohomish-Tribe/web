@@ -71,7 +71,7 @@ func Contact(w http.ResponseWriter, r *http.Request) {
 
 		switch msg.Question {
 		case "Events":
-			recipientPrefix = "bporter"
+			recipientPrefix = "kvansenus"
 			recipientName = "Events"
 		case "Membership":
 			recipientPrefix = "lloeber"
