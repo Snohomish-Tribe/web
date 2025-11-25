@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"net/http"
 
 	"github.com/snohomishtribe/pkg/handlers"
@@ -25,5 +26,7 @@ func main() {
 	http.HandleFunc("/programs", handlers.Programs)
 
 	fmt.Printf("Listening on port %d\n", PORT)
-	http.ListenAndServe(fmt.Sprintf(":%d", PORT), nil)
+	if err := http.ListenAndServe(fmt.Sprintf(":%d", PORT), nil); err != nil {
+		log.Fatalf("Error starting HTTP server: %v\n", err)
+	}
 }
