@@ -3,12 +3,11 @@ package handlers
 import (
 	"fmt"
 	"html/template"
-
 	"log"
 	"net/http"
 	"os"
 
-	"github.com/cwinters8/gomap"
+	"github.com/snohomishtribe/pkg/jmap"
 	"github.com/snohomishtribe/pkg/models"
 )
 
@@ -53,7 +52,9 @@ func About(w http.ResponseWriter, r *http.Request) {
 
 func Contact(w http.ResponseWriter, r *http.Request) {
 	if err := checkPath("/contact", w, r); err != nil {
-		log.Fatal(err)
+		log.Printf("Error checking path: %v\n", err)
+		http.Error(w, "Internal server error", http.StatusInternalServerError)
+		return
 	}
 
 	recipientEmail := ""
@@ -88,41 +89,62 @@ func Contact(w http.ResponseWriter, r *http.Request) {
 
 		recipientEmail = fmt.Sprintf("%s@%s", recipientPrefix, RECIPIENT_EMAIL_DOMAIN)
 
-		mail, err := gomap.NewClient(
+		// Create JMAP client
+		client, err := jmap.NewClient(
 			"https://api.fastmail.com/jmap/session",
 			os.Getenv("FASTMAIL_TOKEN"),
-			gomap.DefaultDrafts,
-			gomap.DefaultSent,
 		)
 		if err != nil {
-			log.Fatal(err)
+			log.Printf("Failed to create JMAP client: %v\n", err)
+			http.Error(w, "Failed to send email. Please try again later.", http.StatusInternalServerError)
+			return
 		}
-		// sends the email
-		from := gomap.NewAddress(msg.Name, os.Getenv("SENDER_EMAIL"))
-		to := gomap.NewAddress(fmt.Sprintf("Snohomish Tribe %s", recipientName), recipientEmail)
 
-		if err := mail.SendEmail(
-			gomap.NewAddresses(from),
-			gomap.NewAddresses(to),
+		// Send the email
+		from := jmap.NewAddress(msg.Name, os.Getenv("SENDER_EMAIL"))
+		to := []jmap.Address{
+			jmap.NewAddress(fmt.Sprintf("Snohomish Tribe %s", recipientName), recipientEmail),
+		}
+
+		if err := client.SendEmail(
+			from,
+			to,
 			fmt.Sprintf("Contact Page Question: %s", msg.Question),
-			fmt.Sprintf("From %s \n\n %s", msg.Email, msg.Message), // Email message
+			fmt.Sprintf("From %s \n\n %s", msg.Email, msg.Message),
 			false,
 		); err != nil {
-			log.Fatal(err, " line 76")
+			log.Printf("Failed to send email: %v\n", err)
+			http.Error(w, "Failed to send email. Please try again later.", http.StatusInternalServerError)
+			return
 		}
 
-		tmpl, _ := template.ParseFiles("static/templates/success.html", "static/templates/main.layout.html")
+		tmpl, err := template.ParseFiles("static/templates/success.html", "static/templates/main.layout.html")
+		if err != nil {
+			log.Printf("Failed to parse success template: %v\n", err)
+			http.Error(w, "Internal server error", http.StatusInternalServerError)
+			return
+		}
+
 		if err := tmpl.Execute(w, nil); err != nil {
-			log.Fatal("Failed to parse template ", err)
+			log.Printf("Failed to execute success template: %v\n", err)
+			http.Error(w, "Internal server error", http.StatusInternalServerError)
+			return
 		}
 
 		return
 	}
 
-	tmpl, _ := template.ParseFiles("static/templates/contact.html", "static/templates/main.layout.html")
+	tmpl, err := template.ParseFiles("static/templates/contact.html", "static/templates/main.layout.html")
+	if err != nil {
+		log.Printf("Failed to parse contact template: %v\n", err)
+		http.Error(w, "Internal server error", http.StatusInternalServerError)
+		return
+	}
 
 	if err := tmpl.Execute(w, nil); err != nil {
-		log.Fatal("Failed to parse template ", err)
+		log.Printf("Failed to execute contact template: %v\n", err)
+		http.Error(w, "Internal server error", http.StatusInternalServerError)
+		return
 	}
 }
 
