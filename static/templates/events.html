@@ -22,7 +22,9 @@
       <h2 class="amarante font-md">Upcoming Events</h2>
       <p class="fira-sans font-sm">Stay updated on the latest cultural and community events hosted by the Snohomish
         Tribe.</p>
-      <!-- First Event -->
+      <!-- Display HTMl using Strapi -->
+      {{if gt (len .Data) 0}}
+      {{range .Data}}
       <section class="row">
         <div class="date">
           <div>
@@ -33,22 +35,23 @@
             </svg>
           </div>
           <div>
-            <p class="fira-sans font-xsm">Sat</p>
-            <p class="amarante font-sm">18</p>
-            <p class="fira-sans font-xsm">October 2025</p>
+            <p class="fira-sans font-xsm">{{.Day}}</p>
+            <p class="amarante font-sm">{{.Date}}</p>
+            <p class="fira-sans font-xsm">{{.Month_Year}}</p>
+            <p class="fira-sans font-xsm">{{.Time}}</p>
           </div>
         </div>
         <div class="event-name">
-          <h3 class="amarante font-sm">Wool Bag Weaving Event</h3>
+          <h3 class="amarante font-sm">{{.Event_Name}}</h3>
           <p class="fira-sans">Location</p>
-          <p class="fira-sans font-xsm">South Whidbey Island</p>
-          <p class="fira-sans font-xsm">RSVP 
-            <a href="mailto:cultural_events@snohomishtribe.org" style="color:blue;">
-              cultural_events@snohomishtribe.org </a> for more details</p>
-              <p class="fira-sans font-xsm" >Spots are limited</p>
+          <p class="fira-sans font-xsm">{{.Address}}</p>
+          <p class="fira-sans font-xsm">{{.Details}}</p>
         </div>
       </section>
-      <!-- Second Event -->
+      {{end}}
+      {{end}}
+      <!-- Strapi Error Message -->
+      {{if lt (len .Data) 1}}
       <section class="row">
         <div class="date">
           <div>
@@ -58,21 +61,13 @@
                 fill="#2D302C"></path>
             </svg>
           </div>
-          <div>
-            <p class="fira-sans font-xsm">Sat</p>
-            <p class="amarante font-sm">25</p>
-            <p class="fira-sans font-xsm">October 2025</p>
-            <p class="fira-sans font-xsm">2pm-4pm</p>
-          </div>
         </div>
         <div class="event-name">
-          <h3 class="amarante font-sm">Rooted Like Grandmother Cedar: Special event at Lynnwood Library</h3>
-          <p class="fira-sans">Location</p>
-          <p class="fira-sans font-xsm">19200 44th Ave W, Lynnwood, WA 98036</p>
-          <p class="fira-sans font-xsm">Special community event hosted by the library featuring cedar weaving demonstration by STI</p>
-          <!-- <a href="static/event-flyers/2025 Canoe welcoming events.png" class="event-btn roboto" download>Event Flyer PDF</a> -->
+          <h3 class="amarante font-sm">There was a problem, please check again later</h3>
         </div>
       </section>
+      {{end}}
+      
     </div>
   </div>
 
