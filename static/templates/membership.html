@@ -88,7 +88,7 @@
       <ul>
         <li><a href="/static/forms/STI Photo ID.pdf" download>Photo ID Form</a></li>
         <li><a href="/static/forms/STI Update Form.pdf" download>STI Update Request Form</a></li>
-        <li><a href="/static/forms/Fee Schedule.pdf" download>2025 Fee Schedule</a></li>
+        <li><a href="/static/forms/Fee Schedule.pdf" download><span class="fee-schedule-year"></span> Fee Schedule</a></li>
         <li><a href="/static/forms/Enrollment Packet with Fee Schedule.pdf" download>Enrollment Packet with Fee
             Schedule</a></li>
       </ul>
@@ -170,4 +170,8 @@
 
 {{define "js"}}
 <script src="/static/js/app.js"></script>
+<script>
+  const feeScheduleYear = document.querySelector('.fee-schedule-year');
+  feeScheduleYear.textContent = `${new Date().getFullYear()}`
+</script>
 {{end}}
