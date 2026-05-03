@@ -1,6 +1,10 @@
 package handlers
 
 import (
+	// "encoding/json"
+	// "io"
+	// "time"
+	// "github.com/joho/godotenv"
 	"fmt"
 	"html/template"
 
@@ -10,6 +14,7 @@ import (
 
 	"github.com/cwinters8/gomap"
 	"github.com/snohomishtribe/pkg/models"
+	"github.com/snohomishtribe/pkg/utils"
 )
 
 const RECIPIENT_EMAIL_DOMAIN = "snohomishtribe.org"
@@ -138,13 +143,21 @@ func Credits(w http.ResponseWriter, r *http.Request) {
 }
 
 func Events(w http.ResponseWriter, r *http.Request) {
+	token := os.Getenv("EVENTS_BEARER_TOKEN")
+	url := os.Getenv("EVENTS_ENDPOINT")
+	ParsedData := utils.FetchEvents(url, token)
+
 	if err := checkPath("/events", w, r); err != nil {
 		log.Fatal(err)
 	}
 	tmpl, _ := template.ParseFiles("static/templates/events.html", "static/templates/main.layout.html")
 
-	if err := tmpl.Execute(w, nil); err != nil {
-		log.Fatal("Failed to parse template ", err)
+	// if err := tmpl.Execute(w, nil); err != nil {
+	// 	log.Fatal("Failed to parse template ", err)
+	// }
+
+	if err := tmpl.Execute(w, ParsedData); err != nil {
+		log.Fatal("Failed to parse template in Events handler ", err)
 	}
 }
 
