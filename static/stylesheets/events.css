@@ -52,7 +52,7 @@ section {
   z-index: 1;
 }
   
-.event-name p:last-child {
+.event-info p:last-child {
   width: 75%;
   line-height: 1.75rem;
 }
@@ -87,7 +87,7 @@ section {
     gap: 2rem;
 }
 
-  .event-name h3 {
+  .event-info h3 {
     margin-top: 0;
   }
 }

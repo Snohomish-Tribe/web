@@ -17,5 +17,6 @@ type EventsPageData struct {
 		Address    string `json:"Address"`
 		Details    string `json:"Details"`
 		Link       string `json:"Link"`
+		Link_Type  string `json:"Link_Type"`
 	} `json:"data"`
 }
