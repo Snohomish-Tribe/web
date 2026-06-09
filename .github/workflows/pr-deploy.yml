@@ -20,7 +20,7 @@ jobs:
           echo "Checking Fly app '${app}'"
           if ! flyctl apps list | awk '{print $1}' | grep -xq "${app}"; then
             echo "Creating Fly app '${app}'"
-            flyctl apps create "${app}"
+            flyctl apps create "${app}" --org snohomish-tribe
           else
             echo "Fly app '${app}' already exists"
           fi
