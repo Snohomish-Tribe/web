@@ -103,14 +103,15 @@ func Contact(w http.ResponseWriter, r *http.Request) {
 			log.Fatal(err)
 		}
 		// sends the email
-		from := gomap.NewAddress(msg.Name, os.Getenv("SENDER_EMAIL"))
+		from := gomap.NewAddress(msg.Name, msg.Email)
 		to := gomap.NewAddress(fmt.Sprintf("Snohomish Tribe %s", recipientName), recipientEmail)
 
-		if err := mail.SendEmail(
+		if err := mail.SendEmailWithIdentity(
 			gomap.NewAddresses(from),
 			gomap.NewAddresses(to),
 			fmt.Sprintf("Contact Page Question: %s", msg.Question),
 			fmt.Sprintf("From %s \n\n %s", msg.Email, msg.Message), // Email message
+			os.Getenv("SENDER_EMAIL"),
 			false,
 		); err != nil {
 			log.Fatal(err, " line 76")
