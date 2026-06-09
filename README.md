@@ -15,6 +15,7 @@ This repository includes a GitHub Actions workflow at `.github/workflows/pr-depl
 The workflow creates a branch-specific Fly app name using the PR branch name. It normalizes the branch name by converting it to lowercase, replacing non-alphanumeric characters with `-`, trimming leading/trailing hyphens, and collapsing repeated hyphens.
 
 Example branch names:
+
 - `feature/New_UI` → `web-pr-feature-new-ui`
 - `bugfix/123-fix` → `web-pr-bugfix-123-fix`
 
