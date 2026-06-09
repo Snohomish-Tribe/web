@@ -1,0 +1,23 @@
+name: Fly PR Deploy
+on:
+  pull_request:
+    types: [opened, reopened, synchronize, ready_for_review]
+
+jobs:
+  deploy:
+    name: Deploy PR branch to Fly
+    runs-on: ubuntu-latest
+    concurrency:
+      group: fly-pr-${{ github.head_ref }}
+      cancel-in-progress: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: superfly/flyctl-actions/setup-flyctl@master
+      - name: Deploy branch-specific Fly app
+        run: |
+          branch=$(echo "${GITHUB_HEAD_REF}" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9]/-/g' | sed 's/^-*//; s/-*$//; s/-\+/-/g')
+          app="web-pr-${branch}"
+          echo "Deploying PR branch '${GITHUB_HEAD_REF}' to Fly app '${app}'"
+          flyctl deploy --remote-only --app "${app}"
+        env:
+          FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
