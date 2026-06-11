@@ -2,15 +2,19 @@ name: Fly PR Teardown
 on:
   pull_request_target:
     types: [closed]
+  push:
 
 permissions: {}
 
 jobs:
   teardown:
-    name: Destroy closed PR app
+    name: Destroy PR app
+    if: >-
+      github.event_name == 'pull_request_target' ||
+      contains(github.event.head_commit.message, '[test-pr-teardown]')
     runs-on: ubuntu-latest
     concurrency:
-      group: fly-pr-${{ github.event.pull_request.head.ref }}
+      group: fly-pr-${{ github.event_name == 'push' && github.ref_name || github.event.pull_request.head.ref }}
       cancel-in-progress: true
     steps:
       - uses: superfly/flyctl-actions/setup-flyctl@master
@@ -49,5 +53,5 @@ jobs:
         env:
           APP_PREFIX: web-pr-
           PRODUCTION_APP: snohomish-web
-          PR_HEAD_REF: ${{ github.event.pull_request.head.ref }}
+          PR_HEAD_REF: ${{ github.event_name == 'push' && github.ref_name || github.event.pull_request.head.ref }}
           FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
