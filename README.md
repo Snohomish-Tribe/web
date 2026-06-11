@@ -19,6 +19,8 @@ Example branch names:
 - `feature/New_UI` → `web-pr-feature-new-ui`
 - `bugfix/123-fix` → `web-pr-bugfix-123-fix`
 
+After a successful deploy, the workflow comments on the pull request with the preview URL. When the pull request is closed or merged, `.github/workflows/pr-teardown.yml` destroys only the corresponding `web-pr-*` preview app.
+
 The workflow expects the `FLY_API_TOKEN` secret to be configured in the repository settings.
 
 ## Go package used
