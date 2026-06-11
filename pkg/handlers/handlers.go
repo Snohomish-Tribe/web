@@ -100,21 +100,25 @@ func Contact(w http.ResponseWriter, r *http.Request) {
 			gomap.DefaultSent,
 		)
 		if err != nil {
-			log.Fatal(err)
+			log.Printf("failed to initialize contact email client: %v", err)
+			http.Error(w, "Unable to send your message right now.", http.StatusBadGateway)
+			return
 		}
-		// sends the email
-		from := gomap.NewAddress(msg.Name, msg.Email)
+		from := gomap.NewAddress("Snohomish Tribe Contact Form", os.Getenv("SENDER_EMAIL"))
 		to := gomap.NewAddress(fmt.Sprintf("Snohomish Tribe %s", recipientName), recipientEmail)
+		replyTo := gomap.NewAddress(msg.Name, msg.Email)
 
-		if err := mail.SendEmailWithIdentity(
-			gomap.NewAddresses(from),
-			gomap.NewAddresses(to),
+		if err := sendContactEmail(
+			mail,
+			from,
+			to,
+			replyTo,
 			fmt.Sprintf("Contact Page Question: %s", msg.Question),
 			fmt.Sprintf("From %s \n\n %s", msg.Email, msg.Message), // Email message
-			os.Getenv("SENDER_EMAIL"),
-			false,
 		); err != nil {
-			log.Fatal(err, " line 76")
+			log.Printf("failed to send contact email: %v", err)
+			http.Error(w, "Unable to send your message right now.", http.StatusBadGateway)
+			return
 		}
 
 		tmpl, _ := template.ParseFiles("static/templates/success.html", "static/templates/main.layout.html")
