@@ -10,8 +10,6 @@ permissions:
 jobs:
   deploy:
     name: Deploy PR branch to Fly
-    # Temporarily disabled while validating PR app teardown.
-    if: ${{ github.event_name == 'workflow_dispatch' }}
     runs-on: ubuntu-latest
     concurrency:
       group: fly-pr-${{ github.head_ref }}
