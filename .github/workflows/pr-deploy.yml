@@ -1,0 +1,85 @@
+name: Fly PR Deploy
+on:
+  pull_request:
+    types: [opened, reopened, synchronize, ready_for_review]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  deploy:
+    name: Deploy PR branch to Fly
+    runs-on: ubuntu-latest
+    concurrency:
+      group: fly-pr-${{ github.head_ref }}
+      cancel-in-progress: true
+    steps:
+      - uses: actions/checkout@v6
+      - uses: superfly/flyctl-actions/setup-flyctl@master
+      - name: Ensure Fly app exists
+        run: |
+          branch=$(echo "${GITHUB_HEAD_REF}" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9]/-/g' | sed 's/^-*//; s/-*$//; s/-\+/-/g')
+          app="web-pr-${branch}"
+          echo "Checking Fly app '${app}'"
+          if ! flyctl apps list | awk '{print $1}' | grep -xq "${app}"; then
+            echo "Creating Fly app '${app}'"
+            flyctl apps create "${app}" --org snohomish-tribe
+          else
+            echo "Fly app '${app}' already exists"
+          fi
+          echo "APP_NAME=${app}" >> "${GITHUB_ENV}"
+        env:
+          FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
+      - name: Copy production secrets to PR app
+        run: |
+          source_machine_json=$(flyctl machine list --app snohomish-web --json)
+          source_machine=$(
+            printf '%s' "${source_machine_json}" |
+              jq -r '([.[] | select(.state == "started")][0].id // .[0].id // empty)'
+          )
+          source_machine_state=$(
+            printf '%s' "${source_machine_json}" |
+              jq -r --arg id "${source_machine}" '.[] | select(.id == $id) | .state'
+          )
+
+          if [ -z "${source_machine}" ]; then
+            echo "No production machine is available to copy secrets from"
+            exit 1
+          fi
+
+          if [ "${source_machine_state}" != "started" ]; then
+            flyctl machine start "${source_machine}" --app snohomish-web
+          fi
+
+          fastmail_token=$(flyctl ssh console --app snohomish-web --command 'printenv FASTMAIL_TOKEN')
+          events_endpoint=$(flyctl ssh console --app snohomish-web --command 'printenv EVENTS_ENDPOINT')
+          events_bearer_token=$(flyctl ssh console --app snohomish-web --command 'printenv EVENTS_BEARER_TOKEN')
+
+          if [ -z "${fastmail_token}" ] || [ -z "${events_endpoint}" ] || [ -z "${events_bearer_token}" ]; then
+            echo "One or more required production secrets are empty"
+            exit 1
+          fi
+
+          printf 'FASTMAIL_TOKEN=%s\nEVENTS_ENDPOINT=%s\nEVENTS_BEARER_TOKEN=%s\n' \
+            "${fastmail_token}" \
+            "${events_endpoint}" \
+            "${events_bearer_token}" |
+            flyctl secrets import --stage --app "${APP_NAME}"
+        env:
+          FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
+      - name: Deploy branch-specific Fly app
+        run: |
+          echo "Deploying PR branch '${GITHUB_HEAD_REF}' to Fly app '${APP_NAME}'"
+          flyctl deploy --remote-only --app "${APP_NAME}"
+        env:
+          FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
+      - name: Comment deployed app URL
+        run: |
+          app_url="https://${APP_NAME}.fly.dev"
+          gh pr comment "${PR_NUMBER}" \
+            --repo "${GITHUB_REPOSITORY}" \
+            --body "PR app deployed: ${app_url}"
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}

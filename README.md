@@ -8,61 +8,21 @@ Website for the Snohomish Tribe
 go run cmd/web/*.go
 ```
 
+## Pull request preview deploys
+
+This repository includes a GitHub Actions workflow at `.github/workflows/pr-deploy.yml` that deploys PR branches to Fly when a pull request is opened, reopened, updated, or marked ready for review.
+
+The workflow creates a branch-specific Fly app name using the PR branch name. It normalizes the branch name by converting it to lowercase, replacing non-alphanumeric characters with `-`, trimming leading/trailing hyphens, and collapsing repeated hyphens.
+
+Example branch names:
+
+- `feature/New_UI` → `web-pr-feature-new-ui`
+- `bugfix/123-fix` → `web-pr-bugfix-123-fix`
+
+After a successful deploy, the workflow comments on the pull request with the preview URL. When the pull request is closed or merged, `.github/workflows/pr-teardown.yml` destroys only the corresponding `web-pr-*` preview app.
+
+The workflow expects the `FLY_API_TOKEN` secret to be configured in the repository settings.
+
 ## Go package used
 
 -[Gomap](https://pkg.go.dev/github.com/cwinters8/gomap#section-readme)
-
-## Terraform
-
-It's useless - don't bother with it for now. OCI is not working, so the app is deployed to fly.io.
-
-### OCI auth
-
-This authentication is mainly used for Terraform, but the CLI can be useful in other cases as well.
-
-```sh
-oci session authenticate --region us-sanjose-1 --profile-name snohomish
-```
-
-## Push docker image to OCI Container Registry
-
-Don't bother with this either.
-
-### Prerequisite
-
-[Authenticate with Docker CLI to Oracle Cloud image registry](https://docs.oracle.com/en-us/iaas/Content/Registry/Tasks/registrypushingimagesusingthedockercli.htm#Pushing_Images_Using_the_Docker_CLI)
-
-Once you have an auth token, login with Docker:
-
-```sh
-docker login ocir.us-sanjose-1.oci.oraclecloud.com
-```
-
-Username will be in the format: axihvv9biq8w/your-username
-
-If successful, you'll get the message: `Login Succeeded`
-
-### Build
-
-Get the output for the base image tag from Terraform
-
-```sh
-IMAGE_TAG=$(terraform -chdir=terraform output container_repo_image_tag | tr -d '"')
-```
-
-Build and tag the Docker image
-
-```sh
-TAG="${IMAGE_TAG}:latest"
-docker build --platform linux/arm64 -t "${TAG}" .
-```
-
-### Push
-
-```sh
-docker push "${TAG}"
-```
-
-TODO:
-
-- Pass environment variables to container definition

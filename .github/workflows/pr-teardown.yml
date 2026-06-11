@@ -1,0 +1,53 @@
+name: Fly PR Teardown
+on:
+  pull_request_target:
+    types: [closed]
+
+permissions: {}
+
+jobs:
+  teardown:
+    name: Destroy closed PR app
+    runs-on: ubuntu-latest
+    concurrency:
+      group: fly-pr-${{ github.event.pull_request.head.ref }}
+      cancel-in-progress: true
+    steps:
+      - uses: superfly/flyctl-actions/setup-flyctl@master
+      - name: Destroy branch-specific Fly app
+        run: |
+          branch=$(
+            printf '%s' "${PR_HEAD_REF}" |
+              tr '[:upper:]' '[:lower:]' |
+              sed 's/[^a-z0-9]/-/g' |
+              sed 's/^-*//; s/-*$//; s/-\+/-/g'
+          )
+
+          if [ -z "${branch}" ]; then
+            echo "Refusing teardown because the normalized branch name is empty"
+            exit 1
+          fi
+
+          app="${APP_PREFIX}${branch}"
+
+          if ! printf '%s\n' "${app}" | grep -Eq '^web-pr-[a-z0-9]+(-[a-z0-9]+)*$'; then
+            echo "Refusing teardown for unexpected app name '${app}'"
+            exit 1
+          fi
+
+          if [ "${app}" = "${PRODUCTION_APP}" ]; then
+            echo "Refusing to destroy production app '${PRODUCTION_APP}'"
+            exit 1
+          fi
+
+          if flyctl apps list | awk 'NR > 1 {print $1}' | grep -Fxq -- "${app}"; then
+            echo "Destroying closed PR app '${app}'"
+            flyctl apps destroy "${app}" --yes
+          else
+            echo "PR app '${app}' does not exist; nothing to destroy"
+          fi
+        env:
+          APP_PREFIX: web-pr-
+          PRODUCTION_APP: snohomish-web
+          PR_HEAD_REF: ${{ github.event.pull_request.head.ref }}
+          FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
