@@ -2,6 +2,7 @@
   Events Page
 ==================================== */
 .moon {
+  z-index: -1;
   position: absolute;
   width: 50%;
 }
