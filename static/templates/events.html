@@ -48,10 +48,10 @@
           <p class="fira-sans font-xsm">{{.Details}}
           </p>
           {{if eq .Link_Type "Register"}}
-          <a href="{{.Link}}" target="_blank">Register</a>
+          <a class="event-btn roboto" href="{{.Link}}" target="_blank">Register</a>
           {{end}}
           {{if eq .Link_Type "Download"}}
-          <a href="{{.Link}}" download>Download</a>
+          <a class="event-btn roboto" href="{{.Link}}" download>Download</a>
           {{end}}
         </div>
       </section>
